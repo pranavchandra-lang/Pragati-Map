@@ -22,7 +22,7 @@
     .category-section { margin-bottom: 28px; }
     .category-label {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.8px; color: var(--muted); margin-bottom: 12px;
+      letter-spacing: 1px; color: var(--pink); margin-bottom: 12px;
       display: flex; align-items: center; gap: 8px;
     }
     .category-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
@@ -234,7 +234,7 @@
                   <label for="${skill.skill_id}_${n}">
                     <span class="level-num">${n}</span>
                     <span>${LEVEL_LABELS[n]}</span>
-                    <span style="font-size:10px;color:var(--border)">${LEVEL_ENG[n]}</span>
+                    <span class="level-eng">${LEVEL_ENG[n]}</span>
                   </label>
                 </div>
               `).join('')}

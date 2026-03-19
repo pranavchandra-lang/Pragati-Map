@@ -113,7 +113,7 @@ textarea { resize: vertical; min-height: 80px; }
   transition: border-color 0.2s;
 }
 .skill-card.rated { border-color: var(--pink); }
-.skill-card .skill-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+.skill-card .skill-name { font-weight: 700; font-size: 16px; margin-bottom: 4px; color: #ffffff; }
 .skill-card .skill-meta { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
 
 .rating-options {
@@ -127,18 +127,26 @@ textarea { resize: vertical; min-height: 80px; }
 
 .rating-option input[type="radio"] { display: none; }
 .rating-option label {
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  padding: 10px 6px; border-radius: 8px; border: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 8px; border-radius: 10px; border: 1.5px solid var(--border);
   cursor: pointer; text-align: center; transition: all 0.2s;
-  font-size: 12px; color: var(--muted);
+  font-size: 13px; font-weight: 600; color: #E0D4F0;
+  background: rgba(255,255,255,0.03);
 }
 .rating-option label .level-num {
-  font-size: 20px; font-weight: 800; color: var(--text);
+  font-size: 22px; font-weight: 800; color: #ffffff;
+  line-height: 1;
+}
+.rating-option label .level-eng {
+  font-size: 10px; color: var(--muted); font-weight: 400;
 }
 .rating-option input:checked + label {
-  border-color: var(--pink); background: rgba(217, 0, 141, 0.12); color: var(--text);
+  border-color: var(--pink);
+  background: rgba(217, 0, 141, 0.15);
+  color: #ffffff;
 }
-.rating-option label:hover { border-color: var(--muted); }
+.rating-option input:checked + label .level-num { color: var(--pink); }
+.rating-option label:hover { border-color: #7a6b90; background: rgba(255,255,255,0.06); }
 
 /* ── Status badges ───────────────────────────────────────────────────────── */
 .badge {
