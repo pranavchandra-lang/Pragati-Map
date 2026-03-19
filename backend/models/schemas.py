@@ -41,6 +41,7 @@ class ManagerRatingSubmit(BaseModel):
     employee_id: str
     ratings: List[SkillRating]
     coaching_notes: Optional[str] = None
+    growth_potential: Optional[str] = None  # "High" | "Medium" | "Low"
     submitted_at: Optional[str] = None
 
 

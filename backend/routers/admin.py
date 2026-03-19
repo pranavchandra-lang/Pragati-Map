@@ -98,7 +98,12 @@ def get_employee_gap_report(employee_id: str, request: Request, x_admin_key: Opt
 def list_employees(request: Request, x_admin_key: Optional[str] = Header(default=None)):
     _admin_auth(request, x_admin_key)
     data = read_json("employees.json")
-    return {"employees": data.get("employees", []), "count": len(data.get("employees", []))}
+    ratings_data = read_json("manager_ratings.json")
+    gp_map = {r["employee_id"]: r.get("growth_potential", "") for r in ratings_data.get("ratings", [])}
+    employees = data.get("employees", [])
+    for emp in employees:
+        emp["growth_potential"] = gp_map.get(emp["employee_id"], "")
+    return {"employees": employees, "count": len(employees)}
 
 
 @router.get("/admin/framework")

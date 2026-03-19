@@ -106,7 +106,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-03-01T00:00:00Z"
     },
     {
       "manager_id": "Rahul Sharma",
@@ -120,7 +121,7 @@
         {
           "skill_id": "tech_dart_programming",
           "skill_name": "Dart programming",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "tech_mvvm_architecture",
@@ -130,7 +131,7 @@
         {
           "skill_id": "tech_custom_flutter_plugins",
           "skill_name": "Custom Flutter plugins",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "tech_method_channels",
@@ -155,7 +156,7 @@
         {
           "skill_id": "tech_ownership_mindset",
           "skill_name": "Ownership mindset",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "tech_python_backend",
@@ -189,7 +190,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-03-01T00:00:00Z"
     },
     {
       "manager_id": "Rahul Sharma",
@@ -248,7 +250,7 @@
         {
           "skill_id": "tech_microservices",
           "skill_name": "Microservices",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "tech_documentation",
@@ -268,11 +270,12 @@
         {
           "skill_id": "tech_performance_optimization",
           "skill_name": "Performance optimization",
-          "self_rating": 1
+          "self_rating": 2
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-24T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-23T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -281,7 +284,7 @@
         {
           "skill_id": "tech_flutter",
           "skill_name": "Flutter",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "tech_dart",
@@ -291,12 +294,12 @@
         {
           "skill_id": "tech_ios_android",
           "skill_name": "iOS/Android",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "tech_leadership",
           "skill_name": "Leadership",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "tech_app_architecture",
@@ -306,7 +309,7 @@
         {
           "skill_id": "tech_api_integration",
           "skill_name": "API integration",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "tech_ci_cd",
@@ -326,7 +329,7 @@
         {
           "skill_id": "tech_security",
           "skill_name": "Security",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "tech_engineering_strategy",
@@ -336,12 +339,12 @@
         {
           "skill_id": "tech_team_growth",
           "skill_name": "Team capability building",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "tech_backend_tech",
           "skill_name": "Backend tech",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "tech_ux_ui",
@@ -361,7 +364,7 @@
         {
           "skill_id": "tech_hiring",
           "skill_name": "Hiring",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "tech_ai_ml_ar",
@@ -376,11 +379,12 @@
         {
           "skill_id": "tech_culture_building",
           "skill_name": "Culture building",
-          "self_rating": 2
+          "self_rating": 1
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-24T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Rahul Sharma",
@@ -439,7 +443,7 @@
         {
           "skill_id": "tech_process_optimization",
           "skill_name": "Process optimization",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "tech_documentation",
@@ -458,7 +462,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -487,7 +492,7 @@
         {
           "skill_id": "prod_user_first_thinking",
           "skill_name": "User-first thinking",
-          "self_rating": 3
+          "self_rating": 4
         },
         {
           "skill_id": "prod_root_cause_analysis",
@@ -497,7 +502,7 @@
         {
           "skill_id": "prod_stakeholder_communication",
           "skill_name": "Stakeholder communication",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_excel_spreadsheets",
@@ -512,12 +517,12 @@
         {
           "skill_id": "prod_autonomous_execution",
           "skill_name": "Autonomous execution",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_startup_experience",
           "skill_name": "Startup experience",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_market_research",
@@ -542,7 +547,7 @@
         {
           "skill_id": "prod_cross_functional_coordination",
           "skill_name": "Cross-functional coordination",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "prod_tier_1_education",
@@ -551,7 +556,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-26T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-23T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -570,7 +576,7 @@
         {
           "skill_id": "prod_product_roadmap",
           "skill_name": "Product roadmap",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_stakeholder_management",
@@ -590,12 +596,12 @@
         {
           "skill_id": "prod_user_first_thinking",
           "skill_name": "User-first thinking",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "prod_jira_tools",
           "skill_name": "JIRA/tools",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "prod_communication_storytelling",
@@ -610,7 +616,7 @@
         {
           "skill_id": "prod_excel_sheets_advanced",
           "skill_name": "Excel/Sheets advanced",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_market_research",
@@ -620,7 +626,7 @@
         {
           "skill_id": "prod_startup_experience",
           "skill_name": "Startup experience",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_bi_tools",
@@ -639,7 +645,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-23T00:00:00Z"
     },
     {
       "manager_id": "Kavya Reddy",
@@ -693,7 +700,7 @@
         {
           "skill_id": "prod_autonomous_execution",
           "skill_name": "Autonomous execution",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_startup_experience",
@@ -723,7 +730,7 @@
         {
           "skill_id": "prod_cross_functional_coordination",
           "skill_name": "Cross-functional coordination",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_tier_1_education",
@@ -732,7 +739,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-03-01T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -796,7 +804,7 @@
         {
           "skill_id": "prod_emerging_market_design",
           "skill_name": "Emerging market design",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_marketplace_design",
@@ -811,7 +819,7 @@
         {
           "skill_id": "prod_funnel_analysis",
           "skill_name": "Funnel analysis",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "prod_cost_modeling",
@@ -825,7 +833,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-20T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-28T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -839,7 +848,7 @@
         {
           "skill_id": "prod_data_analytics",
           "skill_name": "Data analytics",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_product_roadmap",
@@ -874,7 +883,7 @@
         {
           "skill_id": "prod_communication_storytelling",
           "skill_name": "Communication & storytelling",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_mixpanel_clevertap",
@@ -904,7 +913,7 @@
         {
           "skill_id": "prod_documentation_confluence",
           "skill_name": "Documentation (Confluence)",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "prod_distributed_systems_understanding",
@@ -913,7 +922,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-20T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-21T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -942,7 +952,7 @@
         {
           "skill_id": "fin_far_management",
           "skill_name": "FAR management",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "fin_zoho_books",
@@ -952,7 +962,7 @@
         {
           "skill_id": "fin_ownership_mindset",
           "skill_name": "Ownership mindset",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "fin_process_automation",
@@ -992,7 +1002,7 @@
         {
           "skill_id": "fin_cloud_accounting",
           "skill_name": "Cloud accounting",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "fin_execution_speed",
@@ -1001,7 +1011,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-24T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1020,7 +1031,7 @@
         {
           "skill_id": "fin_tds_compliance",
           "skill_name": "TDS compliance",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "fin_gl_management",
@@ -1050,7 +1061,7 @@
         {
           "skill_id": "fin_audit_management",
           "skill_name": "Audit management",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "fin_zoho_flow",
@@ -1089,7 +1100,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-28T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-03-01T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1108,7 +1120,7 @@
         {
           "skill_id": "exe_sop_development",
           "skill_name": "SOP development",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "exe_cross_fn_coord",
@@ -1152,7 +1164,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-03-01T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1215,7 +1228,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Vikram Gupta",
@@ -1268,7 +1282,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-27T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Vikram Gupta",
@@ -1277,7 +1292,7 @@
         {
           "skill_id": "exe_project_tracking",
           "skill_name": "Project tracking (Jira/Asana)",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "exe_kpi_dashboards",
@@ -1312,7 +1327,7 @@
         {
           "skill_id": "exe_data_analysis",
           "skill_name": "Data analysis (Excel/Sheets)",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "exe_stakeholder_mgmt",
@@ -1321,7 +1336,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-03-01T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
       "manager_id": "Sana Khan",
@@ -1374,7 +1390,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-28T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1393,12 +1410,12 @@
         {
           "skill_id": "ui_usability_testing",
           "skill_name": "Usability testing",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "ui_empathy",
           "skill_name": "User empathy",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "ui_analytical_thinking",
@@ -1408,17 +1425,17 @@
         {
           "skill_id": "ui_isp_user_behavior",
           "skill_name": "ISP user behavior patterns",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "ui_research_strategy",
           "skill_name": "Research strategy",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "ui_insight_to_action",
           "skill_name": "Insight-to-action frameworks",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "ui_data_tools",
@@ -1432,7 +1449,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-25T00:00:00Z"
     },
     {
       "manager_id": "Neha Verma",
@@ -1461,7 +1479,7 @@
         {
           "skill_id": "ui_analytical_thinking",
           "skill_name": "Analytical thinking",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "ui_isp_user_behavior",
@@ -1475,6 +1493,7 @@
         }
       ],
       "coaching_notes": "",
+      "growth_potential": "High",
       "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
@@ -1494,7 +1513,7 @@
         {
           "skill_id": "hr_perf_tools",
           "skill_name": "Performance management tools",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "hr_empathy",
@@ -1504,7 +1523,7 @@
         {
           "skill_id": "hr_conflict_mediation",
           "skill_name": "Conflict mediation",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "hr_labour_law",
@@ -1519,7 +1538,7 @@
         {
           "skill_id": "hr_people_strategy",
           "skill_name": "People strategy",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "hr_culture_building",
@@ -1538,7 +1557,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-22T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Meera Joshi",
@@ -1572,7 +1592,7 @@
         {
           "skill_id": "hr_compliance",
           "skill_name": "HR compliance",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "hr_talent_market",
@@ -1586,6 +1606,7 @@
         }
       ],
       "coaching_notes": "",
+      "growth_potential": "Medium",
       "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
@@ -1595,7 +1616,7 @@
         {
           "skill_id": "hr_hris",
           "skill_name": "HRIS tools",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "hr_payroll",
@@ -1605,12 +1626,12 @@
         {
           "skill_id": "hr_empathy",
           "skill_name": "Empathy and discretion",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "hr_communication",
           "skill_name": "Communication and facilitation",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "hr_labour_law",
@@ -1620,7 +1641,7 @@
         {
           "skill_id": "hr_compliance",
           "skill_name": "HR compliance",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "hr_talent_market",
@@ -1634,7 +1655,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-25T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1643,12 +1665,12 @@
         {
           "skill_id": "labs_prototyping",
           "skill_name": "Rapid prototyping",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "labs_research_methods",
           "skill_name": "Research methodology",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "labs_tech_eval",
@@ -1673,7 +1695,7 @@
         {
           "skill_id": "labs_product_innovation",
           "skill_name": "Product innovation",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "labs_innovation_strategy",
@@ -1683,7 +1705,7 @@
         {
           "skill_id": "labs_tech_roadmap",
           "skill_name": "Technology roadmap",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "labs_api",
@@ -1693,11 +1715,12 @@
         {
           "skill_id": "labs_digital_transformation",
           "skill_name": "Digital transformation",
-          "self_rating": 1
+          "self_rating": 2
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-03-01T00:00:00Z"
     },
     {
       "manager_id": "Dr. Kartik Nair",
@@ -1716,12 +1739,12 @@
         {
           "skill_id": "labs_tech_eval",
           "skill_name": "Technology evaluation",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "labs_innovation",
           "skill_name": "Innovation mindset",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "labs_hypothesis",
@@ -1745,7 +1768,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-22T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-28T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1774,7 +1798,7 @@
         {
           "skill_id": "techfut_systems_thinking",
           "skill_name": "Systems thinking",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "techfut_next_gen",
@@ -1808,7 +1832,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-19T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Sanjay Kumar",
@@ -1856,7 +1881,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-27T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Sanjay Kumar",
@@ -1890,7 +1916,7 @@
         {
           "skill_id": "techfut_next_gen",
           "skill_name": "Next-gen ISP technology (5G/fiber)",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "techfut_digital_infra",
@@ -1904,7 +1930,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-25T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -1928,7 +1955,7 @@
         {
           "skill_id": "mkt_creative_thinking",
           "skill_name": "Creative thinking",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "mkt_brand_consistency",
@@ -1943,7 +1970,7 @@
         {
           "skill_id": "mkt_isp_market",
           "skill_name": "ISP consumer market knowledge",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "mkt_go_to_market",
@@ -1958,7 +1985,7 @@
         {
           "skill_id": "mkt_seo_sem",
           "skill_name": "SEO/SEM",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "mkt_brand_strategy",
@@ -1967,7 +1994,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-20T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-24T00:00:00Z"
     },
     {
       "manager_id": "Priyanka Desai",
@@ -1981,7 +2009,7 @@
         {
           "skill_id": "mkt_marketing_analytics",
           "skill_name": "Marketing analytics",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "mkt_content_management",
@@ -2025,7 +2053,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-19T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Priyanka Desai",
@@ -2059,7 +2088,7 @@
         {
           "skill_id": "mkt_copywriting",
           "skill_name": "Copywriting",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "mkt_isp_market",
@@ -2083,6 +2112,7 @@
         }
       ],
       "coaching_notes": "",
+      "growth_potential": "Medium",
       "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
@@ -2092,7 +2122,7 @@
         {
           "skill_id": "cx_crm_tools",
           "skill_name": "CRM tools (Freshdesk/Zoho)",
-          "self_rating": 3
+          "self_rating": 4
         },
         {
           "skill_id": "cx_sla_tracking",
@@ -2107,7 +2137,7 @@
         {
           "skill_id": "cx_customer_empathy",
           "skill_name": "Customer empathy",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "cx_conflict_resolution",
@@ -2122,12 +2152,12 @@
         {
           "skill_id": "cx_isp_service",
           "skill_name": "ISP service knowledge",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "cx_escalation_protocols",
           "skill_name": "Escalation protocols",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "cx_nps_strategy",
@@ -2151,7 +2181,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-25T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-23T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2165,12 +2196,12 @@
         {
           "skill_id": "cx_sla_tracking",
           "skill_name": "SLA tracking and reporting",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "cx_nps_measurement",
           "skill_name": "NPS measurement",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "cx_customer_empathy",
@@ -2185,12 +2216,12 @@
         {
           "skill_id": "cx_team_coaching",
           "skill_name": "Team coaching",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "cx_isp_service",
           "skill_name": "ISP service knowledge",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "cx_escalation_protocols",
@@ -2205,7 +2236,7 @@
         {
           "skill_id": "cx_retention_planning",
           "skill_name": "Customer retention planning",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "cx_multilingual",
@@ -2219,7 +2250,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-27T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-23T00:00:00Z"
     },
     {
       "manager_id": "Arvind Rao",
@@ -2233,7 +2265,7 @@
         {
           "skill_id": "cx_ticket_management",
           "skill_name": "Ticket management",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "cx_sla_tracking",
@@ -2263,7 +2295,7 @@
         {
           "skill_id": "cx_broadband_basics",
           "skill_name": "Broadband troubleshooting basics",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "cx_multilingual",
@@ -2277,7 +2309,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-03-01T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-21T00:00:00Z"
     },
     {
       "manager_id": "Arvind Rao",
@@ -2311,12 +2344,12 @@
         {
           "skill_id": "cx_written_communication",
           "skill_name": "Written communication",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "cx_isp_service",
           "skill_name": "ISP service knowledge",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "cx_broadband_basics",
@@ -2335,7 +2368,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-21T00:00:00Z"
     },
     {
       "manager_id": "Kiran Bose",
@@ -2359,7 +2393,7 @@
         {
           "skill_id": "cx_customer_empathy",
           "skill_name": "Customer empathy",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "cx_conflict_resolution",
@@ -2389,11 +2423,12 @@
         {
           "skill_id": "cx_upsell",
           "skill_name": "Upselling and retention",
-          "self_rating": 2
+          "self_rating": 1
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-19T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2407,12 +2442,12 @@
         {
           "skill_id": "supply_vendor_mgmt",
           "skill_name": "Vendor management",
-          "self_rating": 2
+          "self_rating": 4
         },
         {
           "skill_id": "supply_inventory",
           "skill_name": "Inventory control",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "supply_negotiation",
@@ -2422,7 +2457,7 @@
         {
           "skill_id": "supply_attention_detail",
           "skill_name": "Attention to detail",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "supply_telecom_hw",
@@ -2437,7 +2472,7 @@
         {
           "skill_id": "supply_cost_optimization",
           "skill_name": "Cost optimization strategy",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "supply_supplier_strategy",
@@ -2456,7 +2491,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-03-01T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Mahesh Agarwal",
@@ -2510,11 +2546,12 @@
         {
           "skill_id": "supply_supplier_rel",
           "skill_name": "Supplier relationship management",
-          "self_rating": 2
+          "self_rating": 1
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-25T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-03-01T00:00:00Z"
     },
     {
       "manager_id": "Mahesh Agarwal",
@@ -2538,7 +2575,7 @@
         {
           "skill_id": "supply_negotiation",
           "skill_name": "Negotiation skills",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "supply_attention_detail",
@@ -2553,7 +2590,7 @@
         {
           "skill_id": "supply_telecom_hw",
           "skill_name": "Telecom hardware knowledge",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "supply_lco_chain",
@@ -2572,7 +2609,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-25T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Mahesh Agarwal",
@@ -2606,7 +2644,7 @@
         {
           "skill_id": "supply_process_adherence",
           "skill_name": "Process adherence",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "supply_telecom_hw",
@@ -2616,7 +2654,7 @@
         {
           "skill_id": "supply_lco_chain",
           "skill_name": "LCO supply chain",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "supply_erp",
@@ -2630,7 +2668,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-20T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2664,7 +2703,7 @@
         {
           "skill_id": "founders_startup_ops",
           "skill_name": "Startup operations",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "founders_investor_rel",
@@ -2679,7 +2718,7 @@
         {
           "skill_id": "founders_growth_strategy",
           "skill_name": "Growth strategy",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "founders_board_reporting",
@@ -2689,11 +2728,12 @@
         {
           "skill_id": "founders_fundraising",
           "skill_name": "Fundraising narrative",
-          "self_rating": 1
+          "self_rating": 2
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-23T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-25T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2707,12 +2747,12 @@
         {
           "skill_id": "founders_financial_modeling",
           "skill_name": "Financial modeling",
-          "self_rating": 3
+          "self_rating": 4
         },
         {
           "skill_id": "founders_planning_tools",
           "skill_name": "Strategic planning tools",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "founders_exec_presence",
@@ -2742,7 +2782,7 @@
         {
           "skill_id": "founders_growth_strategy",
           "skill_name": "Growth strategy",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "founders_board_reporting",
@@ -2756,7 +2796,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-19T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2770,12 +2811,12 @@
         {
           "skill_id": "sol_isp_infra",
           "skill_name": "ISP infrastructure design",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "sol_solution_costing",
           "skill_name": "Solution costing",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "sol_client_comm",
@@ -2790,7 +2831,7 @@
         {
           "skill_id": "sol_isp_solutions",
           "skill_name": "ISP technical solutions",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "sol_lco_integration",
@@ -2810,16 +2851,17 @@
         {
           "skill_id": "sol_technical_docs",
           "skill_name": "Technical documentation",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "sol_partnership_dev",
           "skill_name": "Partnership development",
-          "self_rating": 2
+          "self_rating": 3
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-22T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Gopal Nair",
@@ -2848,12 +2890,12 @@
         {
           "skill_id": "sol_problem_solving",
           "skill_name": "Technical problem solving",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "sol_isp_solutions",
           "skill_name": "ISP technical solutions",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "sol_lco_integration",
@@ -2872,7 +2914,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-24T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-20T00:00:00Z"
     },
     {
       "manager_id": "Gopal Nair",
@@ -2925,7 +2968,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-24T00:00:00Z"
+      "growth_potential": "Low",
+      "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -2934,7 +2978,7 @@
         {
           "skill_id": "analytics_sql",
           "skill_name": "SQL (advanced)",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "analytics_python_r",
@@ -2954,7 +2998,7 @@
         {
           "skill_id": "analytics_insight_comm",
           "skill_name": "Communication of insights",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "analytics_telecom_data",
@@ -2988,7 +3032,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-21T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Ranjit Sharma",
@@ -3012,7 +3057,7 @@
         {
           "skill_id": "analytics_problem_solving",
           "skill_name": "Problem solving",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "analytics_insight_comm",
@@ -3046,7 +3091,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-22T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-26T00:00:00Z"
     },
     {
       "manager_id": "Ranjit Sharma",
@@ -3104,6 +3150,7 @@
         }
       ],
       "coaching_notes": "",
+      "growth_potential": "Medium",
       "submitted_at": "2026-02-25T00:00:00Z"
     },
     {
@@ -3128,7 +3175,7 @@
         {
           "skill_id": "comms_writing",
           "skill_name": "Writing and editing",
-          "self_rating": 3
+          "self_rating": 4
         },
         {
           "skill_id": "comms_brand_voice",
@@ -3167,7 +3214,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-27T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-19T00:00:00Z"
     },
     {
       "manager_id": "Kavita Reddy",
@@ -3210,7 +3258,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-25T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-26T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -3219,12 +3268,12 @@
         {
           "skill_id": "lnd_lms",
           "skill_name": "LMS tools",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "lnd_instructional_design",
           "skill_name": "Instructional design",
-          "self_rating": 1
+          "self_rating": 2
         },
         {
           "skill_id": "lnd_needs_analysis",
@@ -3234,12 +3283,12 @@
         {
           "skill_id": "lnd_facilitation",
           "skill_name": "Facilitation skills",
-          "self_rating": 1
+          "self_rating": 3
         },
         {
           "skill_id": "lnd_adult_learning",
           "skill_name": "Adult learning principles",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "lnd_content_dev",
@@ -3249,7 +3298,7 @@
         {
           "skill_id": "lnd_skills_taxonomy",
           "skill_name": "Skill taxonomy design",
-          "self_rating": 4
+          "self_rating": 3
         },
         {
           "skill_id": "lnd_training_roi",
@@ -3278,7 +3327,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-26T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-28T00:00:00Z"
     },
     {
       "manager_id": "Shilpa Mohan",
@@ -3326,7 +3376,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-19T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-02-27T00:00:00Z"
     },
     {
       "manager_id": "Pranav Chandra",
@@ -3345,7 +3396,7 @@
         {
           "skill_id": "biz_negotiation",
           "skill_name": "Negotiation",
-          "self_rating": 3
+          "self_rating": 2
         },
         {
           "skill_id": "biz_relationship",
@@ -3360,12 +3411,12 @@
         {
           "skill_id": "biz_isp_market",
           "skill_name": "ISP market knowledge",
-          "self_rating": 2
+          "self_rating": 1
         },
         {
           "skill_id": "biz_partner_ecosystem",
           "skill_name": "Partner/channel ecosystem",
-          "self_rating": 2
+          "self_rating": 3
         },
         {
           "skill_id": "biz_revenue_strategy",
@@ -3389,7 +3440,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-26T00:00:00Z"
+      "growth_potential": "High",
+      "submitted_at": "2026-02-22T00:00:00Z"
     },
     {
       "manager_id": "Rajesh Srivastava",
@@ -3442,7 +3494,8 @@
         }
       ],
       "coaching_notes": "",
-      "submitted_at": "2026-02-26T00:00:00Z"
+      "growth_potential": "Medium",
+      "submitted_at": "2026-03-01T00:00:00Z"
     }
   ]
 }

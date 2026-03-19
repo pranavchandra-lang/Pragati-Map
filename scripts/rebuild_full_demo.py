@@ -561,6 +561,13 @@ def gen_mgr_rating(self_rating, expected_level):
     delta = random.choices([-1, 0, 0, 0, 1], weights=[15, 40, 30, 10, 5])[0]
     return max(1, min(4, self_rating + delta))
 
+def gen_growth_potential(seniority):
+    """Manager's assessment of growth potential. Lead roles skewed High/Med, ICs more spread."""
+    if seniority == "Lead":
+        return random.choices(["High", "Medium", "Low"], weights=[50, 35, 15])[0]
+    else:
+        return random.choices(["High", "Medium", "Low"], weights=[20, 55, 25])[0]
+
 def make_assessment(employee, framework):
     eid = employee["employee_id"]
     fn = employee["function_code"]
@@ -604,6 +611,7 @@ def make_mgr_rating(employee, assessment, framework):
         "employee_id": employee["employee_id"],
         "ratings": ratings,
         "coaching_notes": "",
+        "growth_potential": gen_growth_potential(employee["seniority"]),
         "submitted_at": ts(random.randint(0, 10))
     }
 

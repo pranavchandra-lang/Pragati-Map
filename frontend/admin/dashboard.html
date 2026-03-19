@@ -170,20 +170,21 @@
     <!-- Row 2: 9-Box Grid -->
     <div class="card mb-24">
       <div class="section-title">9-Box Talent Grid</div>
-      <p class="section-sub">Skill Readiness (X) × Performance Potential (Y) — assessed employees only</p>
+      <p class="section-sub">Skill Attainment (X) × Growth Potential (Y) — assessed employees only</p>
       <div style="position:relative; padding-left: 32px;">
         <div style="position:absolute;left:0;top:0;bottom:28px;display:flex;align-items:center;">
-          <span style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:0.6px;">Performance Potential</span>
+          <span style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:0.6px;">Growth Potential</span>
         </div>
         <div id="nine-box-grid" class="nine-box-grid"></div>
         <div class="nine-box-x-labels" id="nine-box-x-labels">
-          <div class="nine-box-x-label">Low Readiness</div>
-          <div class="nine-box-x-label">Medium Readiness</div>
-          <div class="nine-box-x-label">High Readiness</div>
+          <div class="nine-box-x-label">Below Expectations</div>
+          <div class="nine-box-x-label">Approaching</div>
+          <div class="nine-box-x-label">Meeting / Exceeding</div>
         </div>
-        <div class="nine-box-x-axis">← Skill Readiness →</div>
+        <div class="nine-box-x-axis">← Skill Attainment →</div>
       </div>
       <div id="nine-box-legend" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:12px;"></div>
+      <p style="font-size:11px;color:var(--muted);margin-top:12px;">Skill Attainment: avg of self + manager ratings vs role requirements. Growth Potential: manager-assessed.</p>
     </div>
 
     <!-- Row 3: Function-level heatmap -->
@@ -357,20 +358,20 @@
     }
 
     // ── 9-Box Grid ─────────────────────────────────────────────────────────
-    // X = Skill Readiness (derived from avg gap: 0=high readiness, 2+=low)
-    // Y = Performance Potential (derived from seniority)
+    // X = Skill Attainment (derived from avg gap: low gap=high attainment)
+    // Y = Growth Potential (manager-assessed: High / Medium / Low)
     const NINE_BOX_COLORS = [
-      // row 3 (High perf): left=Inconsistent Star, mid=Strong Performer, right=Star
+      // row 0 (High potential): left=amber, mid=light green, right=dark green
       ['rgba(255,128,0,0.25)','rgba(0,128,67,0.25)','rgba(0,128,67,0.45)'],
-      // row 2 (Med perf): left=Underperformer, mid=Core Player, right=High Potential
+      // row 1 (Med potential): left=red, mid=amber, right=light green
       ['rgba(224,30,0,0.2)','rgba(255,128,0,0.2)','rgba(0,128,67,0.25)'],
-      // row 1 (Low perf): left=Poor Fit, mid=Risk, right=Rough Diamond
+      // row 2 (Low potential): left=dark red, mid=red, right=amber
       ['rgba(224,30,0,0.35)','rgba(224,30,0,0.25)','rgba(255,128,0,0.2)'],
     ];
     const NINE_BOX_LABELS = [
-      ['Inconsistent Star','Strong Performer','Star'],
-      ['Underperformer','Core Player','High Potential'],
-      ['Poor Fit','Risk','Rough Diamond'],
+      ['Diamond in Rough','Rising Star','Star'],
+      ['Needs Support','Core Player','Strong Contributor'],
+      ['Urgent Review','Stable Performer','Proficient'],
     ];
     const PERF_COLORS = ['#E01E00','#FF8000','#008043'];
     const DOT_COLORS = ['#D9008D','#6D17CE','#008043','#FF8000','#0078D4','#E01E00','#443152','#00B4D8','#F72585','#3A86FF','#8338EC'];
@@ -387,10 +388,11 @@
     }
 
     function getPerfBucket(emp) {
-      const s = (emp.seniority || '').toLowerCase();
-      if (s === 'director') return 2; // High
-      if (s === 'lead' || s === 'manager') return 1; // Med-High → show as High for demo
-      return 1; // IC → Medium (most employees)
+      const gp = (emp.growth_potential || '').toLowerCase();
+      if (gp === 'high')   return 2;
+      if (gp === 'medium') return 1;
+      if (gp === 'low')    return 0;
+      return 1; // fallback: not yet rated
     }
 
     function renderNineBox() {

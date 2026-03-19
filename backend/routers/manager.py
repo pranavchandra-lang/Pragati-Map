@@ -60,8 +60,9 @@ def get_rating_form(employee_id: str):
         "manager_ratings": mgr_data["ratings"] if mgr_data else [],
         "self_submitted_at": self_data.get("submitted_at") if self_data else None,
         "assessment_complete": self_data is not None,
-        "label_self": "Employee का नज़रिया",
-        "label_manager": "आपका आकलन",
+        "existing_growth_potential": mgr_data.get("growth_potential") if mgr_data else None,
+        "label_self": "Employee's View",
+        "label_manager": "Your Assessment",
     }
 
 
@@ -79,6 +80,7 @@ def submit_manager_rating(payload: ManagerRatingSubmit):
         "employee_id": payload.employee_id,
         "ratings": [r.model_dump() for r in payload.ratings],
         "coaching_notes": payload.coaching_notes or "",
+        "growth_potential": payload.growth_potential or "Medium",
         "submitted_at": payload.submitted_at or now,
     })
     write_json("manager_ratings.json", data)
