@@ -159,9 +159,11 @@ def seed_demo_data(request: Request, x_admin_key: Optional[str] = Header(default
     for fname in files:
         src = repo_data / fname
         dst = volume_data / fname
-        if src.exists():
+        if src.exists() and src.resolve() != dst.resolve():
             shutil.copy2(src, dst)
             copied.append(fname)
+        elif src.exists():
+            copied.append(f"{fname} (same path, skipped)")
 
     return {
         "status": "seeded",

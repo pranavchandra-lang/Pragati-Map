@@ -46,8 +46,9 @@ def get_assessment_form(
     framework = read_json("skill_framework.json")
     fn_code = employee.get("function_code", "")
     role_title = employee.get("role_title", "")
+    role_slug = employee.get("role_slug", "")
 
-    skills_to_rate = _get_skills_for_role(framework, fn_code, role_title)
+    skills_to_rate = _get_skills_for_role(framework, fn_code, role_title, role_slug)
     fallback_used = not skills_to_rate
     if fallback_used:
         skills_to_rate = GENERIC_CORE_SKILLS
@@ -103,12 +104,13 @@ def submit_assessment(payload: AssessmentSubmit):
     }
 
 
-def _get_skills_for_role(framework: dict, fn_code: str, role_title: str) -> list:
+def _get_skills_for_role(framework: dict, fn_code: str, role_title: str, role_slug: str = "") -> list:
     import re
     slug = re.sub(r'[^a-z0-9]+', '_', role_title.lower()).strip('_')
     roles = framework.get("functions", {}).get(fn_code, {}).get("roles", {})
 
-    role = roles.get(slug)
+    # Try role_slug directly first (most reliable), then title-based slug, then fuzzy
+    role = roles.get(role_slug) or roles.get(slug)
     if not role:
         for key in roles:
             if key in slug or slug in key:
