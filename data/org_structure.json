@@ -1,1 +1,51 @@
-{"_meta": {"description": "Wiom org structure", "last_updated": "", "total_headcount": 0}, "functions": []}
+{
+  "_meta": {
+    "description": "Wiom org structure",
+    "last_updated": "2026-03-19",
+    "total_headcount": 15
+  },
+  "functions": [
+    {
+      "function_code": "TECH",
+      "function_name": "Technology & Engineering",
+      "head_count": 4,
+      "manager_count": 1,
+      "ic_count": 3
+    },
+    {
+      "function_code": "OPS",
+      "function_name": "Operations",
+      "head_count": 4,
+      "manager_count": 1,
+      "ic_count": 3
+    },
+    {
+      "function_code": "GROWTH",
+      "function_name": "Growth & Sales",
+      "head_count": 3,
+      "manager_count": 1,
+      "ic_count": 2
+    },
+    {
+      "function_code": "PROD",
+      "function_name": "Product",
+      "head_count": 2,
+      "manager_count": 1,
+      "ic_count": 1
+    },
+    {
+      "function_code": "HR",
+      "function_name": "Human Resources",
+      "head_count": 1,
+      "manager_count": 0,
+      "ic_count": 1
+    },
+    {
+      "function_code": "FIN",
+      "function_name": "Finance",
+      "head_count": 1,
+      "manager_count": 0,
+      "ic_count": 1
+    }
+  ]
+}

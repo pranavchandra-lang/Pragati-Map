@@ -1,1 +1,148 @@
-{"employees": []}
+{
+  "employees": [
+    {
+      "employee_id": "EMP001",
+      "name": "Rahul Sharma",
+      "role_title": "Tech Lead",
+      "function_code": "TECH",
+      "role_slug": "tech_lead",
+      "manager": "Pranav Chandra",
+      "seniority": "Manager",
+      "email": "rahul@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP002",
+      "name": "Priya Menon",
+      "role_title": "Backend Engineer",
+      "function_code": "TECH",
+      "role_slug": "backend_engineer",
+      "manager": "Rahul Sharma",
+      "seniority": "IC",
+      "email": "priya@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "submitted"
+    },
+    {
+      "employee_id": "EMP003",
+      "name": "Amit Kumar",
+      "role_title": "Backend Engineer",
+      "function_code": "TECH",
+      "role_slug": "backend_engineer",
+      "manager": "Rahul Sharma",
+      "seniority": "IC",
+      "email": "amit@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP004",
+      "name": "Deepa Nair",
+      "role_title": "Head of Operations",
+      "function_code": "OPS",
+      "role_slug": "ops_head",
+      "manager": "Pranav Chandra",
+      "seniority": "Manager",
+      "email": "deepa@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP005",
+      "name": "Ravi Patel",
+      "role_title": "LCO Partner Manager",
+      "function_code": "OPS",
+      "role_slug": "lco_partner_manager",
+      "manager": "Deepa Nair",
+      "seniority": "IC",
+      "email": "ravi@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP006",
+      "name": "Sunita Yadav",
+      "role_title": "LCO Partner Manager",
+      "function_code": "OPS",
+      "role_slug": "lco_partner_manager",
+      "manager": "Deepa Nair",
+      "seniority": "IC",
+      "email": "sunita@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP007",
+      "name": "Kiran Reddy",
+      "role_title": "LCO Partner Manager",
+      "function_code": "OPS",
+      "role_slug": "lco_partner_manager",
+      "manager": "Deepa Nair",
+      "seniority": "IC",
+      "email": "kiran@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP008",
+      "name": "Ankit Gupta",
+      "role_title": "Growth Manager",
+      "function_code": "GROWTH",
+      "role_slug": "growth_manager",
+      "manager": "Pranav Chandra",
+      "seniority": "IC",
+      "email": "ankit@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP009",
+      "name": "Neha Singh",
+      "role_title": "Growth Manager",
+      "function_code": "GROWTH",
+      "role_slug": "growth_manager",
+      "manager": "Pranav Chandra",
+      "seniority": "IC",
+      "email": "neha@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP010",
+      "name": "Vikram Joshi",
+      "role_title": "Product Manager",
+      "function_code": "PROD",
+      "role_slug": "product_manager",
+      "manager": "Pranav Chandra",
+      "seniority": "Manager",
+      "email": "vikram@wiom.in",
+      "assessment_status": "pending",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP011",
+      "name": "Pooja Iyer",
+      "role_title": "HR Manager",
+      "function_code": "HR",
+      "role_slug": "hr_manager",
+      "manager": "Pranav Chandra",
+      "seniority": "IC",
+      "email": "pooja@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "pending"
+    },
+    {
+      "employee_id": "EMP012",
+      "name": "Sanjay Mehta",
+      "role_title": "Finance Manager",
+      "function_code": "FIN",
+      "role_slug": "finance_manager",
+      "manager": "Pranav Chandra",
+      "seniority": "IC",
+      "email": "sanjay@wiom.in",
+      "assessment_status": "submitted",
+      "manager_rating_status": "pending"
+    }
+  ]
+}

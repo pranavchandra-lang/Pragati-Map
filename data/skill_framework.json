@@ -1,1 +1,461 @@
-{"_meta": {"last_updated": ""}, "functions": {}}
+{
+  "_meta": {
+    "last_updated": "2026-03-19"
+  },
+  "functions": {
+    "TECH": {
+      "roles": {
+        "backend_engineer": {
+          "role_title": "Backend Engineer",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_python_backend",
+              "skill_name": "Python / Backend Development",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_api_design",
+              "skill_name": "REST API Design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_database",
+              "skill_name": "Database Management (SQL/NoSQL)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_problem_solving",
+              "skill_name": "Structured Problem Solving",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "tech_system_design",
+              "skill_name": "System Design",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.2,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_cloud",
+              "skill_name": "Cloud Infrastructure (GCP/AWS)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "tech_lead": {
+          "role_title": "Tech Lead",
+          "seniority": "Manager",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_python_backend",
+              "skill_name": "Python / Backend Development",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_architecture",
+              "skill_name": "System Architecture",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_team_leadership",
+              "skill_name": "Engineering Team Leadership",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_code_review",
+              "skill_name": "Code Review & Standards",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [],
+          "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "OPS": {
+      "roles": {
+        "lco_partner_manager": {
+          "role_title": "LCO Partner Manager",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "ops_partner_mgmt",
+              "skill_name": "LCO Partner Relationship Management",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_sla_mgmt",
+              "skill_name": "SLA & KPI Management",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_escalation",
+              "skill_name": "Escalation & Conflict Resolution",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_field_ops",
+              "skill_name": "Field Operations Coordination",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "ops_network_basics",
+              "skill_name": "Basic Networking / ISP Knowledge",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.2,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "ops_data_analysis",
+              "skill_name": "Data Analysis (Excel/Sheets)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "ops_head": {
+          "role_title": "Head of Operations",
+          "seniority": "Manager",
+          "must_have_skills": [
+            {
+              "skill_id": "ops_strategic_ops",
+              "skill_name": "Strategic Operations Planning",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_partner_mgmt",
+              "skill_name": "LCO Partner Relationship Management",
+              "category": "Domain",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_team_mgmt",
+              "skill_name": "Team Management",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ops_reporting",
+              "skill_name": "Ops Reporting & Dashboards",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [],
+          "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "GROWTH": {
+      "roles": {
+        "growth_manager": {
+          "role_title": "Growth Manager",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "growth_lead_gen",
+              "skill_name": "Lead Generation & Pipeline",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "growth_onboarding",
+              "skill_name": "Customer Onboarding",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "growth_crm",
+              "skill_name": "CRM Usage (Kapture/Salesforce)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "growth_communication",
+              "skill_name": "Stakeholder Communication",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "growth_analytics",
+              "skill_name": "Growth Analytics & Metrics",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.2,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "PROD": {
+      "roles": {
+        "product_manager": {
+          "role_title": "Product Manager",
+          "seniority": "Manager",
+          "must_have_skills": [
+            {
+              "skill_id": "prod_roadmap",
+              "skill_name": "Product Roadmapping & Prioritisation",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_user_research",
+              "skill_name": "User Research & Discovery",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_data_driven",
+              "skill_name": "Data-Driven Decision Making",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_cross_fn",
+              "skill_name": "Cross-functional Collaboration",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "prod_technical",
+              "skill_name": "Technical Product Understanding",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.2,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "HR": {
+      "roles": {
+        "hr_manager": {
+          "role_title": "HR Manager",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "hr_talent_acq",
+              "skill_name": "Talent Acquisition & Hiring",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_perf_mgmt",
+              "skill_name": "Performance Management",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_lnd",
+              "skill_name": "Learning & Development",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_employee_engagement",
+              "skill_name": "Employee Engagement",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "hr_hris",
+              "skill_name": "HRIS / HR Tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "FIN": {
+      "roles": {
+        "finance_manager": {
+          "role_title": "Finance Manager",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "fin_financial_analysis",
+              "skill_name": "Financial Analysis & Reporting",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_accounting",
+              "skill_name": "Accounting & Compliance",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.8,
+              "strategic_priority": false,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_cash_flow",
+              "skill_name": "Cash Flow Management",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_excel",
+              "skill_name": "Advanced Excel / Sheets",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "fin_startup_finance",
+              "skill_name": "Startup Finance / Fundraising Basics",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.2,
+              "strategic_priority": false,
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        }
+      }
+    }
+  }
+}

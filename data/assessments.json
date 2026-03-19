@@ -1,1 +1,256 @@
-{"assessments": []}
+{
+  "assessments": [
+    {
+      "employee_id": "EMP002",
+      "function_code": "TECH",
+      "role_title": "Backend Engineer",
+      "role_slug": "backend_engineer",
+      "submitted_at": "2025-03-15T10:00:00",
+      "ratings": [
+        {
+          "skill_id": "tech_python_backend",
+          "skill_name": "Python / Backend Development",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_api_design",
+          "skill_name": "REST API Design",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_database",
+          "skill_name": "Database Management (SQL/NoSQL)",
+          "self_rating": 2,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "tech_problem_solving",
+          "skill_name": "Structured Problem Solving",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_system_design",
+          "skill_name": "System Design",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "tech_cloud",
+          "skill_name": "Cloud Infrastructure (GCP/AWS)",
+          "self_rating": 1,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "employee_id": "EMP005",
+      "function_code": "OPS",
+      "role_title": "LCO Partner Manager",
+      "role_slug": "lco_partner_manager",
+      "submitted_at": "2025-03-15T11:00:00",
+      "ratings": [
+        {
+          "skill_id": "ops_partner_mgmt",
+          "skill_name": "LCO Partner Relationship Management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "ops_sla_mgmt",
+          "skill_name": "SLA & KPI Management",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "ops_escalation",
+          "skill_name": "Escalation & Conflict Resolution",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "ops_field_ops",
+          "skill_name": "Field Operations Coordination",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "ops_network_basics",
+          "skill_name": "Basic Networking / ISP Knowledge",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "ops_data_analysis",
+          "skill_name": "Data Analysis (Excel/Sheets)",
+          "self_rating": 1,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "employee_id": "EMP006",
+      "function_code": "OPS",
+      "role_title": "LCO Partner Manager",
+      "role_slug": "lco_partner_manager",
+      "submitted_at": "2025-03-15T12:00:00",
+      "ratings": [
+        {
+          "skill_id": "ops_partner_mgmt",
+          "skill_name": "LCO Partner Relationship Management",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "ops_sla_mgmt",
+          "skill_name": "SLA & KPI Management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "ops_escalation",
+          "skill_name": "Escalation & Conflict Resolution",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "ops_field_ops",
+          "skill_name": "Field Operations Coordination",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "ops_network_basics",
+          "skill_name": "Basic Networking / ISP Knowledge",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "ops_data_analysis",
+          "skill_name": "Data Analysis (Excel/Sheets)",
+          "self_rating": 2,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "employee_id": "EMP008",
+      "function_code": "GROWTH",
+      "role_title": "Growth Manager",
+      "role_slug": "growth_manager",
+      "submitted_at": "2025-03-16T09:00:00",
+      "ratings": [
+        {
+          "skill_id": "growth_lead_gen",
+          "skill_name": "Lead Generation & Pipeline",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "growth_onboarding",
+          "skill_name": "Customer Onboarding",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "growth_crm",
+          "skill_name": "CRM Usage (Kapture/Salesforce)",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "growth_communication",
+          "skill_name": "Stakeholder Communication",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "growth_analytics",
+          "skill_name": "Growth Analytics & Metrics",
+          "self_rating": 1,
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "employee_id": "EMP011",
+      "function_code": "HR",
+      "role_title": "HR Manager",
+      "role_slug": "hr_manager",
+      "submitted_at": "2025-03-16T10:00:00",
+      "ratings": [
+        {
+          "skill_id": "hr_talent_acq",
+          "skill_name": "Talent Acquisition & Hiring",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "hr_perf_mgmt",
+          "skill_name": "Performance Management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "hr_lnd",
+          "skill_name": "Learning & Development",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "hr_employee_engagement",
+          "skill_name": "Employee Engagement",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "hr_hris",
+          "skill_name": "HRIS / HR Tools",
+          "self_rating": 2,
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "employee_id": "EMP012",
+      "function_code": "FIN",
+      "role_title": "Finance Manager",
+      "role_slug": "finance_manager",
+      "submitted_at": "2025-03-16T11:00:00",
+      "ratings": [
+        {
+          "skill_id": "fin_financial_analysis",
+          "skill_name": "Financial Analysis & Reporting",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "fin_accounting",
+          "skill_name": "Accounting & Compliance",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "fin_cash_flow",
+          "skill_name": "Cash Flow Management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_excel",
+          "skill_name": "Advanced Excel / Sheets",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "fin_startup_finance",
+          "skill_name": "Startup Finance / Fundraising Basics",
+          "self_rating": 1,
+          "confidence": "low"
+        }
+      ]
+    }
+  ]
+}
