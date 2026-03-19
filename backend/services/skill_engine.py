@@ -47,7 +47,8 @@ def get_employee_gaps(employee_id: str) -> list:
     mgr_map = {r["skill_id"]: r["self_rating"] for r in mgr_data["ratings"]} if mgr_data else {}
 
     fn_code = self_data["function_code"]
-    role_slug = _find_role_slug(self_data["role_title"], framework, fn_code)
+    role_slug = _find_role_slug(self_data["role_title"], framework, fn_code,
+                                self_data.get("role_slug", ""))
     if not role_slug:
         return []
 
@@ -75,9 +76,12 @@ def get_employee_gaps(employee_id: str) -> list:
     return sorted(gaps, key=lambda x: x["priority_score"], reverse=True)
 
 
-def _find_role_slug(role_title: str, framework: dict, fn_code: str) -> str:
-    slug = re.sub(r'[^a-z0-9]+', '_', role_title.lower()).strip('_')
+def _find_role_slug(role_title: str, framework: dict, fn_code: str, role_slug: str = "") -> str:
     roles = framework.get("functions", {}).get(fn_code, {}).get("roles", {})
+    # Use stored role_slug directly if valid
+    if role_slug and role_slug in roles:
+        return role_slug
+    slug = re.sub(r'[^a-z0-9]+', '_', role_title.lower()).strip('_')
     if slug in roles:
         return slug
     # fuzzy: find closest match
