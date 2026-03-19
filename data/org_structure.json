@@ -1,51 +1,111 @@
 {
   "_meta": {
     "description": "Wiom org structure",
-    "last_updated": "2026-03-19",
-    "total_headcount": 15
+    "last_updated": "2026-03-01T00:00:00Z",
+    "total_headcount": 53
   },
   "functions": [
     {
-      "function_code": "TECH",
-      "function_name": "Technology & Engineering",
-      "head_count": 4,
-      "manager_count": 1,
-      "ic_count": 3
+      "code": "TECH",
+      "name": "TECH",
+      "headcount": 5,
+      "managers": 2
     },
     {
-      "function_code": "OPS",
-      "function_name": "Operations",
-      "head_count": 4,
-      "manager_count": 1,
-      "ic_count": 3
+      "code": "PROD",
+      "name": "PROD",
+      "headcount": 5,
+      "managers": 3
     },
     {
-      "function_code": "GROWTH",
-      "function_name": "Growth & Sales",
-      "head_count": 3,
-      "manager_count": 1,
-      "ic_count": 2
+      "code": "FIN",
+      "name": "FIN",
+      "headcount": 2,
+      "managers": 0
     },
     {
-      "function_code": "PROD",
-      "function_name": "Product",
-      "head_count": 2,
-      "manager_count": 1,
-      "ic_count": 1
+      "code": "EXE",
+      "name": "EXE",
+      "headcount": 5,
+      "managers": 2
     },
     {
-      "function_code": "HR",
-      "function_name": "Human Resources",
-      "head_count": 1,
-      "manager_count": 0,
-      "ic_count": 1
+      "code": "USER_INS",
+      "name": "USER_INS",
+      "headcount": 2,
+      "managers": 1
     },
     {
-      "function_code": "FIN",
-      "function_name": "Finance",
-      "head_count": 1,
-      "manager_count": 0,
-      "ic_count": 1
+      "code": "HR",
+      "name": "HR",
+      "headcount": 3,
+      "managers": 1
+    },
+    {
+      "code": "LABS",
+      "name": "LABS",
+      "headcount": 2,
+      "managers": 1
+    },
+    {
+      "code": "TECH_FUT",
+      "name": "TECH_FUT",
+      "headcount": 3,
+      "managers": 1
+    },
+    {
+      "code": "MKT",
+      "name": "MKT",
+      "headcount": 3,
+      "managers": 1
+    },
+    {
+      "code": "CX",
+      "name": "CX",
+      "headcount": 5,
+      "managers": 2
+    },
+    {
+      "code": "SUPPLY",
+      "name": "SUPPLY",
+      "headcount": 4,
+      "managers": 1
+    },
+    {
+      "code": "FOUNDERS",
+      "name": "FOUNDERS",
+      "headcount": 2,
+      "managers": 0
+    },
+    {
+      "code": "SOL_DESIGN",
+      "name": "SOL_DESIGN",
+      "headcount": 3,
+      "managers": 1
+    },
+    {
+      "code": "ANALYTICS",
+      "name": "ANALYTICS",
+      "headcount": 3,
+      "managers": 1
+    },
+    {
+      "code": "COMMS",
+      "name": "COMMS",
+      "headcount": 2,
+      "managers": 1
+    },
+    {
+      "code": "LND",
+      "name": "LND",
+      "headcount": 2,
+      "managers": 1
+    },
+    {
+      "code": "BIZ",
+      "name": "BIZ",
+      "headcount": 2,
+      "managers": 1
     }
   ]
 }

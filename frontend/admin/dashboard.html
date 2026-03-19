@@ -301,7 +301,7 @@
     function renderStats(heat) {
       document.getElementById('stat-assessed').textContent = heat.assessed_count ?? '—';
       document.getElementById('stat-total').textContent = heat.total_count ?? '—';
-      const allGaps = Object.values(heat.matrix || {}).flatMap(obj => Object.values(obj)).filter(v => v > 0);
+      const allGaps = Object.values(heat.matrix || {}).flatMap(obj => Object.values(obj)).filter(v => v !== null && v !== undefined && v > 0);
       const avg = allGaps.length ? (allGaps.reduce((a,b)=>a+b,0)/allGaps.length).toFixed(1) : '0';
       document.getElementById('stat-avg-gap').textContent = avg;
       document.getElementById('stat-critical').textContent = allGaps.filter(v => v >= 2).length;
@@ -319,10 +319,17 @@
         html += `<div class="heatmap-row" style="${gridStyle}">
           <div class="heatmap-fn-label">${fn}</div>
           ${CATS.map(cat => {
-            const val = fnData[cat] || 0;
+            const raw = fnData[cat];
+            const hasData = raw !== undefined && raw !== null;
+            const val = hasData ? raw : null;
+            if (!hasData) {
+              // No skills mapped for this function × category
+              return `<div class="heatmap-cell" style="background:rgba(46,34,69,0.4);color:var(--border);cursor:default" title="No ${cat} skills mapped for ${fn}">—</div>`;
+            }
             const bg = gapColor(val);
             const tc = val > 1 ? '#fff' : (val > 0.5 ? '#eee' : '#9B89B0');
-            return `<div class="heatmap-cell" style="background:${bg};color:${tc}" onclick="openPanel('${fn}','${cat}')" title="${fn}·${cat}: ${val}">${val > 0 ? val.toFixed(1) : '·'}</div>`;
+            const label = val > 0 ? val.toFixed(1) : '✓';
+            return `<div class="heatmap-cell" style="background:${bg};color:${tc}" onclick="openPanel('${fn}','${cat}')" title="${fn} · ${cat}: ${val.toFixed(1)}">${label}</div>`;
           }).join('')}
         </div>`;
       });

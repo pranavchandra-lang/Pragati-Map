@@ -143,11 +143,28 @@
 
     async function loadEmployee() {
       if (!empId) { showError(); return; }
+
+      // If no admin key in session, prompt for it before making API calls
+      if (!adminKey) {
+        const key = prompt('Admin password दर्ज करें:');
+        if (!key) { showError(); return; }
+        adminKey = key;
+        sessionStorage.setItem('wiom_admin_key', key);
+      }
+
       try {
         const [empRes, gapRes] = await Promise.all([
           fetch('/api/v1/admin/employees', {headers: headers()}),
           fetch(`/api/v1/admin/gaps/${empId}`, {headers: headers()}),
         ]);
+
+        // If key was wrong, clear it and show error
+        if (empRes.status === 403) {
+          sessionStorage.removeItem('wiom_admin_key');
+          adminKey = '';
+          showError('Admin password गलत है। Dashboard पर वापस जाएं।');
+          return;
+        }
 
         const empData = await empRes.json();
         const employee = (empData.employees || []).find(e => e.employee_id === empId);
@@ -352,8 +369,9 @@
       document.getElementById(contentMap[name])?.classList.add('active');
     }
 
-    function showError() {
+    function showError(msg) {
       document.getElementById('loading').classList.add('hidden');
+      if (msg) document.querySelector('#error-state .alert').textContent = msg;
       document.getElementById('error-state').classList.remove('hidden');
     }
 

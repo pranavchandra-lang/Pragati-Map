@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "last_updated": "2026-03-19"
+    "last_updated": "2026-03-01T00:00:00Z"
   },
   "functions": {
     "PROD": {
@@ -798,6 +798,26 @@
               "strategic_priority": false,
               "rationale": "Ownership culture",
               "type": "must_have"
+            },
+            {
+              "skill_id": "tech_engineering_strategy",
+              "skill_name": "Engineering roadmap & strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_team_growth",
+              "skill_name": "Team capability building",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
             }
           ],
           "good_to_have_skills": [
@@ -1116,6 +1136,26 @@
               "strategic_priority": false,
               "rationale": "Self-serve analytics",
               "type": "must_have"
+            },
+            {
+              "skill_id": "tech_engineering_strategy",
+              "skill_name": "Engineering roadmap & strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_team_growth",
+              "skill_name": "Team capability building",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
             }
           ],
           "good_to_have_skills": [
@@ -1285,6 +1325,26 @@
               "strategic_priority": false,
               "rationale": "Data protection",
               "type": "must_have"
+            },
+            {
+              "skill_id": "tech_engineering_strategy",
+              "skill_name": "Engineering roadmap & strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_team_growth",
+              "skill_name": "Team capability building",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
             }
           ],
           "good_to_have_skills": [
@@ -1379,16 +1439,6 @@
           "role_title": "Record to Report (R2R)",
           "seniority": "IC",
           "must_have_skills": [
-            {
-              "skill_id": "fin_ca_qualification",
-              "skill_name": "CA qualification",
-              "category": "Technical",
-              "expected_level": 4,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "rationale": "Baseline",
-              "type": "must_have"
-            },
             {
               "skill_id": "fin_month_end_close",
               "skill_name": "Month-end close",
@@ -1553,6 +1603,2958 @@
             }
           ],
           "skill_gaps_to_watch": []
+        }
+      }
+    },
+    "EXE": {
+      "roles": {
+        "execution_manager": {
+          "role_title": "Execution Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "exe_project_tracking",
+              "skill_name": "Project tracking (Jira/Asana)",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_kpi_dashboards",
+              "skill_name": "KPI dashboard management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_sop_development",
+              "skill_name": "SOP development",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_cross_fn_coord",
+              "skill_name": "Cross-functional coordination",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_prioritization",
+              "skill_name": "Prioritization under pressure",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_stakeholder_mgmt",
+              "skill_name": "Stakeholder management",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_lco_knowledge",
+              "skill_name": "LCO partner operations",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_okr_execution",
+              "skill_name": "OKR setting and execution",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_business_planning",
+              "skill_name": "Business planning",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "exe_process_automation",
+              "skill_name": "Process automation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "exe_change_mgmt",
+              "skill_name": "Change management",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "operations_analyst": {
+          "role_title": "Operations Analyst",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "exe_project_tracking",
+              "skill_name": "Project tracking (Jira/Asana)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_kpi_dashboards",
+              "skill_name": "KPI dashboard management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_sop_development",
+              "skill_name": "SOP development",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_cross_fn_coord",
+              "skill_name": "Cross-functional coordination",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_prioritization",
+              "skill_name": "Prioritization under pressure",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_lco_knowledge",
+              "skill_name": "LCO partner operations",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "exe_regulatory_compliance",
+              "skill_name": "Regulatory compliance basics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "exe_data_analysis",
+              "skill_name": "Data analysis (Excel/Sheets)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "exe_stakeholder_mgmt",
+              "skill_name": "Stakeholder communication",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "CX": {
+      "roles": {
+        "cx_team_lead": {
+          "role_title": "CX Team Lead",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "cx_crm_tools",
+              "skill_name": "CRM tools (Freshdesk/Zoho)",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_sla_tracking",
+              "skill_name": "SLA tracking and reporting",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_nps_measurement",
+              "skill_name": "NPS measurement",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_customer_empathy",
+              "skill_name": "Customer empathy",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_conflict_resolution",
+              "skill_name": "Conflict resolution",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_team_coaching",
+              "skill_name": "Team coaching",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_isp_service",
+              "skill_name": "ISP service knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_escalation_protocols",
+              "skill_name": "Escalation protocols",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_nps_strategy",
+              "skill_name": "NPS improvement strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_retention_planning",
+              "skill_name": "Customer retention planning",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "cx_multilingual",
+              "skill_name": "Multilingual support",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "cx_cx_roadmap",
+              "skill_name": "CX roadmap ownership",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "customer_support_exec": {
+          "role_title": "Customer Support Executive",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "cx_crm_tools",
+              "skill_name": "CRM tools (Freshdesk/Zoho)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_ticket_management",
+              "skill_name": "Ticket management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_sla_tracking",
+              "skill_name": "SLA tracking",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_customer_empathy",
+              "skill_name": "Customer empathy",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_conflict_resolution",
+              "skill_name": "Conflict resolution",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_written_communication",
+              "skill_name": "Written communication",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_isp_service",
+              "skill_name": "ISP service knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "cx_broadband_basics",
+              "skill_name": "Broadband troubleshooting basics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "cx_multilingual",
+              "skill_name": "Multilingual support",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "cx_upsell",
+              "skill_name": "Upselling and retention",
+              "category": "Domain",
+              "expected_level": 1,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "MKT": {
+      "roles": {
+        "marketing_manager": {
+          "role_title": "Marketing Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "mkt_digital_tools",
+              "skill_name": "Digital marketing (Meta/Google Ads)",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_marketing_analytics",
+              "skill_name": "Marketing analytics",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_content_management",
+              "skill_name": "Content management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_creative_thinking",
+              "skill_name": "Creative thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_brand_consistency",
+              "skill_name": "Brand consistency",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_copywriting",
+              "skill_name": "Copywriting",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_isp_market",
+              "skill_name": "ISP consumer market knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_go_to_market",
+              "skill_name": "Go-to-market strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_growth_marketing",
+              "skill_name": "Growth marketing strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "mkt_seo_sem",
+              "skill_name": "SEO/SEM",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "mkt_brand_strategy",
+              "skill_name": "Brand strategy",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "marketing_executive": {
+          "role_title": "Marketing Executive",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "mkt_digital_tools",
+              "skill_name": "Digital marketing (Meta/Google Ads)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_marketing_analytics",
+              "skill_name": "Marketing analytics",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_content_management",
+              "skill_name": "Content management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_creative_thinking",
+              "skill_name": "Creative thinking",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_brand_consistency",
+              "skill_name": "Brand consistency",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_copywriting",
+              "skill_name": "Copywriting",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_isp_market",
+              "skill_name": "ISP consumer market knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "mkt_competitive_pos",
+              "skill_name": "Competitive positioning",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "mkt_seo_sem",
+              "skill_name": "SEO/SEM",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "mkt_video_editing",
+              "skill_name": "Video editing",
+              "category": "Technical",
+              "expected_level": 1,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "SUPPLY": {
+      "roles": {
+        "supply_manager": {
+          "role_title": "Supply Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "supply_procurement",
+              "skill_name": "Procurement systems",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_vendor_mgmt",
+              "skill_name": "Vendor management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_inventory",
+              "skill_name": "Inventory control",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_negotiation",
+              "skill_name": "Negotiation skills",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_attention_detail",
+              "skill_name": "Attention to detail",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_telecom_hw",
+              "skill_name": "Telecom hardware knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_lco_chain",
+              "skill_name": "LCO supply chain",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_cost_optimization",
+              "skill_name": "Cost optimization strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_supplier_strategy",
+              "skill_name": "Supplier diversification strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "supply_erp",
+              "skill_name": "ERP systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "supply_import_export",
+              "skill_name": "Import/export regulations",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "procurement_executive": {
+          "role_title": "Procurement Executive",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "supply_procurement",
+              "skill_name": "Procurement systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_vendor_mgmt",
+              "skill_name": "Vendor management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_inventory",
+              "skill_name": "Inventory control",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_negotiation",
+              "skill_name": "Negotiation skills",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_attention_detail",
+              "skill_name": "Attention to detail",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_process_adherence",
+              "skill_name": "Process adherence",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_telecom_hw",
+              "skill_name": "Telecom hardware knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "supply_lco_chain",
+              "skill_name": "LCO supply chain",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "supply_erp",
+              "skill_name": "ERP systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "supply_supplier_rel",
+              "skill_name": "Supplier relationship management",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "HR": {
+      "roles": {
+        "hr_manager": {
+          "role_title": "HR Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "hr_hris",
+              "skill_name": "HRIS tools",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_payroll",
+              "skill_name": "Payroll systems",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_perf_tools",
+              "skill_name": "Performance management tools",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_empathy",
+              "skill_name": "Empathy and discretion",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_conflict_mediation",
+              "skill_name": "Conflict mediation",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_labour_law",
+              "skill_name": "Indian labour law",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_talent_market",
+              "skill_name": "Talent market knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_people_strategy",
+              "skill_name": "People strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_culture_building",
+              "skill_name": "Culture building",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "hr_ats",
+              "skill_name": "ATS (applicant tracking)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "hr_org_design",
+              "skill_name": "Organizational design",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "hr_executive": {
+          "role_title": "HR Executive",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "hr_hris",
+              "skill_name": "HRIS tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_payroll",
+              "skill_name": "Payroll systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_empathy",
+              "skill_name": "Empathy and discretion",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_communication",
+              "skill_name": "Communication and facilitation",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_labour_law",
+              "skill_name": "Indian labour law",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "hr_compliance",
+              "skill_name": "HR compliance",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "hr_talent_market",
+              "skill_name": "Talent market knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "hr_ats",
+              "skill_name": "ATS (applicant tracking)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "ANALYTICS": {
+      "roles": {
+        "analytics_lead": {
+          "role_title": "Analytics Lead",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "analytics_sql",
+              "skill_name": "SQL (advanced)",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_python_r",
+              "skill_name": "Python / R for analysis",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_bi_tools",
+              "skill_name": "BI tools (Tableau/Power BI/Metabase)",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_problem_solving",
+              "skill_name": "Problem solving",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_insight_comm",
+              "skill_name": "Communication of insights",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_telecom_data",
+              "skill_name": "Telecom data analysis",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_funnel",
+              "skill_name": "Funnel analytics",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_data_strategy",
+              "skill_name": "Data strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_roadmap",
+              "skill_name": "Analytics roadmap ownership",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "analytics_ml",
+              "skill_name": "ML fundamentals",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "analytics_pipeline",
+              "skill_name": "Data pipeline management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "data_analyst": {
+          "role_title": "Data Analyst",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "analytics_sql",
+              "skill_name": "SQL (advanced)",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_python_r",
+              "skill_name": "Python / R for analysis",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_bi_tools",
+              "skill_name": "BI tools (Tableau/Power BI/Metabase)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_problem_solving",
+              "skill_name": "Problem solving",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_insight_comm",
+              "skill_name": "Communication of insights",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_attention_quality",
+              "skill_name": "Attention to data quality",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_telecom_data",
+              "skill_name": "Telecom data analysis",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "analytics_funnel",
+              "skill_name": "Funnel analytics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "analytics_ml",
+              "skill_name": "ML fundamentals",
+              "category": "Technical",
+              "expected_level": 1,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "analytics_customer_behavior",
+              "skill_name": "Customer behavior modeling",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "SOL_DESIGN": {
+      "roles": {
+        "solution_architect": {
+          "role_title": "Solution Architect",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "sol_network_design",
+              "skill_name": "Network architecture design",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_isp_infra",
+              "skill_name": "ISP infrastructure design",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_solution_costing",
+              "skill_name": "Solution costing",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_client_comm",
+              "skill_name": "Client communication",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_problem_solving",
+              "skill_name": "Technical problem solving",
+              "category": "Behavioural",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_isp_solutions",
+              "skill_name": "ISP technical solutions",
+              "category": "Domain",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_lco_integration",
+              "skill_name": "LCO integration knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_solution_strategy",
+              "skill_name": "Solution strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_pricing_models",
+              "skill_name": "Pricing models",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "sol_technical_docs",
+              "skill_name": "Technical documentation",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "sol_partnership_dev",
+              "skill_name": "Partnership development",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "network_engineer": {
+          "role_title": "Network Engineer",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "sol_network_design",
+              "skill_name": "Network architecture design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_isp_infra",
+              "skill_name": "ISP infrastructure design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_solution_costing",
+              "skill_name": "Solution costing",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_technical_docs",
+              "skill_name": "Technical documentation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_problem_solving",
+              "skill_name": "Technical problem solving",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_isp_solutions",
+              "skill_name": "ISP technical solutions",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_lco_integration",
+              "skill_name": "LCO integration knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "sol_bandwidth_planning",
+              "skill_name": "Bandwidth planning",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "sol_client_comm",
+              "skill_name": "Client communication",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "USER_INS": {
+      "roles": {
+        "user_insights_lead": {
+          "role_title": "User Insights Lead",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "ui_research_methods",
+              "skill_name": "User research methods",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_survey_design",
+              "skill_name": "Survey design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_usability_testing",
+              "skill_name": "Usability testing",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_empathy",
+              "skill_name": "User empathy",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_analytical_thinking",
+              "skill_name": "Analytical thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_isp_user_behavior",
+              "skill_name": "ISP user behavior patterns",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_research_strategy",
+              "skill_name": "Research strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_insight_to_action",
+              "skill_name": "Insight-to-action frameworks",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "ui_data_tools",
+              "skill_name": "Data analysis tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "ui_stakeholder_comm",
+              "skill_name": "Stakeholder communication",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "ux_researcher": {
+          "role_title": "UX Researcher",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "ui_research_methods",
+              "skill_name": "User research methods",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_survey_design",
+              "skill_name": "Survey design",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_usability_testing",
+              "skill_name": "Usability testing",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_empathy",
+              "skill_name": "User empathy",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_analytical_thinking",
+              "skill_name": "Analytical thinking",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "ui_isp_user_behavior",
+              "skill_name": "ISP user behavior patterns",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "ui_data_tools",
+              "skill_name": "Data analysis tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "FOUNDERS": {
+      "roles": {
+        "strategy_associate": {
+          "role_title": "Strategy Associate",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "founders_biz_analysis",
+              "skill_name": "Business analysis",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_financial_modeling",
+              "skill_name": "Financial modeling",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_planning_tools",
+              "skill_name": "Strategic planning tools",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_exec_presence",
+              "skill_name": "Executive presence",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_cross_fn",
+              "skill_name": "Cross-functional influence",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_startup_ops",
+              "skill_name": "Startup operations",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_investor_rel",
+              "skill_name": "Investor relations basics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_company_strategy",
+              "skill_name": "Company strategy alignment",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "founders_growth_strategy",
+              "skill_name": "Growth strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "founders_board_reporting",
+              "skill_name": "Board reporting",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "founders_fundraising",
+              "skill_name": "Fundraising narrative",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "LND": {
+      "roles": {
+        "lnd_manager": {
+          "role_title": "L&D Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "lnd_lms",
+              "skill_name": "LMS tools",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_instructional_design",
+              "skill_name": "Instructional design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_needs_analysis",
+              "skill_name": "Training needs analysis",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_facilitation",
+              "skill_name": "Facilitation skills",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_adult_learning",
+              "skill_name": "Adult learning principles",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_content_dev",
+              "skill_name": "Content development",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_skills_taxonomy",
+              "skill_name": "Skill taxonomy design",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_training_roi",
+              "skill_name": "Training ROI measurement",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_strategy",
+              "skill_name": "L&D strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_gap_priority",
+              "skill_name": "Skills gap prioritization",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "lnd_learning_culture",
+              "skill_name": "Learning culture building",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "lnd_eval_tools",
+              "skill_name": "Assessment/evaluation tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "lnd_coordinator": {
+          "role_title": "L&D Coordinator",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "lnd_lms",
+              "skill_name": "LMS tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_instructional_design",
+              "skill_name": "Instructional design",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_needs_analysis",
+              "skill_name": "Training needs analysis",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_facilitation",
+              "skill_name": "Facilitation skills",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_adult_learning",
+              "skill_name": "Adult learning principles",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_content_dev",
+              "skill_name": "Content development",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "lnd_training_roi",
+              "skill_name": "Training ROI measurement",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "lnd_eval_tools",
+              "skill_name": "Assessment/evaluation tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "COMMS": {
+      "roles": {
+        "comms_manager": {
+          "role_title": "Communications Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "comms_pr_tools",
+              "skill_name": "PR and media tools",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_cms",
+              "skill_name": "Content management systems",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_social_media",
+              "skill_name": "Social media management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_writing",
+              "skill_name": "Writing and editing",
+              "category": "Behavioural",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_brand_voice",
+              "skill_name": "Brand voice consistency",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_media_relations",
+              "skill_name": "Media relations",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_isp_industry",
+              "skill_name": "ISP industry communications",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_strategy",
+              "skill_name": "Communications strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_brand_narrative",
+              "skill_name": "Brand narrative",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "comms_crisis",
+              "skill_name": "Crisis communication",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "comms_regulatory_pr",
+              "skill_name": "Regulatory PR",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "content_writer": {
+          "role_title": "Content Writer",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "comms_cms",
+              "skill_name": "Content management systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_social_media",
+              "skill_name": "Social media management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_writing",
+              "skill_name": "Writing and editing",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_brand_voice",
+              "skill_name": "Brand voice consistency",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "comms_isp_industry",
+              "skill_name": "ISP industry communications",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "comms_pr_tools",
+              "skill_name": "PR and media tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "comms_crisis",
+              "skill_name": "Crisis communication",
+              "category": "Domain",
+              "expected_level": 1,
+              "business_criticality_weight": 0.8,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "LABS": {
+      "roles": {
+        "labs_lead": {
+          "role_title": "Labs Lead",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "labs_prototyping",
+              "skill_name": "Rapid prototyping",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_research_methods",
+              "skill_name": "Research methodology",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_tech_eval",
+              "skill_name": "Technology evaluation",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_innovation",
+              "skill_name": "Innovation mindset",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_hypothesis",
+              "skill_name": "Hypothesis-driven thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_emerging_tech",
+              "skill_name": "Emerging ISP technology",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_product_innovation",
+              "skill_name": "Product innovation",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_innovation_strategy",
+              "skill_name": "Innovation strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_tech_roadmap",
+              "skill_name": "Technology roadmap",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "labs_api",
+              "skill_name": "API integration",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "labs_digital_transformation",
+              "skill_name": "Digital transformation",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "labs_researcher": {
+          "role_title": "Research Engineer",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "labs_prototyping",
+              "skill_name": "Rapid prototyping",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_research_methods",
+              "skill_name": "Research methodology",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_tech_eval",
+              "skill_name": "Technology evaluation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_innovation",
+              "skill_name": "Innovation mindset",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_hypothesis",
+              "skill_name": "Hypothesis-driven thinking",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_emerging_tech",
+              "skill_name": "Emerging ISP technology",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "labs_product_innovation",
+              "skill_name": "Product innovation",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "labs_api",
+              "skill_name": "API integration",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "TECH_FUT": {
+      "roles": {
+        "tech_future_architect": {
+          "role_title": "Future Tech Architect",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "techfut_cloud",
+              "skill_name": "Cloud architecture",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_systems_design",
+              "skill_name": "Systems design",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_devops",
+              "skill_name": "DevOps practices",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_learning_agility",
+              "skill_name": "Learning agility",
+              "category": "Behavioural",
+              "expected_level": 4,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_systems_thinking",
+              "skill_name": "Systems thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_next_gen",
+              "skill_name": "Next-gen ISP technology (5G/fiber)",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_digital_infra",
+              "skill_name": "Digital infrastructure",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_tech_strategy",
+              "skill_name": "Technology strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_future_proofing",
+              "skill_name": "Future-proofing architecture",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "techfut_ai_ml",
+              "skill_name": "AI/ML fundamentals",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "techfut_mentoring",
+              "skill_name": "Technical mentoring",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "cloud_engineer": {
+          "role_title": "Cloud Engineer",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "techfut_cloud",
+              "skill_name": "Cloud architecture",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_systems_design",
+              "skill_name": "Systems design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_devops",
+              "skill_name": "DevOps practices",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_learning_agility",
+              "skill_name": "Learning agility",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_systems_thinking",
+              "skill_name": "Systems thinking",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_next_gen",
+              "skill_name": "Next-gen ISP technology (5G/fiber)",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "techfut_digital_infra",
+              "skill_name": "Digital infrastructure",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "techfut_ai_ml",
+              "skill_name": "AI/ML fundamentals",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        }
+      }
+    },
+    "BIZ": {
+      "roles": {
+        "business_development_manager": {
+          "role_title": "Business Development Manager",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "biz_crm",
+              "skill_name": "CRM systems",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_pitch_decks",
+              "skill_name": "Pitch deck development",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_negotiation",
+              "skill_name": "Negotiation",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_relationship",
+              "skill_name": "Relationship building",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_pitching",
+              "skill_name": "Pitching and presentation",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_isp_market",
+              "skill_name": "ISP market knowledge",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_partner_ecosystem",
+              "skill_name": "Partner/channel ecosystem",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_revenue_strategy",
+              "skill_name": "Revenue strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_market_expansion",
+              "skill_name": "Market expansion strategy",
+              "category": "Strategic",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": true,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "biz_contract_mgmt",
+              "skill_name": "Contract management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "biz_partnership_strategy",
+              "skill_name": "Partnership strategy",
+              "category": "Strategic",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
+        },
+        "biz_dev_executive": {
+          "role_title": "Business Development Executive",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "biz_crm",
+              "skill_name": "CRM systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_pitch_decks",
+              "skill_name": "Pitch deck development",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_negotiation",
+              "skill_name": "Negotiation",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_relationship",
+              "skill_name": "Relationship building",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_pitching",
+              "skill_name": "Pitching and presentation",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_isp_market",
+              "skill_name": "ISP market knowledge",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "biz_partner_ecosystem",
+              "skill_name": "Partner/channel ecosystem",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 2.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "biz_contract_mgmt",
+              "skill_name": "Contract management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "biz_revenue_models",
+              "skill_name": "Revenue models understanding",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ]
         }
       }
     }

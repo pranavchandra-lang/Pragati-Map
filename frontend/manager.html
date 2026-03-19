@@ -66,17 +66,17 @@
     <!-- Step 1: Manager login -->
     <div id="step-login" class="active">
       <div class="page-header">
-        <h1>Team को Rate करें</h1>
-        <p class="mt-8">अपना नाम डालें और अपनी team के assessments देखें</p>
+        <h1>Rate Your Team</h1>
+        <p class="mt-8">Enter your name to see your team's assessments</p>
       </div>
 
       <div class="card" style="max-width:440px;margin:0 auto">
         <div id="login-error" class="alert alert-error hidden mb-16"></div>
         <div class="form-group">
-          <label>आपका नाम (जैसा Wiom में register है)</label>
+          <label>Your name (as registered in Wiom)</label>
           <input type="text" id="manager-name" placeholder="e.g. Pranav Chandra" autocomplete="off">
         </div>
-        <button class="btn btn-primary btn-full" onclick="loadDirects()">Team देखें →</button>
+        <button class="btn btn-primary btn-full" onclick="loadDirects()">View Team →</button>
       </div>
     </div>
 
@@ -103,32 +103,32 @@
       </div>
 
       <div class="alert alert-info mb-16">
-        <strong>Side-by-side देखें:</strong> बाईं तरफ employee का self-assessment, दाईं तरफ आपकी rating।
+        <strong>Side-by-side view:</strong> Employee's self-assessment on the left, your rating on the right.
       </div>
 
       <div id="compare-container"></div>
 
       <div class="form-group mt-16">
         <label>Coaching Notes (optional)</label>
-        <textarea id="coaching-notes" placeholder="इस employee के बारे में कोई specific note..."></textarea>
+        <textarea id="coaching-notes" placeholder="Any specific notes about this employee..."></textarea>
       </div>
 
-      <button class="btn btn-primary btn-full" onclick="submitRating()">Rating Save करें</button>
+      <button class="btn btn-primary btn-full" onclick="submitRating()">Save Rating</button>
     </div>
 
     <!-- Step 4: Done + coaching starters -->
     <div id="step-done">
       <div style="text-align:center;padding:32px 0 24px">
         <div style="font-size:48px;margin-bottom:12px">✅</div>
-        <h1>Rating Save हो गई!</h1>
-        <p class="mt-8">यहाँ हैं 1:1 के लिए coaching conversation starters:</p>
+        <h1>Rating Saved!</h1>
+        <p class="mt-8">Here are coaching conversation starters for your 1:1:</p>
       </div>
 
       <div id="coaching-starters-container"></div>
 
       <div class="mt-24 flex gap-12" style="justify-content:center;flex-wrap:wrap">
-        <button class="btn btn-ghost" onclick="rateNextEmployee()">अगला Employee →</button>
-        <a href="/" class="btn btn-secondary">Home पर जाएं</a>
+        <button class="btn btn-ghost" onclick="rateNextEmployee()">Next Employee →</button>
+        <a href="/" class="btn btn-secondary">Back to Home</a>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
     let currentEmployee = null;
     let currentSelfRatings = [];
 
-    const LEVEL_LABELS = ['', 'पहचान', 'सीख रहा/रही हूं', 'खुद कर सकता/सकती हूं', 'दूसरों को सिखा सकता/सकती हूं'];
+    const LEVEL_LABELS = ['', 'Awareness', 'Working', 'Practitioner', 'Expert'];
     const LEVEL_ENG = ['', 'Awareness', 'Working', 'Practitioner', 'Expert'];
 
     async function loadDirects() {
@@ -152,7 +152,7 @@
         const res = await fetch(`/api/v1/manager/directs/${encodeURIComponent(name)}`);
         if (!res.ok) {
           const err = await res.json();
-          errEl.textContent = err.detail || 'आपके नाम से कोई team नहीं मिली।';
+          errEl.textContent = err.detail || 'No team found for this name.';
           errEl.classList.remove('hidden');
           return;
         }
@@ -161,7 +161,7 @@
         directs = data.directs;
         renderDirects();
       } catch (e) {
-        errEl.textContent = 'Server error। दोबारा try करें।';
+        errEl.textContent = 'Server error. Please try again.';
         errEl.classList.remove('hidden');
       }
     }
@@ -169,7 +169,7 @@
     function renderDirects() {
       document.getElementById('step-login').classList.remove('active');
       document.getElementById('step-directs').classList.add('active');
-      document.getElementById('directs-title').textContent = `${managerName} की Team`;
+      document.getElementById('directs-title').textContent = `${managerName}'s Team`;
       document.getElementById('directs-count').textContent = `${directs.length} direct reports`;
 
       const list = document.getElementById('directs-list');
@@ -204,7 +204,7 @@
         currentSelfRatings = data.self_ratings || [];
         renderRatingForm(emp, data);
       } catch (e) {
-        alert('Form load नहीं हुआ। दोबारा try करें।');
+        alert('Could not load form. Please try again.');
       }
     }
 
@@ -225,7 +225,7 @@
 
       if (!data.assessment_complete) {
         container.innerHTML = `<div class="alert alert-error">
-          इस employee ने अभी self-assessment submit नहीं किया। पहले उनसे करवाएं।
+          This employee hasn't submitted their self-assessment yet. Ask them to complete it first.
         </div>`;
         document.querySelector('#step-rate .btn-primary').disabled = true;
         return;
@@ -241,14 +241,14 @@
           <div class="skill-name">${sr.skill_name}</div>
           <div class="compare-grid">
             <div>
-              <div class="compare-col-header">Employee का नज़रिया</div>
+              <div class="compare-col-header">Employee's View</div>
               <div class="self-score-display">
                 <span class="score-val">${sr.self_rating}</span>
                 <span>${LEVEL_LABELS[sr.self_rating] || ''}</span>
               </div>
             </div>
             <div>
-              <div class="compare-col-header">आपका आकलन</div>
+              <div class="compare-col-header">Your Assessment</div>
               <div class="rating-options" style="grid-template-columns:repeat(4,1fr)">
                 ${[1,2,3,4].map(n => `
                   <div class="rating-option">
@@ -280,7 +280,7 @@
 
       const btn = document.querySelector('#step-rate .btn-primary');
       btn.disabled = true;
-      btn.textContent = 'Save हो रहा है...';
+      btn.textContent = 'Saving...';
 
       try {
         const res = await fetch('/api/v1/manager/rate', {
@@ -301,8 +301,8 @@
         if (idx >= 0) directs[idx].manager_rating_status = 'submitted';
       } catch (e) {
         btn.disabled = false;
-        btn.textContent = 'Rating Save करें';
-        alert('Save नहीं हुआ। दोबारा try करें।');
+        btn.textContent = 'Save Rating';
+        alert('Save failed. Please try again.');
       }
     }
 
@@ -321,7 +321,7 @@
       });
 
       if (starters.length === 0) {
-        container.innerHTML = `<div class="alert alert-info">Rating save हो गई। Gaps available होने पर coaching prompts दिखेंगे।</div>`;
+        container.innerHTML = `<div class="alert alert-info">Rating saved. Coaching prompts will appear once gaps are available.</div>`;
       }
     }
 

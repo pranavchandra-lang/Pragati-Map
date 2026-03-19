@@ -1,36 +1,3448 @@
 {
   "ratings": [
     {
-      "manager_id": "Rahul Sharma",
-      "employee_id": "EMP002",
-      "submitted_at": "2025-03-16T14:00:00",
-      "coaching_notes": "Priya shows good analytical thinking but needs to level up on system design. Pair her with senior engineer for 1:1 mentoring.",
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP001",
       "ratings": [
         {
-          "skill_id": "tech_python_backend",
-          "skill_name": "Python / Backend Development",
-          "self_rating": 2,
-          "confidence": "high"
+          "skill_id": "tech_system_design",
+          "skill_name": "System Design",
+          "self_rating": 2
         },
         {
-          "skill_id": "tech_api_design",
-          "skill_name": "REST API Design",
-          "self_rating": 2,
-          "confidence": "medium"
+          "skill_id": "tech_core_java",
+          "skill_name": "Core Java",
+          "self_rating": 3
         },
         {
-          "skill_id": "tech_database",
-          "skill_name": "Database Management (SQL/NoSQL)",
-          "self_rating": 2,
-          "confidence": "high"
+          "skill_id": "tech_microservices",
+          "skill_name": "Microservices",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_jvm_multithreading",
+          "skill_name": "JVM & Multithreading",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_docker_kubernetes",
+          "skill_name": "Docker & Kubernetes",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_debugging",
+          "skill_name": "Debugging",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "tech_message_brokers",
+          "skill_name": "Message brokers",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_nosql_dbs",
+          "skill_name": "NoSQL DBs",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_cloud_aws_gcp",
+          "skill_name": "Cloud (AWS/GCP)",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "tech_technical_leadership",
+          "skill_name": "Technical leadership",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_engineering_strategy",
+          "skill_name": "Engineering roadmap & strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_team_growth",
+          "skill_name": "Team capability building",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_service_mesh",
+          "skill_name": "Service mesh",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_scala",
+          "skill_name": "Scala",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_distributed_systems",
+          "skill_name": "Distributed systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_streaming_tech",
+          "skill_name": "Streaming tech",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_documentation",
+          "skill_name": "Documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_open_source",
+          "skill_name": "Open source",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_big_data",
+          "skill_name": "Big data",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_mentoring",
+          "skill_name": "Mentoring",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Rahul Sharma",
+      "employee_id": "EMP002",
+      "ratings": [
+        {
+          "skill_id": "tech_flutter_development",
+          "skill_name": "Flutter development",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_dart_programming",
+          "skill_name": "Dart programming",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_mvvm_architecture",
+          "skill_name": "MVVM architecture",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_custom_flutter_plugins",
+          "skill_name": "Custom Flutter plugins",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_method_channels",
+          "skill_name": "Method channels",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_state_management",
+          "skill_name": "State management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_rest_api_integration",
+          "skill_name": "REST API integration",
+          "self_rating": 1
         },
         {
           "skill_id": "tech_problem_solving",
-          "skill_name": "Structured Problem Solving",
-          "self_rating": 3,
-          "confidence": "high"
+          "skill_name": "Problem-solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_python_backend",
+          "skill_name": "Python backend",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_microservices",
+          "skill_name": "Microservices",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_documentation",
+          "skill_name": "Documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_code_reviews",
+          "skill_name": "Code reviews",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_mentoring",
+          "skill_name": "Mentoring",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_performance_optimization",
+          "skill_name": "Performance optimization",
+          "self_rating": 1
         }
-      ]
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Rahul Sharma",
+      "employee_id": "EMP003",
+      "ratings": [
+        {
+          "skill_id": "tech_flutter_development",
+          "skill_name": "Flutter development",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_dart_programming",
+          "skill_name": "Dart programming",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_mvvm_architecture",
+          "skill_name": "MVVM architecture",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_custom_flutter_plugins",
+          "skill_name": "Custom Flutter plugins",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_method_channels",
+          "skill_name": "Method channels",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_state_management",
+          "skill_name": "State management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_rest_api_integration",
+          "skill_name": "REST API integration",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_problem_solving",
+          "skill_name": "Problem-solving",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_python_backend",
+          "skill_name": "Python backend",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_microservices",
+          "skill_name": "Microservices",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_documentation",
+          "skill_name": "Documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_code_reviews",
+          "skill_name": "Code reviews",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_mentoring",
+          "skill_name": "Mentoring",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_performance_optimization",
+          "skill_name": "Performance optimization",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-24T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP004",
+      "ratings": [
+        {
+          "skill_id": "tech_flutter",
+          "skill_name": "Flutter",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "tech_dart",
+          "skill_name": "Dart",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_ios_android",
+          "skill_name": "iOS/Android",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_leadership",
+          "skill_name": "Leadership",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_app_architecture",
+          "skill_name": "App architecture",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "tech_api_integration",
+          "skill_name": "API integration",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_ci_cd",
+          "skill_name": "CI/CD",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_performance_optimization",
+          "skill_name": "Performance optimization",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_collaboration",
+          "skill_name": "Collaboration",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_security",
+          "skill_name": "Security",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_engineering_strategy",
+          "skill_name": "Engineering roadmap & strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_team_growth",
+          "skill_name": "Team capability building",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "tech_backend_tech",
+          "skill_name": "Backend tech",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_ux_ui",
+          "skill_name": "UX/UI",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_agile",
+          "skill_name": "Agile",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_testing_frameworks",
+          "skill_name": "Testing frameworks",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_hiring",
+          "skill_name": "Hiring",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_ai_ml_ar",
+          "skill_name": "AI/ML/AR",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_multi_project_mgmt",
+          "skill_name": "Multi-project mgmt",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_culture_building",
+          "skill_name": "Culture building",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-24T00:00:00Z"
+    },
+    {
+      "manager_id": "Rahul Sharma",
+      "employee_id": "EMP005",
+      "ratings": [
+        {
+          "skill_id": "tech_sql",
+          "skill_name": "SQL",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_data_visualization",
+          "skill_name": "Data visualization",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_excel",
+          "skill_name": "Excel",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_eda",
+          "skill_name": "EDA",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_analytical_thinking",
+          "skill_name": "Analytical thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_stakeholder_collaboration",
+          "skill_name": "Stakeholder collaboration",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_data_quality",
+          "skill_name": "Data quality",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_bi_reporting",
+          "skill_name": "BI reporting",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "tech_python_r",
+          "skill_name": "Python/R",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_data_warehousing",
+          "skill_name": "Data warehousing",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_process_optimization",
+          "skill_name": "Process optimization",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_documentation",
+          "skill_name": "Documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_marketplace_analytics",
+          "skill_name": "Marketplace analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "tech_statistical_modeling",
+          "skill_name": "Statistical modeling",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP006",
+      "ratings": [
+        {
+          "skill_id": "prod_sql",
+          "skill_name": "SQL",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_analytics_tools_mixpanel_clevertap_metabase",
+          "skill_name": "Analytics tools (MixPanel/CleverTap/Metabase)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_product_roadmapping",
+          "skill_name": "Product roadmapping",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_project_management",
+          "skill_name": "Project management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_user_first_thinking",
+          "skill_name": "User-first thinking",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_root_cause_analysis",
+          "skill_name": "Root cause analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_stakeholder_communication",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_excel_spreadsheets",
+          "skill_name": "Excel/spreadsheets",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_jira",
+          "skill_name": "JIRA",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_autonomous_execution",
+          "skill_name": "Autonomous execution",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_startup_experience",
+          "skill_name": "Startup experience",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_market_research",
+          "skill_name": "Market research",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_confluence",
+          "skill_name": "Confluence",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_pm_frameworks_okrs_rice",
+          "skill_name": "PM frameworks (OKRs, RICE)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_b2c_experience",
+          "skill_name": "B2C experience",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_cross_functional_coordination",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_tier_1_education",
+          "skill_name": "Tier 1 education",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-26T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP007",
+      "ratings": [
+        {
+          "skill_id": "prod_sql",
+          "skill_name": "SQL",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_data_analytics",
+          "skill_name": "Data analytics",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_product_roadmap",
+          "skill_name": "Product roadmap",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_stakeholder_management",
+          "skill_name": "Stakeholder management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_root_cause_analysis",
+          "skill_name": "Root cause analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_autonomous_ownership",
+          "skill_name": "Autonomous ownership",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_user_first_thinking",
+          "skill_name": "User-first thinking",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_jira_tools",
+          "skill_name": "JIRA/tools",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_communication_storytelling",
+          "skill_name": "Communication & storytelling",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_mixpanel_clevertap",
+          "skill_name": "MixPanel/CleverTap",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_excel_sheets_advanced",
+          "skill_name": "Excel/Sheets advanced",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_market_research",
+          "skill_name": "Market research",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_startup_experience",
+          "skill_name": "Startup experience",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_bi_tools",
+          "skill_name": "BI tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_documentation_confluence",
+          "skill_name": "Documentation (Confluence)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_distributed_systems_understanding",
+          "skill_name": "Distributed systems understanding",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Kavya Reddy",
+      "employee_id": "EMP008",
+      "ratings": [
+        {
+          "skill_id": "prod_sql",
+          "skill_name": "SQL",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_analytics_tools_mixpanel_clevertap_metabase",
+          "skill_name": "Analytics tools (MixPanel/CleverTap/Metabase)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_product_roadmapping",
+          "skill_name": "Product roadmapping",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_project_management",
+          "skill_name": "Project management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_user_first_thinking",
+          "skill_name": "User-first thinking",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_root_cause_analysis",
+          "skill_name": "Root cause analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_stakeholder_communication",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_excel_spreadsheets",
+          "skill_name": "Excel/spreadsheets",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_jira",
+          "skill_name": "JIRA",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_autonomous_execution",
+          "skill_name": "Autonomous execution",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_startup_experience",
+          "skill_name": "Startup experience",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_market_research",
+          "skill_name": "Market research",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_confluence",
+          "skill_name": "Confluence",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_pm_frameworks_okrs_rice",
+          "skill_name": "PM frameworks (OKRs, RICE)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_b2c_experience",
+          "skill_name": "B2C experience",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_cross_functional_coordination",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_tier_1_education",
+          "skill_name": "Tier 1 education",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP009",
+      "ratings": [
+        {
+          "skill_id": "prod_systems_thinking_service_design",
+          "skill_name": "Systems thinking & service design",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_jtbd_framework",
+          "skill_name": "JTBD framework",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_heart_metrics",
+          "skill_name": "HEART metrics",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_service_blueprinting",
+          "skill_name": "Service blueprinting",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_design_sprint_facilitation",
+          "skill_name": "Design sprint facilitation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_team_leadership",
+          "skill_name": "Team leadership",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_stakeholder_alignment",
+          "skill_name": "Stakeholder alignment",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_strategic_storytelling",
+          "skill_name": "Strategic storytelling",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "prod_data_driven_design",
+          "skill_name": "Data-driven design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_behavioral_design",
+          "skill_name": "Behavioral design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_designops",
+          "skill_name": "DesignOps",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_emerging_market_design",
+          "skill_name": "Emerging market design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_marketplace_design",
+          "skill_name": "Marketplace design",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_rapid_prototyping",
+          "skill_name": "Rapid prototyping",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_funnel_analysis",
+          "skill_name": "Funnel analysis",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_cost_modeling",
+          "skill_name": "Cost modeling",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_design_systems",
+          "skill_name": "Design systems",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-20T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP010",
+      "ratings": [
+        {
+          "skill_id": "prod_sql",
+          "skill_name": "SQL",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_data_analytics",
+          "skill_name": "Data analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_product_roadmap",
+          "skill_name": "Product roadmap",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_stakeholder_management",
+          "skill_name": "Stakeholder management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_root_cause_analysis",
+          "skill_name": "Root cause analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_autonomous_ownership",
+          "skill_name": "Autonomous ownership",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_user_first_thinking",
+          "skill_name": "User-first thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_jira_tools",
+          "skill_name": "JIRA/tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_communication_storytelling",
+          "skill_name": "Communication & storytelling",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_mixpanel_clevertap",
+          "skill_name": "MixPanel/CleverTap",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "prod_excel_sheets_advanced",
+          "skill_name": "Excel/Sheets advanced",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_market_research",
+          "skill_name": "Market research",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_startup_experience",
+          "skill_name": "Startup experience",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_bi_tools",
+          "skill_name": "BI tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_documentation_confluence",
+          "skill_name": "Documentation (Confluence)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "prod_distributed_systems_understanding",
+          "skill_name": "Distributed systems understanding",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-20T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP011",
+      "ratings": [
+        {
+          "skill_id": "fin_month_end_close",
+          "skill_name": "Month-end close",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_gst_compliance",
+          "skill_name": "GST compliance",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_tds_compliance",
+          "skill_name": "TDS compliance",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_gl_management",
+          "skill_name": "GL management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_far_management",
+          "skill_name": "FAR management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_zoho_books",
+          "skill_name": "Zoho Books",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_process_automation",
+          "skill_name": "Process automation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_audit_management",
+          "skill_name": "Audit management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_zoho_flow",
+          "skill_name": "Zoho Flow",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_uat",
+          "skill_name": "UAT",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_product_collaboration",
+          "skill_name": "Product collaboration",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_revenue_leakage",
+          "skill_name": "Revenue leakage",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_payroll_compliance",
+          "skill_name": "Payroll compliance",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_cloud_accounting",
+          "skill_name": "Cloud accounting",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_execution_speed",
+          "skill_name": "Execution speed",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-24T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP012",
+      "ratings": [
+        {
+          "skill_id": "fin_month_end_close",
+          "skill_name": "Month-end close",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_gst_compliance",
+          "skill_name": "GST compliance",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_tds_compliance",
+          "skill_name": "TDS compliance",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_gl_management",
+          "skill_name": "GL management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_far_management",
+          "skill_name": "FAR management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_zoho_books",
+          "skill_name": "Zoho Books",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_process_automation",
+          "skill_name": "Process automation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_audit_management",
+          "skill_name": "Audit management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "fin_zoho_flow",
+          "skill_name": "Zoho Flow",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_uat",
+          "skill_name": "UAT",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_product_collaboration",
+          "skill_name": "Product collaboration",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_revenue_leakage",
+          "skill_name": "Revenue leakage",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_payroll_compliance",
+          "skill_name": "Payroll compliance",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_cloud_accounting",
+          "skill_name": "Cloud accounting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "fin_execution_speed",
+          "skill_name": "Execution speed",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-28T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP013",
+      "ratings": [
+        {
+          "skill_id": "exe_project_tracking",
+          "skill_name": "Project tracking (Jira/Asana)",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_kpi_dashboards",
+          "skill_name": "KPI dashboard management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_sop_development",
+          "skill_name": "SOP development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_cross_fn_coord",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "exe_prioritization",
+          "skill_name": "Prioritization under pressure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_stakeholder_mgmt",
+          "skill_name": "Stakeholder management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_lco_knowledge",
+          "skill_name": "LCO partner operations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_okr_execution",
+          "skill_name": "OKR setting and execution",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_business_planning",
+          "skill_name": "Business planning",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "exe_process_automation",
+          "skill_name": "Process automation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_change_mgmt",
+          "skill_name": "Change management",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP014",
+      "ratings": [
+        {
+          "skill_id": "exe_project_tracking",
+          "skill_name": "Project tracking (Jira/Asana)",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_kpi_dashboards",
+          "skill_name": "KPI dashboard management",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "exe_sop_development",
+          "skill_name": "SOP development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_cross_fn_coord",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_prioritization",
+          "skill_name": "Prioritization under pressure",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_stakeholder_mgmt",
+          "skill_name": "Stakeholder management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_lco_knowledge",
+          "skill_name": "LCO partner operations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_okr_execution",
+          "skill_name": "OKR setting and execution",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_business_planning",
+          "skill_name": "Business planning",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_process_automation",
+          "skill_name": "Process automation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_change_mgmt",
+          "skill_name": "Change management",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Vikram Gupta",
+      "employee_id": "EMP015",
+      "ratings": [
+        {
+          "skill_id": "exe_project_tracking",
+          "skill_name": "Project tracking (Jira/Asana)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_kpi_dashboards",
+          "skill_name": "KPI dashboard management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_sop_development",
+          "skill_name": "SOP development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_cross_fn_coord",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_prioritization",
+          "skill_name": "Prioritization under pressure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_lco_knowledge",
+          "skill_name": "LCO partner operations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_regulatory_compliance",
+          "skill_name": "Regulatory compliance basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_data_analysis",
+          "skill_name": "Data analysis (Excel/Sheets)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_stakeholder_mgmt",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-27T00:00:00Z"
+    },
+    {
+      "manager_id": "Vikram Gupta",
+      "employee_id": "EMP016",
+      "ratings": [
+        {
+          "skill_id": "exe_project_tracking",
+          "skill_name": "Project tracking (Jira/Asana)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_kpi_dashboards",
+          "skill_name": "KPI dashboard management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_sop_development",
+          "skill_name": "SOP development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_cross_fn_coord",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_prioritization",
+          "skill_name": "Prioritization under pressure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_lco_knowledge",
+          "skill_name": "LCO partner operations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_regulatory_compliance",
+          "skill_name": "Regulatory compliance basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_data_analysis",
+          "skill_name": "Data analysis (Excel/Sheets)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_stakeholder_mgmt",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "manager_id": "Sana Khan",
+      "employee_id": "EMP017",
+      "ratings": [
+        {
+          "skill_id": "exe_project_tracking",
+          "skill_name": "Project tracking (Jira/Asana)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_kpi_dashboards",
+          "skill_name": "KPI dashboard management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_sop_development",
+          "skill_name": "SOP development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_cross_fn_coord",
+          "skill_name": "Cross-functional coordination",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_prioritization",
+          "skill_name": "Prioritization under pressure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_lco_knowledge",
+          "skill_name": "LCO partner operations",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "exe_regulatory_compliance",
+          "skill_name": "Regulatory compliance basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_data_analysis",
+          "skill_name": "Data analysis (Excel/Sheets)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "exe_stakeholder_mgmt",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP018",
+      "ratings": [
+        {
+          "skill_id": "ui_research_methods",
+          "skill_name": "User research methods",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "ui_survey_design",
+          "skill_name": "Survey design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "ui_usability_testing",
+          "skill_name": "Usability testing",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "ui_empathy",
+          "skill_name": "User empathy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_analytical_thinking",
+          "skill_name": "Analytical thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_isp_user_behavior",
+          "skill_name": "ISP user behavior patterns",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "ui_research_strategy",
+          "skill_name": "Research strategy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_insight_to_action",
+          "skill_name": "Insight-to-action frameworks",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_data_tools",
+          "skill_name": "Data analysis tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "ui_stakeholder_comm",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Neha Verma",
+      "employee_id": "EMP019",
+      "ratings": [
+        {
+          "skill_id": "ui_research_methods",
+          "skill_name": "User research methods",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_survey_design",
+          "skill_name": "Survey design",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_usability_testing",
+          "skill_name": "Usability testing",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_empathy",
+          "skill_name": "User empathy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_analytical_thinking",
+          "skill_name": "Analytical thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_isp_user_behavior",
+          "skill_name": "ISP user behavior patterns",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "ui_data_tools",
+          "skill_name": "Data analysis tools",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-27T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP020",
+      "ratings": [
+        {
+          "skill_id": "hr_hris",
+          "skill_name": "HRIS tools",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "hr_payroll",
+          "skill_name": "Payroll systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_perf_tools",
+          "skill_name": "Performance management tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_empathy",
+          "skill_name": "Empathy and discretion",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "hr_conflict_mediation",
+          "skill_name": "Conflict mediation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_labour_law",
+          "skill_name": "Indian labour law",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_talent_market",
+          "skill_name": "Talent market knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_people_strategy",
+          "skill_name": "People strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_culture_building",
+          "skill_name": "Culture building",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_ats",
+          "skill_name": "ATS (applicant tracking)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_org_design",
+          "skill_name": "Organizational design",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Meera Joshi",
+      "employee_id": "EMP021",
+      "ratings": [
+        {
+          "skill_id": "hr_hris",
+          "skill_name": "HRIS tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_payroll",
+          "skill_name": "Payroll systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_empathy",
+          "skill_name": "Empathy and discretion",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_communication",
+          "skill_name": "Communication and facilitation",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "hr_labour_law",
+          "skill_name": "Indian labour law",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_compliance",
+          "skill_name": "HR compliance",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_talent_market",
+          "skill_name": "Talent market knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_ats",
+          "skill_name": "ATS (applicant tracking)",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Meera Joshi",
+      "employee_id": "EMP022",
+      "ratings": [
+        {
+          "skill_id": "hr_hris",
+          "skill_name": "HRIS tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_payroll",
+          "skill_name": "Payroll systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_empathy",
+          "skill_name": "Empathy and discretion",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "hr_communication",
+          "skill_name": "Communication and facilitation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "hr_labour_law",
+          "skill_name": "Indian labour law",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_compliance",
+          "skill_name": "HR compliance",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_talent_market",
+          "skill_name": "Talent market knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "hr_ats",
+          "skill_name": "ATS (applicant tracking)",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP023",
+      "ratings": [
+        {
+          "skill_id": "labs_prototyping",
+          "skill_name": "Rapid prototyping",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "labs_research_methods",
+          "skill_name": "Research methodology",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_tech_eval",
+          "skill_name": "Technology evaluation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_innovation",
+          "skill_name": "Innovation mindset",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_hypothesis",
+          "skill_name": "Hypothesis-driven thinking",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "labs_emerging_tech",
+          "skill_name": "Emerging ISP technology",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_product_innovation",
+          "skill_name": "Product innovation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_innovation_strategy",
+          "skill_name": "Innovation strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_tech_roadmap",
+          "skill_name": "Technology roadmap",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_api",
+          "skill_name": "API integration",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_digital_transformation",
+          "skill_name": "Digital transformation",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Dr. Kartik Nair",
+      "employee_id": "EMP024",
+      "ratings": [
+        {
+          "skill_id": "labs_prototyping",
+          "skill_name": "Rapid prototyping",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_research_methods",
+          "skill_name": "Research methodology",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_tech_eval",
+          "skill_name": "Technology evaluation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "labs_innovation",
+          "skill_name": "Innovation mindset",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_hypothesis",
+          "skill_name": "Hypothesis-driven thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_emerging_tech",
+          "skill_name": "Emerging ISP technology",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_product_innovation",
+          "skill_name": "Product innovation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "labs_api",
+          "skill_name": "API integration",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP025",
+      "ratings": [
+        {
+          "skill_id": "techfut_cloud",
+          "skill_name": "Cloud architecture",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "techfut_systems_design",
+          "skill_name": "Systems design",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_devops",
+          "skill_name": "DevOps practices",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_learning_agility",
+          "skill_name": "Learning agility",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_systems_thinking",
+          "skill_name": "Systems thinking",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_next_gen",
+          "skill_name": "Next-gen ISP technology (5G/fiber)",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_digital_infra",
+          "skill_name": "Digital infrastructure",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_tech_strategy",
+          "skill_name": "Technology strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_future_proofing",
+          "skill_name": "Future-proofing architecture",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_ai_ml",
+          "skill_name": "AI/ML fundamentals",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_mentoring",
+          "skill_name": "Technical mentoring",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-19T00:00:00Z"
+    },
+    {
+      "manager_id": "Sanjay Kumar",
+      "employee_id": "EMP026",
+      "ratings": [
+        {
+          "skill_id": "techfut_cloud",
+          "skill_name": "Cloud architecture",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_systems_design",
+          "skill_name": "Systems design",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "techfut_devops",
+          "skill_name": "DevOps practices",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_learning_agility",
+          "skill_name": "Learning agility",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_systems_thinking",
+          "skill_name": "Systems thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_next_gen",
+          "skill_name": "Next-gen ISP technology (5G/fiber)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_digital_infra",
+          "skill_name": "Digital infrastructure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_ai_ml",
+          "skill_name": "AI/ML fundamentals",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-27T00:00:00Z"
+    },
+    {
+      "manager_id": "Sanjay Kumar",
+      "employee_id": "EMP027",
+      "ratings": [
+        {
+          "skill_id": "techfut_cloud",
+          "skill_name": "Cloud architecture",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_systems_design",
+          "skill_name": "Systems design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_devops",
+          "skill_name": "DevOps practices",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_learning_agility",
+          "skill_name": "Learning agility",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "techfut_systems_thinking",
+          "skill_name": "Systems thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_next_gen",
+          "skill_name": "Next-gen ISP technology (5G/fiber)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_digital_infra",
+          "skill_name": "Digital infrastructure",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "techfut_ai_ml",
+          "skill_name": "AI/ML fundamentals",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP028",
+      "ratings": [
+        {
+          "skill_id": "mkt_digital_tools",
+          "skill_name": "Digital marketing (Meta/Google Ads)",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "mkt_marketing_analytics",
+          "skill_name": "Marketing analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_content_management",
+          "skill_name": "Content management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_creative_thinking",
+          "skill_name": "Creative thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_brand_consistency",
+          "skill_name": "Brand consistency",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_copywriting",
+          "skill_name": "Copywriting",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "mkt_isp_market",
+          "skill_name": "ISP consumer market knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_go_to_market",
+          "skill_name": "Go-to-market strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_growth_marketing",
+          "skill_name": "Growth marketing strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_seo_sem",
+          "skill_name": "SEO/SEM",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_brand_strategy",
+          "skill_name": "Brand strategy",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-20T00:00:00Z"
+    },
+    {
+      "manager_id": "Priyanka Desai",
+      "employee_id": "EMP029",
+      "ratings": [
+        {
+          "skill_id": "mkt_digital_tools",
+          "skill_name": "Digital marketing (Meta/Google Ads)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_marketing_analytics",
+          "skill_name": "Marketing analytics",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_content_management",
+          "skill_name": "Content management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_creative_thinking",
+          "skill_name": "Creative thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_brand_consistency",
+          "skill_name": "Brand consistency",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_copywriting",
+          "skill_name": "Copywriting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_isp_market",
+          "skill_name": "ISP consumer market knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_competitive_pos",
+          "skill_name": "Competitive positioning",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_seo_sem",
+          "skill_name": "SEO/SEM",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_video_editing",
+          "skill_name": "Video editing",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-19T00:00:00Z"
+    },
+    {
+      "manager_id": "Priyanka Desai",
+      "employee_id": "EMP030",
+      "ratings": [
+        {
+          "skill_id": "mkt_digital_tools",
+          "skill_name": "Digital marketing (Meta/Google Ads)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_marketing_analytics",
+          "skill_name": "Marketing analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_content_management",
+          "skill_name": "Content management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "mkt_creative_thinking",
+          "skill_name": "Creative thinking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_brand_consistency",
+          "skill_name": "Brand consistency",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_copywriting",
+          "skill_name": "Copywriting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_isp_market",
+          "skill_name": "ISP consumer market knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_competitive_pos",
+          "skill_name": "Competitive positioning",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_seo_sem",
+          "skill_name": "SEO/SEM",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "mkt_video_editing",
+          "skill_name": "Video editing",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP031",
+      "ratings": [
+        {
+          "skill_id": "cx_crm_tools",
+          "skill_name": "CRM tools (Freshdesk/Zoho)",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "cx_sla_tracking",
+          "skill_name": "SLA tracking and reporting",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_nps_measurement",
+          "skill_name": "NPS measurement",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_customer_empathy",
+          "skill_name": "Customer empathy",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "cx_conflict_resolution",
+          "skill_name": "Conflict resolution",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_team_coaching",
+          "skill_name": "Team coaching",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_isp_service",
+          "skill_name": "ISP service knowledge",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "cx_escalation_protocols",
+          "skill_name": "Escalation protocols",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_nps_strategy",
+          "skill_name": "NPS improvement strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_retention_planning",
+          "skill_name": "Customer retention planning",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "cx_multilingual",
+          "skill_name": "Multilingual support",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_cx_roadmap",
+          "skill_name": "CX roadmap ownership",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP032",
+      "ratings": [
+        {
+          "skill_id": "cx_crm_tools",
+          "skill_name": "CRM tools (Freshdesk/Zoho)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_sla_tracking",
+          "skill_name": "SLA tracking and reporting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_nps_measurement",
+          "skill_name": "NPS measurement",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_customer_empathy",
+          "skill_name": "Customer empathy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_conflict_resolution",
+          "skill_name": "Conflict resolution",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_team_coaching",
+          "skill_name": "Team coaching",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_isp_service",
+          "skill_name": "ISP service knowledge",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "cx_escalation_protocols",
+          "skill_name": "Escalation protocols",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_nps_strategy",
+          "skill_name": "NPS improvement strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_retention_planning",
+          "skill_name": "Customer retention planning",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_multilingual",
+          "skill_name": "Multilingual support",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_cx_roadmap",
+          "skill_name": "CX roadmap ownership",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-27T00:00:00Z"
+    },
+    {
+      "manager_id": "Arvind Rao",
+      "employee_id": "EMP033",
+      "ratings": [
+        {
+          "skill_id": "cx_crm_tools",
+          "skill_name": "CRM tools (Freshdesk/Zoho)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_ticket_management",
+          "skill_name": "Ticket management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_sla_tracking",
+          "skill_name": "SLA tracking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_customer_empathy",
+          "skill_name": "Customer empathy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_conflict_resolution",
+          "skill_name": "Conflict resolution",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_written_communication",
+          "skill_name": "Written communication",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_isp_service",
+          "skill_name": "ISP service knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_broadband_basics",
+          "skill_name": "Broadband troubleshooting basics",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_multilingual",
+          "skill_name": "Multilingual support",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_upsell",
+          "skill_name": "Upselling and retention",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "manager_id": "Arvind Rao",
+      "employee_id": "EMP034",
+      "ratings": [
+        {
+          "skill_id": "cx_crm_tools",
+          "skill_name": "CRM tools (Freshdesk/Zoho)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_ticket_management",
+          "skill_name": "Ticket management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_sla_tracking",
+          "skill_name": "SLA tracking",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_customer_empathy",
+          "skill_name": "Customer empathy",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "cx_conflict_resolution",
+          "skill_name": "Conflict resolution",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_written_communication",
+          "skill_name": "Written communication",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_isp_service",
+          "skill_name": "ISP service knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_broadband_basics",
+          "skill_name": "Broadband troubleshooting basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_multilingual",
+          "skill_name": "Multilingual support",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_upsell",
+          "skill_name": "Upselling and retention",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Kiran Bose",
+      "employee_id": "EMP035",
+      "ratings": [
+        {
+          "skill_id": "cx_crm_tools",
+          "skill_name": "CRM tools (Freshdesk/Zoho)",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_ticket_management",
+          "skill_name": "Ticket management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_sla_tracking",
+          "skill_name": "SLA tracking",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_customer_empathy",
+          "skill_name": "Customer empathy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "cx_conflict_resolution",
+          "skill_name": "Conflict resolution",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_written_communication",
+          "skill_name": "Written communication",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_isp_service",
+          "skill_name": "ISP service knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_broadband_basics",
+          "skill_name": "Broadband troubleshooting basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_multilingual",
+          "skill_name": "Multilingual support",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "cx_upsell",
+          "skill_name": "Upselling and retention",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-19T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP036",
+      "ratings": [
+        {
+          "skill_id": "supply_procurement",
+          "skill_name": "Procurement systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_vendor_mgmt",
+          "skill_name": "Vendor management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_inventory",
+          "skill_name": "Inventory control",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_negotiation",
+          "skill_name": "Negotiation skills",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_attention_detail",
+          "skill_name": "Attention to detail",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "supply_telecom_hw",
+          "skill_name": "Telecom hardware knowledge",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "supply_lco_chain",
+          "skill_name": "LCO supply chain",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_cost_optimization",
+          "skill_name": "Cost optimization strategy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_supplier_strategy",
+          "skill_name": "Supplier diversification strategy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_erp",
+          "skill_name": "ERP systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_import_export",
+          "skill_name": "Import/export regulations",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-03-01T00:00:00Z"
+    },
+    {
+      "manager_id": "Mahesh Agarwal",
+      "employee_id": "EMP037",
+      "ratings": [
+        {
+          "skill_id": "supply_procurement",
+          "skill_name": "Procurement systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_vendor_mgmt",
+          "skill_name": "Vendor management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_inventory",
+          "skill_name": "Inventory control",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_negotiation",
+          "skill_name": "Negotiation skills",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_attention_detail",
+          "skill_name": "Attention to detail",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_process_adherence",
+          "skill_name": "Process adherence",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_telecom_hw",
+          "skill_name": "Telecom hardware knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_lco_chain",
+          "skill_name": "LCO supply chain",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_erp",
+          "skill_name": "ERP systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_supplier_rel",
+          "skill_name": "Supplier relationship management",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Mahesh Agarwal",
+      "employee_id": "EMP038",
+      "ratings": [
+        {
+          "skill_id": "supply_procurement",
+          "skill_name": "Procurement systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_vendor_mgmt",
+          "skill_name": "Vendor management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_inventory",
+          "skill_name": "Inventory control",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_negotiation",
+          "skill_name": "Negotiation skills",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_attention_detail",
+          "skill_name": "Attention to detail",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_process_adherence",
+          "skill_name": "Process adherence",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "supply_telecom_hw",
+          "skill_name": "Telecom hardware knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_lco_chain",
+          "skill_name": "LCO supply chain",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_erp",
+          "skill_name": "ERP systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_supplier_rel",
+          "skill_name": "Supplier relationship management",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Mahesh Agarwal",
+      "employee_id": "EMP039",
+      "ratings": [
+        {
+          "skill_id": "supply_procurement",
+          "skill_name": "Procurement systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_vendor_mgmt",
+          "skill_name": "Vendor management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_inventory",
+          "skill_name": "Inventory control",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_negotiation",
+          "skill_name": "Negotiation skills",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_attention_detail",
+          "skill_name": "Attention to detail",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_process_adherence",
+          "skill_name": "Process adherence",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "supply_telecom_hw",
+          "skill_name": "Telecom hardware knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_lco_chain",
+          "skill_name": "LCO supply chain",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_erp",
+          "skill_name": "ERP systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "supply_supplier_rel",
+          "skill_name": "Supplier relationship management",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-20T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP040",
+      "ratings": [
+        {
+          "skill_id": "founders_biz_analysis",
+          "skill_name": "Business analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_financial_modeling",
+          "skill_name": "Financial modeling",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_planning_tools",
+          "skill_name": "Strategic planning tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_exec_presence",
+          "skill_name": "Executive presence",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_cross_fn",
+          "skill_name": "Cross-functional influence",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_startup_ops",
+          "skill_name": "Startup operations",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_investor_rel",
+          "skill_name": "Investor relations basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_company_strategy",
+          "skill_name": "Company strategy alignment",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_growth_strategy",
+          "skill_name": "Growth strategy",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_board_reporting",
+          "skill_name": "Board reporting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_fundraising",
+          "skill_name": "Fundraising narrative",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-23T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP041",
+      "ratings": [
+        {
+          "skill_id": "founders_biz_analysis",
+          "skill_name": "Business analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_financial_modeling",
+          "skill_name": "Financial modeling",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "founders_planning_tools",
+          "skill_name": "Strategic planning tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_exec_presence",
+          "skill_name": "Executive presence",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_cross_fn",
+          "skill_name": "Cross-functional influence",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_startup_ops",
+          "skill_name": "Startup operations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_investor_rel",
+          "skill_name": "Investor relations basics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_company_strategy",
+          "skill_name": "Company strategy alignment",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_growth_strategy",
+          "skill_name": "Growth strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "founders_board_reporting",
+          "skill_name": "Board reporting",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "founders_fundraising",
+          "skill_name": "Fundraising narrative",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-19T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP042",
+      "ratings": [
+        {
+          "skill_id": "sol_network_design",
+          "skill_name": "Network architecture design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_infra",
+          "skill_name": "ISP infrastructure design",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "sol_solution_costing",
+          "skill_name": "Solution costing",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "sol_client_comm",
+          "skill_name": "Client communication",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "sol_problem_solving",
+          "skill_name": "Technical problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_solutions",
+          "skill_name": "ISP technical solutions",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "sol_lco_integration",
+          "skill_name": "LCO integration knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_solution_strategy",
+          "skill_name": "Solution strategy",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "sol_pricing_models",
+          "skill_name": "Pricing models",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "sol_technical_docs",
+          "skill_name": "Technical documentation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_partnership_dev",
+          "skill_name": "Partnership development",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Gopal Nair",
+      "employee_id": "EMP043",
+      "ratings": [
+        {
+          "skill_id": "sol_network_design",
+          "skill_name": "Network architecture design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_infra",
+          "skill_name": "ISP infrastructure design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_solution_costing",
+          "skill_name": "Solution costing",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_technical_docs",
+          "skill_name": "Technical documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_problem_solving",
+          "skill_name": "Technical problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_solutions",
+          "skill_name": "ISP technical solutions",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_lco_integration",
+          "skill_name": "LCO integration knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_bandwidth_planning",
+          "skill_name": "Bandwidth planning",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_client_comm",
+          "skill_name": "Client communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-24T00:00:00Z"
+    },
+    {
+      "manager_id": "Gopal Nair",
+      "employee_id": "EMP044",
+      "ratings": [
+        {
+          "skill_id": "sol_network_design",
+          "skill_name": "Network architecture design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_infra",
+          "skill_name": "ISP infrastructure design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_solution_costing",
+          "skill_name": "Solution costing",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_technical_docs",
+          "skill_name": "Technical documentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_problem_solving",
+          "skill_name": "Technical problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_isp_solutions",
+          "skill_name": "ISP technical solutions",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "sol_lco_integration",
+          "skill_name": "LCO integration knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_bandwidth_planning",
+          "skill_name": "Bandwidth planning",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "sol_client_comm",
+          "skill_name": "Client communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-24T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP045",
+      "ratings": [
+        {
+          "skill_id": "analytics_sql",
+          "skill_name": "SQL (advanced)",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "analytics_python_r",
+          "skill_name": "Python / R for analysis",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "analytics_bi_tools",
+          "skill_name": "BI tools (Tableau/Power BI/Metabase)",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_problem_solving",
+          "skill_name": "Problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_insight_comm",
+          "skill_name": "Communication of insights",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_telecom_data",
+          "skill_name": "Telecom data analysis",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "analytics_funnel",
+          "skill_name": "Funnel analytics",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_data_strategy",
+          "skill_name": "Data strategy",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "analytics_roadmap",
+          "skill_name": "Analytics roadmap ownership",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_ml",
+          "skill_name": "ML fundamentals",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_pipeline",
+          "skill_name": "Data pipeline management",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-21T00:00:00Z"
+    },
+    {
+      "manager_id": "Ranjit Sharma",
+      "employee_id": "EMP046",
+      "ratings": [
+        {
+          "skill_id": "analytics_sql",
+          "skill_name": "SQL (advanced)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_python_r",
+          "skill_name": "Python / R for analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_bi_tools",
+          "skill_name": "BI tools (Tableau/Power BI/Metabase)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_problem_solving",
+          "skill_name": "Problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_insight_comm",
+          "skill_name": "Communication of insights",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_attention_quality",
+          "skill_name": "Attention to data quality",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_telecom_data",
+          "skill_name": "Telecom data analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_funnel",
+          "skill_name": "Funnel analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_ml",
+          "skill_name": "ML fundamentals",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_customer_behavior",
+          "skill_name": "Customer behavior modeling",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-22T00:00:00Z"
+    },
+    {
+      "manager_id": "Ranjit Sharma",
+      "employee_id": "EMP047",
+      "ratings": [
+        {
+          "skill_id": "analytics_sql",
+          "skill_name": "SQL (advanced)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_python_r",
+          "skill_name": "Python / R for analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_bi_tools",
+          "skill_name": "BI tools (Tableau/Power BI/Metabase)",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_problem_solving",
+          "skill_name": "Problem solving",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "analytics_insight_comm",
+          "skill_name": "Communication of insights",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_attention_quality",
+          "skill_name": "Attention to data quality",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_telecom_data",
+          "skill_name": "Telecom data analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_funnel",
+          "skill_name": "Funnel analytics",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_ml",
+          "skill_name": "ML fundamentals",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "analytics_customer_behavior",
+          "skill_name": "Customer behavior modeling",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP048",
+      "ratings": [
+        {
+          "skill_id": "comms_pr_tools",
+          "skill_name": "PR and media tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_cms",
+          "skill_name": "Content management systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_social_media",
+          "skill_name": "Social media management",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_writing",
+          "skill_name": "Writing and editing",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "comms_brand_voice",
+          "skill_name": "Brand voice consistency",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_media_relations",
+          "skill_name": "Media relations",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_isp_industry",
+          "skill_name": "ISP industry communications",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "comms_strategy",
+          "skill_name": "Communications strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_brand_narrative",
+          "skill_name": "Brand narrative",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "comms_crisis",
+          "skill_name": "Crisis communication",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_regulatory_pr",
+          "skill_name": "Regulatory PR",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-27T00:00:00Z"
+    },
+    {
+      "manager_id": "Kavita Reddy",
+      "employee_id": "EMP049",
+      "ratings": [
+        {
+          "skill_id": "comms_cms",
+          "skill_name": "Content management systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_social_media",
+          "skill_name": "Social media management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_writing",
+          "skill_name": "Writing and editing",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_brand_voice",
+          "skill_name": "Brand voice consistency",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "comms_isp_industry",
+          "skill_name": "ISP industry communications",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_pr_tools",
+          "skill_name": "PR and media tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "comms_crisis",
+          "skill_name": "Crisis communication",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-25T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP050",
+      "ratings": [
+        {
+          "skill_id": "lnd_lms",
+          "skill_name": "LMS tools",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "lnd_instructional_design",
+          "skill_name": "Instructional design",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_needs_analysis",
+          "skill_name": "Training needs analysis",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "lnd_facilitation",
+          "skill_name": "Facilitation skills",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_adult_learning",
+          "skill_name": "Adult learning principles",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "lnd_content_dev",
+          "skill_name": "Content development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_skills_taxonomy",
+          "skill_name": "Skill taxonomy design",
+          "self_rating": 4
+        },
+        {
+          "skill_id": "lnd_training_roi",
+          "skill_name": "Training ROI measurement",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_strategy",
+          "skill_name": "L&D strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "lnd_gap_priority",
+          "skill_name": "Skills gap prioritization",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "lnd_learning_culture",
+          "skill_name": "Learning culture building",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_eval_tools",
+          "skill_name": "Assessment/evaluation tools",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-26T00:00:00Z"
+    },
+    {
+      "manager_id": "Shilpa Mohan",
+      "employee_id": "EMP051",
+      "ratings": [
+        {
+          "skill_id": "lnd_lms",
+          "skill_name": "LMS tools",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_instructional_design",
+          "skill_name": "Instructional design",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "lnd_needs_analysis",
+          "skill_name": "Training needs analysis",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_facilitation",
+          "skill_name": "Facilitation skills",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_adult_learning",
+          "skill_name": "Adult learning principles",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_content_dev",
+          "skill_name": "Content development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_training_roi",
+          "skill_name": "Training ROI measurement",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "lnd_eval_tools",
+          "skill_name": "Assessment/evaluation tools",
+          "self_rating": 2
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-19T00:00:00Z"
+    },
+    {
+      "manager_id": "Pranav Chandra",
+      "employee_id": "EMP052",
+      "ratings": [
+        {
+          "skill_id": "biz_crm",
+          "skill_name": "CRM systems",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_pitch_decks",
+          "skill_name": "Pitch deck development",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_negotiation",
+          "skill_name": "Negotiation",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "biz_relationship",
+          "skill_name": "Relationship building",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "biz_pitching",
+          "skill_name": "Pitching and presentation",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_isp_market",
+          "skill_name": "ISP market knowledge",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_partner_ecosystem",
+          "skill_name": "Partner/channel ecosystem",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_revenue_strategy",
+          "skill_name": "Revenue strategy",
+          "self_rating": 3
+        },
+        {
+          "skill_id": "biz_market_expansion",
+          "skill_name": "Market expansion strategy",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_contract_mgmt",
+          "skill_name": "Contract management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_partnership_strategy",
+          "skill_name": "Partnership strategy",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-26T00:00:00Z"
+    },
+    {
+      "manager_id": "Rajesh Srivastava",
+      "employee_id": "EMP053",
+      "ratings": [
+        {
+          "skill_id": "biz_crm",
+          "skill_name": "CRM systems",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_pitch_decks",
+          "skill_name": "Pitch deck development",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_negotiation",
+          "skill_name": "Negotiation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_relationship",
+          "skill_name": "Relationship building",
+          "self_rating": 2
+        },
+        {
+          "skill_id": "biz_pitching",
+          "skill_name": "Pitching and presentation",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_isp_market",
+          "skill_name": "ISP market knowledge",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_partner_ecosystem",
+          "skill_name": "Partner/channel ecosystem",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_contract_mgmt",
+          "skill_name": "Contract management",
+          "self_rating": 1
+        },
+        {
+          "skill_id": "biz_revenue_models",
+          "skill_name": "Revenue models understanding",
+          "self_rating": 1
+        }
+      ],
+      "coaching_notes": "",
+      "submitted_at": "2026-02-26T00:00:00Z"
     }
   ]
 }
