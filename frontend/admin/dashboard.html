@@ -556,13 +556,17 @@
       try {
         const res = await fetch('/api/v1/ai/heatmap-insights', {method:'POST', headers});
         const data = await res.json();
-        if (!res.ok) throw new Error(data.detail || 'Failed');
+        if (!res.ok) {
+          const msg = typeof data.detail === 'string' ? data.detail
+            : data.detail?.detail || data.detail?.error || JSON.stringify(data.detail);
+          throw new Error(msg || 'Request failed');
+        }
         el.innerHTML = `
           <div class="ai-card"><div class="ai-label">Biggest Gap</div><p>${data.biggest_gap||'—'}</p></div>
           <div class="ai-card"><div class="ai-label">Emerging Risk</div><p>${data.emerging_risk||'—'}</p></div>
           <div class="ai-card"><div class="ai-label">Strategic Recommendation</div><p>${data.strategic_recommendation||'—'}</p></div>`;
       } catch(e) {
-        el.innerHTML = `<div class="alert alert-error">AI insights failed: ${e.message}. Check GEMINI_API_KEY in Railway env.</div>
+        el.innerHTML = `<div class="alert alert-error" style="word-break:break-word">${e.message}</div>
           <button class="btn btn-ghost btn-sm btn-full mt-16" onclick="loadAIInsights()">Retry</button>`;
       }
     }

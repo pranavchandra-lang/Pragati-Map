@@ -81,26 +81,44 @@ def get_heatmap_insights(request: Request, x_admin_key: Optional[str] = Header(d
   "strategic_recommendation": "1-2 sentence actionable recommendation tied to business growth"
 }"""
 
-    # Build rich heatmap summary for Gemini
-    from backend.routers.admin import get_heatmap as _get_heatmap
+    # Build rich heatmap summary directly from data (avoid re-auth by reading data ourselves)
     try:
-        from fastapi import Request as _Req
-        import types
-        fake_req = types.SimpleNamespace(session={})
-        heat = _get_heatmap(fake_req, x_admin_key=None)  # already auth-checked above
+        from backend.services.skill_engine import get_employee_gaps
+        employees = read_json("employees.json").get("employees", [])
+        assessed = [e for e in employees if e.get("assessment_status") == "submitted"]
+        framework = read_json("skill_framework.json")
+        fns = list(framework.get("functions", {}).keys())
+        # Compute avg gap per function × category
+        CATEGORIES = ["Technical", "Behavioural", "Domain", "Strategic"]
         matrix_lines = []
-        for fn, cats in heat.get("matrix", {}).items():
-            cats_str = ", ".join(f"{k}: {v}" for k, v in cats.items() if v > 0)
-            matrix_lines.append(f"  {fn}: {cats_str}")
-        worst = heat.get("worst_gaps", [])
-        worst_str = ", ".join(f"{g['skill']} ({g['function']}: {g['avg_gap']})" for g in worst[:5])
+        worst_gaps = []
+        for fn in fns:
+            fn_emps = [e for e in assessed if e.get("function_code") == fn]
+            cat_scores = {cat: [] for cat in CATEGORIES}
+            for emp in fn_emps:
+                gaps = get_employee_gaps(emp["employee_id"])
+                for g in gaps:
+                    if g["gap_score"] > 0 and g.get("category") in cat_scores:
+                        cat_scores[g["category"]].append(g["gap_score"])
+                    if g["gap_score"] > 0:
+                        worst_gaps.append((fn, g["skill_name"], g["gap_score"]))
+            parts = []
+            for cat, scores in cat_scores.items():
+                if scores:
+                    avg = round(sum(scores)/len(scores), 1)
+                    parts.append(f"{cat}={avg}")
+            if parts:
+                matrix_lines.append(f"  {fn}: " + ", ".join(parts))
+        worst_gaps.sort(key=lambda x: -x[2])
+        worst_str = "; ".join(f"{s} in {f} (gap {g})" for f, s, g in worst_gaps[:5])
         matrix_summary = (
-            f"Total employees: {heat.get('total_count',0)}, assessed: {heat.get('assessed_count',0)}\n"
-            f"Skill gap matrix (avg gap scores by function × category):\n" + "\n".join(matrix_lines) +
-            f"\nTop skill gaps: {worst_str}"
+            f"Total employees: {len(employees)}, assessed: {len(assessed)}\n"
+            f"Functions: {', '.join(fns)}\n"
+            f"Skill gap matrix (avg gap by function × category):\n" + "\n".join(matrix_lines) +
+            (f"\nTop skill gaps: {worst_str}" if worst_str else "")
         )
-    except Exception:
-        matrix_summary = f"Total employees: {len(read_json('employees.json').get('employees',[]))}"
+    except Exception as ex:
+        matrix_summary = f"Total employees: {len(read_json('employees.json').get('employees', []))}"
 
     user_msg = f"Wiom org skill heatmap summary:\n{matrix_summary}\n\nProvide 3 strategic insights for the HRBP and leadership team."
 
