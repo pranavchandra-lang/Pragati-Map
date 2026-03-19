@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Deep-Dive — Wiom Talent</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .emp-header {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 28px 0 24px; flex-wrap: wrap;
+    }
+    .emp-avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--purple); display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 800; color: var(--pink); flex-shrink: 0;
+    }
+    .emp-meta { flex: 1; }
+    .emp-meta h1 { font-size: 24px; }
+    .emp-meta .emp-role { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .emp-meta .emp-tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+    .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    .tab {
+      padding: 12px 20px; font-size: 14px; font-weight: 600; cursor: pointer;
+      color: var(--muted); border-bottom: 2px solid transparent; transition: all 0.2s;
+    }
+    .tab.active { color: var(--pink); border-bottom-color: var(--pink); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .priority-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 22px; margin-bottom: 16px;
+    }
+    .priority-card .priority-num {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 6px;
+    }
+    .priority-card .priority-skill { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .priority-card .priority-meta { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+    .priority-card .learning-section { margin-top: 16px; }
+
+    .quick-wins-list li {
+      padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px;
+      list-style: none; display: flex; gap: 10px; align-items: flex-start;
+    }
+    .quick-wins-list li:last-child { border-bottom: none; }
+    .quick-wins-list li::before { content: '⚡'; flex-shrink: 0; }
+
+    .coaching-prompt {
+      padding: 14px; background: var(--card-2); border-radius: 8px;
+      font-size: 14px; margin-bottom: 10px; border-left: 3px solid var(--pink);
+      line-height: 1.5;
+    }
+
+    .back-link { color: var(--muted); text-decoration: none; font-size: 13px; display: inline-block; margin-bottom: 8px; }
+    .back-link:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="logo">Wiom</a>
+    <div class="nav-links">
+      <a href="/admin/dashboard.html" class="nav-link">← Dashboard</a>
+      <a href="/logout" class="nav-link">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="loading" style="text-align:center;padding:60px 0">
+      <div class="spinner"></div>
+      <p class="text-muted mt-16">Loading employee data...</p>
+    </div>
+
+    <div id="main" class="hidden">
+      <a href="/admin/dashboard.html" class="back-link">← Back to Dashboard</a>
+
+      <!-- Employee header -->
+      <div class="emp-header">
+        <div class="emp-avatar" id="emp-avatar">?</div>
+        <div class="emp-meta">
+          <h1 id="emp-name">—</h1>
+          <div class="emp-role" id="emp-role">—</div>
+          <div class="emp-tags">
+            <span class="badge badge-pending" id="emp-fn">—</span>
+            <span class="badge badge-pending" id="emp-seniority">—</span>
+            <span class="badge" id="emp-assess-badge">—</span>
+            <span class="badge" id="emp-mgr-badge">—</span>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm" onclick="generatePlan()" id="plan-btn">
+            AI Plan बनाएं
+          </button>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab('gaps')">Skill Gaps</div>
+        <div class="tab" onclick="switchTab('plan')" id="tab-plan">Growth Plan</div>
+        <div class="tab" onclick="switchTab('coaching')">Coaching Prompts</div>
+      </div>
+
+      <!-- Tab: Gaps -->
+      <div id="tab-gaps" class="tab-content active">
+        <div id="gaps-container">
+          <p class="text-muted text-sm">No assessment data yet.</p>
+        </div>
+      </div>
+
+      <!-- Tab: Plan -->
+      <div id="tab-plan-content" class="tab-content">
+        <div id="plan-container">
+          <div style="text-align:center;padding:32px 0">
+            <p class="text-muted mb-16">AI growth plan अभी generate नहीं हुई।</p>
+            <button class="btn btn-primary" onclick="generatePlan()">AI Plan बनाएं</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Coaching -->
+      <div id="tab-coaching" class="tab-content">
+        <div id="coaching-container">
+          <p class="text-muted text-sm">Plan generate होने के बाद coaching prompts दिखेंगे।</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="error-state" class="hidden">
+      <div class="alert alert-error mt-24">Employee data load नहीं हुआ। Dashboard पर वापस जाएं।</div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const empId = params.get('id');
+    let employeeData = null;
+    let adminKey = sessionStorage.getItem('wiom_admin_key') || '';
+
+    const headers = () => adminKey ? {'X-Admin-Key': adminKey, 'Content-Type': 'application/json'} : {'Content-Type': 'application/json'};
+
+    async function loadEmployee() {
+      if (!empId) { showError(); return; }
+      try {
+        const [empRes, gapRes] = await Promise.all([
+          fetch('/api/v1/admin/employees', {headers: headers()}),
+          fetch(`/api/v1/admin/gaps/${empId}`, {headers: headers()}),
+        ]);
+
+        const empData = await empRes.json();
+        const employee = (empData.employees || []).find(e => e.employee_id === empId);
+        if (!employee) { showError(); return; }
+        employeeData = employee;
+
+        renderHeader(employee);
+
+        const gapData = await gapRes.json();
+        renderGapsTab(gapData.gaps || []);
+
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('main').classList.remove('hidden');
+      } catch (e) {
+        showError();
+      }
+    }
+
+    function renderHeader(e) {
+      document.getElementById('emp-name').textContent = e.name;
+      document.getElementById('emp-role').textContent = `${e.role_title} · Manager: ${e.manager || '—'}`;
+      document.getElementById('emp-fn').textContent = e.function_code;
+      document.getElementById('emp-seniority').textContent = e.seniority;
+      document.getElementById('emp-avatar').textContent = e.name.charAt(0).toUpperCase();
+
+      const ab = document.getElementById('emp-assess-badge');
+      ab.textContent = e.assessment_status === 'submitted' ? '✓ Self done' : 'Self pending';
+      ab.className = `badge ${e.assessment_status === 'submitted' ? 'badge-done' : 'badge-pending'}`;
+
+      const mb = document.getElementById('emp-mgr-badge');
+      mb.textContent = e.manager_rating_status === 'submitted' ? '✓ Manager rated' : 'Manager pending';
+      mb.className = `badge ${e.manager_rating_status === 'submitted' ? 'badge-done' : 'badge-pending'}`;
+    }
+
+    function renderGapsTab(gaps) {
+      const el = document.getElementById('gaps-container');
+      if (!gaps.length) {
+        el.innerHTML = '<p class="text-muted text-sm">No assessment data. Ask employee to complete their assessment first.</p>';
+        return;
+      }
+
+      el.innerHTML = `
+        <table class="gap-table">
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Category</th>
+              <th>Self</th>
+              <th>Manager</th>
+              <th>Actual</th>
+              <th>Expected</th>
+              <th>Gap</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${gaps.map(g => `
+              <tr>
+                <td class="font-bold">${g.skill_name}</td>
+                <td class="text-sm text-muted">${g.category}</td>
+                <td>${g.self_score}</td>
+                <td>${g.manager_score}</td>
+                <td>${g.triangulated_score}</td>
+                <td>${g.expected_level}</td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:8px">
+                    <div class="gap-bar" style="width:60px">
+                      <div class="gap-bar-fill ${g.gap_score >= 2 ? 'high' : g.gap_score >= 1 ? 'med' : 'low'}"
+                        style="width:${Math.min(100, Math.abs(g.gap_score)/3*100)}%"></div>
+                    </div>
+                    <span>${g.gap_score > 0 ? g.gap_score.toFixed(1) : '—'}</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-${g.status}">${g.status}</span></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    async function generatePlan() {
+      const btn = document.getElementById('plan-btn');
+      btn.disabled = true;
+      btn.textContent = 'Generating...';
+
+      switchTab('plan');
+
+      document.getElementById('plan-container').innerHTML = `
+        <div style="text-align:center;padding:40px 0">
+          <div class="spinner"></div>
+          <p class="text-muted mt-16">Claude AI personalised plan बना रहा है...</p>
+        </div>
+      `;
+
+      try {
+        const res = await fetch('/api/v1/ai/path', {
+          method: 'POST',
+          headers: headers(),
+          body: JSON.stringify({
+            employee_id: empId,
+            employee_name: employeeData.name,
+            function_context: employeeData.function_code,
+          }),
+        });
+        const data = await res.json();
+        const path = data.path || data;
+
+        if (path.error) {
+          document.getElementById('plan-container').innerHTML =
+            `<div class="alert alert-error">${path.error}</div>`;
+          btn.disabled = false; btn.textContent = 'AI Plan बनाएं';
+          return;
+        }
+
+        renderPlan(path);
+        renderCoaching(path.manager_coaching_prompts || []);
+        document.getElementById('tab-plan').textContent = 'Growth Plan ✓';
+      } catch (e) {
+        document.getElementById('plan-container').innerHTML =
+          '<div class="alert alert-error">Plan generation failed. Try again.</div>';
+      }
+      btn.disabled = false;
+      btn.textContent = 'Regenerate Plan';
+    }
+
+    function renderPlan(path) {
+      const priorities = path.top_3_priorities || [];
+      const quickWins = path.quick_wins || [];
+
+      let html = '';
+      priorities.forEach((p, i) => {
+        const iv = p.interventions || {};
+        html += `
+          <div class="priority-card">
+            <div class="priority-num">Priority ${i+1} · ${p.timeline_weeks || 12} weeks</div>
+            <div class="priority-skill">${p.skill_name}</div>
+            <div class="priority-meta">Gap: ${p.gap_score} · Success: "${p.success_indicator}"</div>
+            <div class="learning-section">
+              <div class="learning-bar">
+                <div class="bar-header">
+                  <span class="bar-label">70% — Experience</span>
+                  <span class="bar-pct">Stretch Assignment</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill-70" style="width:70%"></div></div>
+                <div class="bar-desc">${iv.experiential_70 || '—'}</div>
+              </div>
+              <div class="learning-bar">
+                <div class="bar-header">
+                  <span class="bar-label">20% — Social</span>
+                  <span class="bar-pct">Mentor / Peer</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill-20" style="width:20%"></div></div>
+                <div class="bar-desc">${iv.social_20 || '—'}</div>
+              </div>
+              <div class="learning-bar">
+                <div class="bar-header">
+                  <span class="bar-label">10% — Formal</span>
+                  <span class="bar-pct">Course / Cert</span>
+                </div>
+                <div class="bar-track"><div class="bar-fill-10" style="width:10%"></div></div>
+                <div class="bar-desc">${iv.formal_10 || '—'}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      if (quickWins.length) {
+        html += `
+          <div class="card mt-16">
+            <h3 class="mb-16">⚡ इस हफ्ते करें (Quick Wins)</h3>
+            <ul class="quick-wins-list">
+              ${quickWins.map(w => `<li>${w}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+      document.getElementById('plan-container').innerHTML = html || '<p class="text-muted">No priorities found.</p>';
+    }
+
+    function renderCoaching(prompts) {
+      const el = document.getElementById('coaching-container');
+      if (!prompts.length) {
+        el.innerHTML = '<p class="text-muted text-sm">Plan generate होने के बाद prompts दिखेंगे।</p>';
+        return;
+      }
+      el.innerHTML = `<h3 class="mb-16">Manager के लिए 1:1 Conversation Starters</h3>` +
+        prompts.map(p => `<div class="coaching-prompt">"${p}"</div>`).join('');
+    }
+
+    function switchTab(name) {
+      document.querySelectorAll('.tab').forEach((t, i) => {
+        t.classList.remove('active');
+      });
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+      const tabMap = {gaps: 0, plan: 1, coaching: 2};
+      document.querySelectorAll('.tab')[tabMap[name]]?.classList.add('active');
+      const contentMap = {gaps: 'tab-gaps', plan: 'tab-plan-content', coaching: 'tab-coaching'};
+      document.getElementById(contentMap[name])?.classList.add('active');
+    }
+
+    function showError() {
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('error-state').classList.remove('hidden');
+    }
+
+    loadEmployee();
+  </script>
+</body>
+</html>

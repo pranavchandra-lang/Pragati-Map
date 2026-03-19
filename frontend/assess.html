@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Assessment — Wiom</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header { padding: 32px 0 24px; text-align: center; }
+    .benefit-chip {
+      display: inline-block; padding: 6px 16px; border-radius: 20px;
+      background: rgba(0, 128, 67, 0.12); border: 1px solid rgba(0, 128, 67, 0.3);
+      color: #4caf7d; font-size: 13px; font-weight: 600; margin-bottom: 24px;
+    }
+    #step-entry, #step-form, #step-result { display: none; }
+    #step-entry.active, #step-form.active, #step-result.active { display: block; }
+
+    .entry-card { max-width: 440px; margin: 0 auto; }
+    .entry-card h1 { text-align: center; margin-bottom: 8px; }
+    .entry-card .sub { text-align: center; margin-bottom: 28px; }
+
+    .category-section { margin-bottom: 28px; }
+    .category-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--muted); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .category-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .progress-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 6px; font-size: 13px;
+    }
+    .progress-wrapper { margin-bottom: 28px; }
+
+    /* Result cards */
+    .result-header { text-align: center; padding: 32px 0 24px; }
+    .result-header .icon { font-size: 48px; margin-bottom: 12px; }
+    .gap-priority-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px; margin-bottom: 12px;
+    }
+    .gap-priority-card .gap-num {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 4px;
+    }
+    .gap-priority-card .gap-skill { font-weight: 700; font-size: 15px; margin-bottom: 8px; }
+    .gap-score-row { display: flex; gap: 16px; font-size: 12px; color: var(--muted); }
+    .score-item strong { color: var(--text); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="logo">Wiom</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">← Home</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Step 1: Entry -->
+    <div id="step-entry" class="active">
+      <div class="page-header">
+        <h1 class="text-pink">अपना Skill Map बनाएं</h1>
+        <p class="mt-8">3 मिनट में — कोई गलत जवाब नहीं है</p>
+        <div class="benefit-chip mt-16">✓ सबमिट करते ही आपकी Growth Plan मिलेगी</div>
+      </div>
+
+      <div class="entry-card card">
+        <h2 style="margin-bottom: 6px;">आप कौन हैं?</h2>
+        <p class="mb-16">Employee ID डालें या नाम से search करें</p>
+
+        <div id="entry-error" class="alert alert-error hidden"></div>
+
+        <div class="form-group">
+          <label>Employee ID या नाम</label>
+          <input type="text" id="emp-search" placeholder="e.g. EMP0001 या Pranav" autocomplete="off">
+          <div class="hint">आपका Employee ID HR से मिलेगा</div>
+        </div>
+        <button class="btn btn-primary btn-full" onclick="loadEmployee()">आगे बढ़ें →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Assessment Form -->
+    <div id="step-form">
+      <div class="page-header">
+        <h1 id="form-title">Skill Assessment</h1>
+        <p id="form-subtitle" class="mt-8"></p>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-header">
+          <span class="text-sm text-muted">Progress</span>
+          <span id="progress-text" class="text-sm text-pink font-bold">0 / 0</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <div id="fallback-banner" class="alert alert-info hidden"></div>
+      <div id="skills-container"></div>
+
+      <div class="mt-24" id="submit-area" style="display:none">
+        <div class="alert alert-info mb-16">
+          <strong>Submit करने से पहले:</strong> सभी skills को rate करें। Honest रहें — यह assessment आपकी growth के लिए है, performance review के लिए नहीं।
+        </div>
+        <button class="btn btn-primary btn-full" onclick="submitAssessment()">
+          Assessment Submit करें
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Result -->
+    <div id="step-result">
+      <div class="result-header">
+        <div class="icon">🎯</div>
+        <h1>Assessment Submit हो गया!</h1>
+        <p class="mt-8">यहाँ हैं आपकी top growth priorities:</p>
+      </div>
+
+      <div id="top-gaps-container"></div>
+
+      <div class="card mt-24" style="text-align:center">
+        <p class="mb-16">Claude AI आपकी पूरी personalised Growth Plan बनाएगा</p>
+        <a id="full-plan-link" href="#" class="btn btn-primary">अपनी पूरी Plan देखें →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentEmployee = null;
+    let skillsData = [];
+
+    // Restore state from sessionStorage on page load
+    const saved = sessionStorage.getItem('assess_state');
+    if (saved) {
+      try {
+        const state = JSON.parse(saved);
+        if (state.employee && state.skills) {
+          currentEmployee = state.employee;
+          skillsData = state.skills;
+          renderForm(state.employee, state.skills, state.fallback);
+          restoreRatings(state.ratings || {});
+        }
+      } catch (e) {}
+    }
+
+    async function loadEmployee() {
+      const raw = document.getElementById('emp-search').value.trim();
+      if (!raw) return;
+
+      const errEl = document.getElementById('entry-error');
+      errEl.classList.add('hidden');
+
+      const isId = /^EMP\d+$/i.test(raw);
+      const url = isId
+        ? `/api/v1/assess/${raw.toUpperCase()}`
+        : `/api/v1/assess/EMP0000?name=${encodeURIComponent(raw)}`;
+
+      try {
+        const res = await fetch(url);
+        if (!res.ok) {
+          const err = await res.json();
+          errEl.textContent = err.detail || 'Employee नहीं मिला। ID या नाम दोबारा check करें।';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        const data = await res.json();
+        currentEmployee = data.employee;
+        skillsData = data.skills_to_rate;
+
+        sessionStorage.setItem('assess_state', JSON.stringify({
+          employee: data.employee,
+          skills: data.skills_to_rate,
+          fallback: data.fallback_used,
+          ratings: {}
+        }));
+
+        renderForm(data.employee, data.skills_to_rate, data.fallback_used, data.fallback_message);
+      } catch (e) {
+        errEl.textContent = 'Server से connect नहीं हो पाया। दोबारा try करें।';
+        errEl.classList.remove('hidden');
+      }
+    }
+
+    function renderForm(employee, skills, fallback, fallbackMsg) {
+      document.getElementById('step-entry').classList.remove('active');
+      document.getElementById('step-form').classList.add('active');
+
+      document.getElementById('form-title').textContent = `नमस्ते, ${employee.name}!`;
+      document.getElementById('form-subtitle').textContent =
+        `${employee.role_title} · ${employee.function_code} · ${skills.length} skills`;
+
+      if (fallback && fallbackMsg) {
+        const banner = document.getElementById('fallback-banner');
+        banner.textContent = fallbackMsg;
+        banner.classList.remove('hidden');
+      }
+
+      // Group by category
+      const byCategory = {};
+      skills.forEach(s => {
+        const cat = s.category || 'Technical';
+        if (!byCategory[cat]) byCategory[cat] = [];
+        byCategory[cat].push(s);
+      });
+
+      const container = document.getElementById('skills-container');
+      container.innerHTML = '';
+
+      const LEVEL_LABELS = [
+        '', 'पहचान', 'सीख रहा/रही हूं', 'खुद कर सकता/सकती हूं', 'दूसरों को सिखा सकता/सकती हूं'
+      ];
+      const LEVEL_ENG = ['', 'Awareness', 'Working', 'Practitioner', 'Expert'];
+
+      Object.entries(byCategory).forEach(([cat, catSkills]) => {
+        const section = document.createElement('div');
+        section.className = 'category-section';
+        section.innerHTML = `<div class="category-label">${cat}</div>`;
+
+        catSkills.forEach(skill => {
+          const card = document.createElement('div');
+          card.className = 'skill-card';
+          card.id = `skill-${skill.skill_id}`;
+          card.innerHTML = `
+            <div class="skill-name">${skill.skill_name}</div>
+            <div class="skill-meta">${skill.type === 'must_have' ? 'Must Have' : 'Good to Have'}</div>
+            <div class="rating-options">
+              ${[1,2,3,4].map(n => `
+                <div class="rating-option">
+                  <input type="radio" name="${skill.skill_id}" id="${skill.skill_id}_${n}" value="${n}"
+                    onchange="onRatingChange('${skill.skill_id}')">
+                  <label for="${skill.skill_id}_${n}">
+                    <span class="level-num">${n}</span>
+                    <span>${LEVEL_LABELS[n]}</span>
+                    <span style="font-size:10px;color:var(--border)">${LEVEL_ENG[n]}</span>
+                  </label>
+                </div>
+              `).join('')}
+            </div>
+          `;
+          section.appendChild(card);
+        });
+
+        container.appendChild(section);
+      });
+
+      document.getElementById('submit-area').style.display = 'block';
+      updateProgress();
+    }
+
+    function restoreRatings(ratings) {
+      Object.entries(ratings).forEach(([skillId, val]) => {
+        const el = document.getElementById(`${skillId}_${val}`);
+        if (el) { el.checked = true; document.getElementById(`skill-${skillId}`)?.classList.add('rated'); }
+      });
+      updateProgress();
+    }
+
+    function onRatingChange(skillId) {
+      document.getElementById(`skill-${skillId}`)?.classList.add('rated');
+      const saved = JSON.parse(sessionStorage.getItem('assess_state') || '{}');
+      const val = document.querySelector(`input[name="${skillId}"]:checked`)?.value;
+      if (val) {
+        saved.ratings = saved.ratings || {};
+        saved.ratings[skillId] = parseInt(val);
+        sessionStorage.setItem('assess_state', JSON.stringify(saved));
+      }
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = skillsData.length;
+      const done = skillsData.filter(s =>
+        document.querySelector(`input[name="${s.skill_id}"]:checked`)
+      ).length;
+      document.getElementById('progress-text').textContent = `${done} / ${total}`;
+      document.getElementById('progress-fill').style.width = total ? `${(done/total)*100}%` : '0%';
+    }
+
+    async function submitAssessment() {
+      const unrated = skillsData.filter(s =>
+        !document.querySelector(`input[name="${s.skill_id}"]:checked`)
+      );
+      if (unrated.length > 0) {
+        alert(`${unrated.length} skill(s) अभी rate नहीं हुई। सभी rate करें।`);
+        document.getElementById(`skill-${unrated[0].skill_id}`)?.scrollIntoView({behavior: 'smooth'});
+        return;
+      }
+
+      const ratings = skillsData.map(s => ({
+        skill_id: s.skill_id,
+        skill_name: s.skill_name,
+        self_rating: parseInt(document.querySelector(`input[name="${s.skill_id}"]:checked`).value),
+      }));
+
+      const btn = document.querySelector('#submit-area .btn');
+      btn.disabled = true;
+      btn.textContent = 'Submit हो रहा है...';
+
+      try {
+        const res = await fetch('/api/v1/assess', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            employee_id: currentEmployee.employee_id,
+            function_code: currentEmployee.function_code,
+            role_title: currentEmployee.role_title,
+            ratings,
+          }),
+        });
+        const data = await res.json();
+        sessionStorage.removeItem('assess_state');
+        showResult(data);
+      } catch (e) {
+        btn.disabled = false;
+        btn.textContent = 'Assessment Submit करें';
+        alert('Submit नहीं हो पाया। दोबारा try करें।');
+      }
+    }
+
+    function showResult(data) {
+      document.getElementById('step-form').classList.remove('active');
+      document.getElementById('step-result').classList.add('active');
+
+      const container = document.getElementById('top-gaps-container');
+      const gaps = data.top_gaps || [];
+
+      if (gaps.length === 0) {
+        container.innerHTML = `<div class="alert alert-success">
+          आपकी सभी skills expected level पर या उससे ऊपर हैं! 🎉
+        </div>`;
+      } else {
+        gaps.forEach((g, i) => {
+          const card = document.createElement('div');
+          card.className = 'gap-priority-card';
+          card.innerHTML = `
+            <div class="gap-num">Priority ${i+1}</div>
+            <div class="gap-skill">${g.skill_name}</div>
+            <div class="gap-score-row">
+              <span>आपका score: <strong>${g.self_score}</strong></span>
+              <span>Expected: <strong>${g.expected_level}</strong></span>
+              <span>Gap: <strong class="text-pink">${g.gap_score > 0 ? '+' : ''}${g.gap_score}</strong></span>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      document.getElementById('full-plan-link').href =
+        `/admin/employee.html?id=${currentEmployee.employee_id}`;
+    }
+
+    // Enter key to proceed
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('emp-search')?.addEventListener('keydown', e => {
+        if (e.key === 'Enter') loadEmployee();
+      });
+    });
+  </script>
+</body>
+</html>

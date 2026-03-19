@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager Ratings — Wiom</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header { padding: 28px 0 20px; }
+    #step-login, #step-directs, #step-rate, #step-done { display: none; }
+    #step-login.active, #step-directs.active, #step-rate.active, #step-done.active { display: block; }
+
+    .direct-list { display: flex; flex-direction: column; gap: 8px; }
+    .direct-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; transition: border-color 0.2s;
+    }
+    .direct-item:hover { border-color: var(--pink); }
+    .direct-item .direct-name { font-weight: 700; font-size: 15px; }
+    .direct-item .direct-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .direct-item .direct-status { text-align: right; }
+
+    .rate-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    }
+    .rate-header .back-btn {
+      background: none; border: none; color: var(--muted); cursor: pointer; font-size: 20px;
+    }
+
+    .compare-section { margin-bottom: 28px; }
+    .compare-skill-row {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px; margin-bottom: 10px;
+    }
+    .compare-skill-row .skill-name { font-weight: 700; margin-bottom: 12px; }
+    .self-score-display {
+      background: var(--card-2); border-radius: 6px; padding: 8px 12px;
+      font-size: 13px; color: var(--muted);
+    }
+    .self-score-display .score-val {
+      font-size: 20px; font-weight: 800; color: var(--text); margin-right: 6px;
+    }
+
+    .coaching-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px; margin-bottom: 12px;
+    }
+    .coaching-card .coaching-num {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 6px;
+    }
+    .coaching-card .coaching-text { font-size: 15px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="logo">Wiom</a>
+    <div class="nav-links">
+      <a href="/" class="nav-link">← Home</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Step 1: Manager login -->
+    <div id="step-login" class="active">
+      <div class="page-header">
+        <h1>Team को Rate करें</h1>
+        <p class="mt-8">अपना नाम डालें और अपनी team के assessments देखें</p>
+      </div>
+
+      <div class="card" style="max-width:440px;margin:0 auto">
+        <div id="login-error" class="alert alert-error hidden mb-16"></div>
+        <div class="form-group">
+          <label>आपका नाम (जैसा Wiom में register है)</label>
+          <input type="text" id="manager-name" placeholder="e.g. Pranav Chandra" autocomplete="off">
+        </div>
+        <button class="btn btn-primary btn-full" onclick="loadDirects()">Team देखें →</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Direct reports list -->
+    <div id="step-directs">
+      <div class="page-header flex-between">
+        <div>
+          <h1 id="directs-title">आपकी Team</h1>
+          <p id="directs-count" class="mt-4"></p>
+        </div>
+      </div>
+
+      <div id="directs-list" class="direct-list"></div>
+    </div>
+
+    <!-- Step 3: Rate one employee -->
+    <div id="step-rate">
+      <div class="rate-header">
+        <button class="back-btn" onclick="backToDirects()">←</button>
+        <div>
+          <h2 id="rate-employee-name">Employee</h2>
+          <p id="rate-employee-meta" class="text-sm text-muted"></p>
+        </div>
+      </div>
+
+      <div class="alert alert-info mb-16">
+        <strong>Side-by-side देखें:</strong> बाईं तरफ employee का self-assessment, दाईं तरफ आपकी rating।
+      </div>
+
+      <div id="compare-container"></div>
+
+      <div class="form-group mt-16">
+        <label>Coaching Notes (optional)</label>
+        <textarea id="coaching-notes" placeholder="इस employee के बारे में कोई specific note..."></textarea>
+      </div>
+
+      <button class="btn btn-primary btn-full" onclick="submitRating()">Rating Save करें</button>
+    </div>
+
+    <!-- Step 4: Done + coaching starters -->
+    <div id="step-done">
+      <div style="text-align:center;padding:32px 0 24px">
+        <div style="font-size:48px;margin-bottom:12px">✅</div>
+        <h1>Rating Save हो गई!</h1>
+        <p class="mt-8">यहाँ हैं 1:1 के लिए coaching conversation starters:</p>
+      </div>
+
+      <div id="coaching-starters-container"></div>
+
+      <div class="mt-24 flex gap-12" style="justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-ghost" onclick="rateNextEmployee()">अगला Employee →</button>
+        <a href="/" class="btn btn-secondary">Home पर जाएं</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let managerName = '';
+    let directs = [];
+    let currentEmployee = null;
+    let currentSelfRatings = [];
+
+    const LEVEL_LABELS = ['', 'पहचान', 'सीख रहा/रही हूं', 'खुद कर सकता/सकती हूं', 'दूसरों को सिखा सकता/सकती हूं'];
+    const LEVEL_ENG = ['', 'Awareness', 'Working', 'Practitioner', 'Expert'];
+
+    async function loadDirects() {
+      const name = document.getElementById('manager-name').value.trim();
+      if (!name) return;
+      const errEl = document.getElementById('login-error');
+      errEl.classList.add('hidden');
+
+      try {
+        const res = await fetch(`/api/v1/manager/directs/${encodeURIComponent(name)}`);
+        if (!res.ok) {
+          const err = await res.json();
+          errEl.textContent = err.detail || 'आपके नाम से कोई team नहीं मिली।';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        const data = await res.json();
+        managerName = name;
+        directs = data.directs;
+        renderDirects();
+      } catch (e) {
+        errEl.textContent = 'Server error। दोबारा try करें।';
+        errEl.classList.remove('hidden');
+      }
+    }
+
+    function renderDirects() {
+      document.getElementById('step-login').classList.remove('active');
+      document.getElementById('step-directs').classList.add('active');
+      document.getElementById('directs-title').textContent = `${managerName} की Team`;
+      document.getElementById('directs-count').textContent = `${directs.length} direct reports`;
+
+      const list = document.getElementById('directs-list');
+      list.innerHTML = '';
+      directs.forEach(emp => {
+        const el = document.createElement('div');
+        el.className = 'direct-item';
+        el.innerHTML = `
+          <div>
+            <div class="direct-name">${emp.name}</div>
+            <div class="direct-meta">${emp.role_title} · ${emp.function_code}</div>
+          </div>
+          <div class="direct-status">
+            <span class="badge ${emp.assessment_status === 'submitted' ? 'badge-done' : 'badge-pending'}">
+              ${emp.assessment_status === 'submitted' ? '✓ Self done' : 'Pending'}
+            </span>
+            <br><span class="badge ${emp.manager_rating_status === 'submitted' ? 'badge-done' : 'badge-pending'}" style="margin-top:4px">
+              ${emp.manager_rating_status === 'submitted' ? '✓ Rated' : 'Not rated'}
+            </span>
+          </div>
+        `;
+        el.onclick = () => loadRatingForm(emp);
+        list.appendChild(el);
+      });
+    }
+
+    async function loadRatingForm(emp) {
+      currentEmployee = emp;
+      try {
+        const res = await fetch(`/api/v1/manager/rate/${emp.employee_id}`);
+        const data = await res.json();
+        currentSelfRatings = data.self_ratings || [];
+        renderRatingForm(emp, data);
+      } catch (e) {
+        alert('Form load नहीं हुआ। दोबारा try करें।');
+      }
+    }
+
+    function renderRatingForm(emp, data) {
+      document.getElementById('step-directs').classList.remove('active');
+      document.getElementById('step-rate').classList.add('active');
+      document.getElementById('rate-employee-name').textContent = emp.name;
+      document.getElementById('rate-employee-meta').textContent = `${emp.role_title} · ${emp.function_code}`;
+      document.getElementById('coaching-notes').value = '';
+
+      const selfMap = {};
+      (data.self_ratings || []).forEach(r => { selfMap[r.skill_id] = r.self_rating; });
+      const existingMgrMap = {};
+      (data.manager_ratings || []).forEach(r => { existingMgrMap[r.skill_id] = r.self_rating; });
+
+      const container = document.getElementById('compare-container');
+      container.innerHTML = '';
+
+      if (!data.assessment_complete) {
+        container.innerHTML = `<div class="alert alert-error">
+          इस employee ने अभी self-assessment submit नहीं किया। पहले उनसे करवाएं।
+        </div>`;
+        document.querySelector('#step-rate .btn-primary').disabled = true;
+        return;
+      }
+
+      document.querySelector('#step-rate .btn-primary').disabled = false;
+
+      currentSelfRatings.forEach(sr => {
+        const card = document.createElement('div');
+        card.className = 'compare-skill-row';
+        const existing = existingMgrMap[sr.skill_id] || '';
+        card.innerHTML = `
+          <div class="skill-name">${sr.skill_name}</div>
+          <div class="compare-grid">
+            <div>
+              <div class="compare-col-header">Employee का नज़रिया</div>
+              <div class="self-score-display">
+                <span class="score-val">${sr.self_rating}</span>
+                <span>${LEVEL_LABELS[sr.self_rating] || ''}</span>
+              </div>
+            </div>
+            <div>
+              <div class="compare-col-header">आपका आकलन</div>
+              <div class="rating-options" style="grid-template-columns:repeat(4,1fr)">
+                ${[1,2,3,4].map(n => `
+                  <div class="rating-option">
+                    <input type="radio" name="mgr_${sr.skill_id}" id="mgr_${sr.skill_id}_${n}" value="${n}"
+                      ${existing == n ? 'checked' : ''}>
+                    <label for="mgr_${sr.skill_id}_${n}">
+                      <span class="level-num">${n}</span>
+                      <span style="font-size:10px">${LEVEL_ENG[n]}</span>
+                    </label>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    async function submitRating() {
+      const ratings = currentSelfRatings.map(sr => {
+        const checked = document.querySelector(`input[name="mgr_${sr.skill_id}"]:checked`);
+        return {
+          skill_id: sr.skill_id,
+          skill_name: sr.skill_name,
+          self_rating: checked ? parseInt(checked.value) : sr.self_rating,
+        };
+      });
+
+      const btn = document.querySelector('#step-rate .btn-primary');
+      btn.disabled = true;
+      btn.textContent = 'Save हो रहा है...';
+
+      try {
+        const res = await fetch('/api/v1/manager/rate', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            manager_id: managerName,
+            employee_id: currentEmployee.employee_id,
+            ratings,
+            coaching_notes: document.getElementById('coaching-notes').value,
+          }),
+        });
+        const data = await res.json();
+        showCoachingStarters(data.coaching_starters || []);
+
+        // Update local state
+        const idx = directs.findIndex(d => d.employee_id === currentEmployee.employee_id);
+        if (idx >= 0) directs[idx].manager_rating_status = 'submitted';
+      } catch (e) {
+        btn.disabled = false;
+        btn.textContent = 'Rating Save करें';
+        alert('Save नहीं हुआ। दोबारा try करें।');
+      }
+    }
+
+    function showCoachingStarters(starters) {
+      document.getElementById('step-rate').classList.remove('active');
+      document.getElementById('step-done').classList.add('active');
+
+      const container = document.getElementById('coaching-starters-container');
+      container.innerHTML = '';
+      starters.forEach((s, i) => {
+        const card = document.createElement('div');
+        card.className = 'coaching-card';
+        card.innerHTML = `<div class="coaching-num">Conversation Starter ${i+1}</div>
+                          <div class="coaching-text">"${s}"</div>`;
+        container.appendChild(card);
+      });
+
+      if (starters.length === 0) {
+        container.innerHTML = `<div class="alert alert-info">Rating save हो गई। Gaps available होने पर coaching prompts दिखेंगे।</div>`;
+      }
+    }
+
+    function backToDirects() {
+      document.getElementById('step-rate').classList.remove('active');
+      document.getElementById('step-directs').classList.add('active');
+      renderDirects();
+    }
+
+    function rateNextEmployee() {
+      document.getElementById('step-done').classList.remove('active');
+      document.getElementById('step-directs').classList.add('active');
+      renderDirects();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('manager-name')?.addEventListener('keydown', e => {
+        if (e.key === 'Enter') loadDirects();
+      });
+    });
+  </script>
+</body>
+</html>
