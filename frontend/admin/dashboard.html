@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Dashboard — Wiom Talent</title>
+  <title>Admin Dashboard — Pragati Map</title>
   <link rel="stylesheet" href="/style.css">
   <style>
     .two-panel { display: grid; grid-template-columns: 260px 1fr; gap: 24px; }
     @media (max-width: 800px) { .two-panel { grid-template-columns: 1fr; } }
 
     .heatmap-wrapper { overflow-x: auto; }
-    .heatmap-grid-outer { min-width: 400px; }
     .heatmap-header-row { display: grid; gap: 4px; margin-bottom: 4px; }
     .heatmap-header-cell {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
       color: var(--muted); text-align: center; padding: 4px;
     }
     .heatmap-row { display: grid; gap: 4px; margin-bottom: 4px; align-items: center; }
-    .heatmap-fn-label {
-      font-size: 12px; font-weight: 700; color: var(--text);
-      text-align: right; padding-right: 8px;
-    }
+    .heatmap-fn-label { font-size: 12px; font-weight: 700; color: var(--text); text-align: right; padding-right: 8px; }
 
     .worst-gap-item {
       display: flex; justify-content: space-between; align-items: center;
@@ -30,46 +26,102 @@
     .wg-score { font-weight: 800; color: var(--gap-high); }
 
     .employee-table-wrap { overflow-x: auto; }
-
     .filter-row { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
-    .filter-row input, .filter-row select {
-      width: auto; flex: 1; min-width: 120px; max-width: 200px;
-    }
-
-    .sortable { cursor: pointer; user-select: none; }
-    .sortable:hover { color: var(--text); }
-    .sort-arrow { margin-left: 4px; }
+    .filter-row input, .filter-row select { width: auto; flex: 1; min-width: 120px; max-width: 200px; }
 
     .ai-card {
       background: rgba(109, 23, 206, 0.1); border: 1px solid rgba(109, 23, 206, 0.3);
       border-radius: 12px; padding: 18px; margin-bottom: 12px;
     }
-    .ai-card .ai-label {
-      font-size: 11px; font-weight: 700; text-transform: uppercase;
-      color: #a775e8; margin-bottom: 6px;
-    }
+    .ai-card .ai-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #a775e8; margin-bottom: 6px; }
     .ai-card p { color: var(--text); font-size: 14px; line-height: 1.6; }
 
-    /* Auth gate */
+    /* ── 9-box grid ── */
+    .nine-box-wrap { position: relative; }
+    .nine-box-y-label {
+      position: absolute; left: -28px; top: 50%; transform: translateY(-50%) rotate(-90deg);
+      font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted);
+      white-space: nowrap; letter-spacing: 0.6px;
+    }
+    .nine-box-grid {
+      display: grid; grid-template-columns: 48px repeat(3, 1fr);
+      grid-template-rows: repeat(3, 100px) 28px;
+      gap: 4px; margin-left: 32px;
+    }
+    .nine-box-cell {
+      border-radius: 8px; padding: 8px 6px; position: relative;
+      display: flex; flex-wrap: wrap; gap: 4px; align-content: flex-start;
+    }
+    .nine-box-row-label {
+      display: flex; align-items: center; justify-content: flex-end; padding-right: 8px;
+      font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--muted);
+    }
+    .nine-box-col-label {
+      text-align: center; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; color: var(--muted); align-self: center;
+    }
+    .nine-box-dot {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%; font-size: 9px;
+      font-weight: 700; cursor: pointer; transition: transform 0.15s;
+      border: 1.5px solid rgba(255,255,255,0.15); line-height: 1;
+      text-align: center; overflow: hidden; white-space: nowrap;
+    }
+    .nine-box-dot:hover { transform: scale(1.15); z-index: 2; }
+    .nine-box-corner-label {
+      position: absolute; bottom: 5px; right: 7px;
+      font-size: 9px; font-weight: 700; text-transform: uppercase; opacity: 0.6; letter-spacing: 0.4px;
+    }
+    .nine-box-x-labels { display: flex; margin-left: calc(32px + 48px + 4px); gap: 4px; margin-top: 4px; }
+    .nine-box-x-label { flex: 1; text-align: center; font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--muted); }
+    .nine-box-x-axis { text-align: center; margin-top: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.6px; }
+
+    /* ── Function-level heatmap tabs ── */
+    .fn-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .fn-tab {
+      padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700;
+      cursor: pointer; border: 1.5px solid var(--border); color: var(--muted);
+      background: transparent; transition: all 0.15s;
+    }
+    .fn-tab:hover { border-color: var(--pink); color: var(--text); }
+    .fn-tab.active { border-color: var(--pink); background: rgba(217,0,141,0.12); color: var(--pink); }
+
+    .fn-emp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+    .fn-emp-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 14px;
+    }
+    .fn-emp-name { font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+    .fn-emp-role { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+    .fn-skill-bar { margin-bottom: 6px; }
+    .fn-bar-row { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 2px; }
+    .fn-bar-label { color: var(--muted); }
+    .fn-bar-val { font-weight: 700; }
+    .fn-mini-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .fn-mini-fill { height: 100%; border-radius: 2px; }
+
+    /* auth gate */
     #auth-gate { display: none; }
     #auth-gate.active { display: block; }
     #main-content { display: none; }
     #main-content.active { display: block; }
+
+    .section-title { font-size: 18px; font-weight: 800; margin-bottom: 4px; color: #fff; }
+    .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <a href="/" class="logo">Wiom</a>
+    <a href="/" class="logo">Pragati Map</a>
     <div class="nav-links">
       <a href="/" class="nav-link">Home</a>
       <a href="/logout" class="nav-link">Logout</a>
     </div>
   </nav>
 
-  <!-- Auth gate for non-session access -->
   <div id="auth-gate" class="container">
     <div class="card" style="max-width:400px;margin:40px auto;text-align:center">
-      <h2 class="mb-16">Admin Access</h2>
+      <h2 class="mb-16">People Team Access</h2>
       <input type="password" id="admin-key-input" placeholder="Admin password" style="margin-bottom:12px">
       <button class="btn btn-primary btn-full" onclick="unlockAdmin()">Access Dashboard</button>
       <div id="auth-error" class="alert alert-error mt-16 hidden"></div>
@@ -79,74 +131,78 @@
   <div id="main-content" class="container-wide">
     <div style="padding: 24px 0 16px">
       <h1>Org Skill Dashboard</h1>
-      <p class="mt-4">Live skill gap heatmap across all functions</p>
+      <p class="mt-4">Live skill gap intelligence across all functions</p>
     </div>
 
     <!-- Stats strip -->
-    <div class="stats-strip" id="stats-strip">
-      <div class="stat-card accent">
-        <div class="stat-value" id="stat-assessed">—</div>
-        <div class="stat-label">Assessments complete</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value" id="stat-total">—</div>
-        <div class="stat-label">Total employees</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value" id="stat-avg-gap">—</div>
-        <div class="stat-label">Avg gap score</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-value" id="stat-critical">—</div>
-        <div class="stat-label">Critical gaps (≥2)</div>
-      </div>
+    <div class="stats-strip">
+      <div class="stat-card accent"><div class="stat-value" id="stat-assessed">—</div><div class="stat-label">Assessments complete</div></div>
+      <div class="stat-card"><div class="stat-value" id="stat-total">—</div><div class="stat-label">Total employees</div></div>
+      <div class="stat-card"><div class="stat-value" id="stat-avg-gap">—</div><div class="stat-label">Avg gap score</div></div>
+      <div class="stat-card"><div class="stat-value" id="stat-critical">—</div><div class="stat-label">Critical gaps (≥2)</div></div>
     </div>
 
-    <div class="two-panel">
-      <!-- Left: Worst gaps + AI -->
+    <!-- Row 1: Worst gaps + AI | Org Heatmap -->
+    <div class="two-panel" style="margin-bottom:24px">
       <div>
         <div class="card mb-16">
           <h3 class="mb-16">Top Skill Gaps</h3>
-          <div id="worst-gaps-list">
-            <div class="spinner"></div>
-          </div>
+          <div id="worst-gaps-list"><div class="spinner"></div></div>
         </div>
-
         <div class="card">
           <h3 class="mb-16">AI Insights</h3>
           <div id="ai-insights-container">
-            <p class="text-sm text-muted mb-16">Claude AI org-level analysis</p>
-            <button class="btn btn-ghost btn-sm btn-full" onclick="loadAIInsights()">
-              Generate Insights
-            </button>
+            <p class="text-sm text-muted mb-16">Gemini AI analysis of your org skill data</p>
+            <button class="btn btn-ghost btn-sm btn-full" onclick="loadAIInsights()">Generate Insights</button>
           </div>
         </div>
       </div>
-
-      <!-- Right: Heatmap -->
       <div>
-        <div class="card mb-16">
-          <h3 class="mb-16">Skill Heatmap</h3>
+        <div class="card mb-0">
+          <h3 class="mb-16">Org Skill Heatmap</h3>
           <div class="heatmap-wrapper">
-            <div id="heatmap-container">
-              <div class="spinner"></div>
-            </div>
+            <div id="heatmap-container"><div class="spinner"></div></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Row 2: 9-Box Grid -->
+    <div class="card mb-24">
+      <div class="section-title">9-Box Talent Grid</div>
+      <p class="section-sub">Skill Readiness (X) × Performance Potential (Y) — assessed employees only</p>
+      <div style="position:relative; padding-left: 32px;">
+        <div style="position:absolute;left:0;top:0;bottom:28px;display:flex;align-items:center;">
+          <span style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:0.6px;">Performance Potential</span>
+        </div>
+        <div id="nine-box-grid" class="nine-box-grid"></div>
+        <div class="nine-box-x-labels" id="nine-box-x-labels">
+          <div class="nine-box-x-label">Low Readiness</div>
+          <div class="nine-box-x-label">Medium Readiness</div>
+          <div class="nine-box-x-label">High Readiness</div>
+        </div>
+        <div class="nine-box-x-axis">← Skill Readiness →</div>
+      </div>
+      <div id="nine-box-legend" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:12px;"></div>
+    </div>
+
+    <!-- Row 3: Function-level heatmap -->
+    <div class="card mb-24">
+      <div class="section-title">Function-Level Skill Breakdown</div>
+      <p class="section-sub">Drill into each function — employee skill gap profiles</p>
+      <div class="fn-tabs" id="fn-tabs"></div>
+      <div id="fn-detail-container"><p class="text-sm text-muted">Select a function above.</p></div>
+    </div>
+
     <!-- Employee table -->
-    <div class="card mt-24">
+    <div class="card mt-0">
       <div class="flex-between mb-16">
         <h3>All Employees</h3>
         <span id="emp-count" class="text-sm text-muted"></span>
       </div>
       <div class="filter-row">
         <input type="search" id="emp-search" placeholder="Search name or role..." oninput="filterTable()">
-        <select id="fn-filter" onchange="filterTable()">
-          <option value="">All Functions</option>
-        </select>
+        <select id="fn-filter" onchange="filterTable()"><option value="">All Functions</option></select>
         <select id="status-filter" onchange="filterTable()">
           <option value="">All Status</option>
           <option value="submitted">Assessment Done</option>
@@ -157,12 +213,8 @@
         <table class="gap-table" id="emp-table">
           <thead>
             <tr>
-              <th class="sortable" onclick="sortTable('name')">Name <span class="sort-arrow"></span></th>
-              <th>Role</th>
-              <th>Function</th>
-              <th>Assessment</th>
-              <th>Mgr Rating</th>
-              <th>Action</th>
+              <th>Name</th><th>Role</th><th>Function</th>
+              <th>Assessment</th><th>Mgr Rating</th><th>Action</th>
             </tr>
           </thead>
           <tbody id="emp-tbody"></tbody>
@@ -171,7 +223,7 @@
     </div>
   </div>
 
-  <!-- Slide-in panel for heatmap cell detail -->
+  <!-- Slide panel -->
   <div class="panel-overlay" id="panel-overlay" onclick="closePanel()"></div>
   <div class="slide-panel" id="slide-panel">
     <button class="panel-close" onclick="closePanel()">×</button>
@@ -181,32 +233,22 @@
 
   <script>
     const CATS = ['Technical', 'Behavioural', 'Domain', 'Strategic'];
-    const CAT_COLORS = ['#D9008D', '#443152', '#008043', '#6D17CE'];
     let adminKey = sessionStorage.getItem('wiom_admin_key') || '';
-    let allEmployees = [];
-    let heatmapData = null;
+    let allEmployees = [], heatmapData = null, empGapCache = {};
 
     function init() {
-      // Check if logged in via session (Google OAuth)
       fetch('/api/v1/admin/employees', {headers: adminKey ? {'X-Admin-Key': adminKey} : {}})
         .then(r => {
-          if (r.status === 403) {
-            document.getElementById('auth-gate').classList.add('active');
-          } else {
-            document.getElementById('main-content').classList.add('active');
-            loadDashboard();
-          }
-        }).catch(() => {
-          document.getElementById('auth-gate').classList.add('active');
-        });
+          if (r.status === 403) document.getElementById('auth-gate').classList.add('active');
+          else { document.getElementById('main-content').classList.add('active'); loadDashboard(); }
+        }).catch(() => document.getElementById('auth-gate').classList.add('active'));
     }
 
     async function unlockAdmin() {
       const key = document.getElementById('admin-key-input').value;
       const res = await fetch('/api/v1/admin/employees', {headers: {'X-Admin-Key': key}});
       if (res.ok) {
-        adminKey = key;
-        sessionStorage.setItem('wiom_admin_key', key);
+        adminKey = key; sessionStorage.setItem('wiom_admin_key', key);
         document.getElementById('auth-gate').classList.remove('active');
         document.getElementById('main-content').classList.add('active');
         loadDashboard();
@@ -217,12 +259,11 @@
     }
 
     async function loadDashboard() {
-      const headers = adminKey ? {'X-Admin-Key': adminKey} : {};
+      const h = adminKey ? {'X-Admin-Key': adminKey} : {};
       const [empRes, heatRes] = await Promise.all([
-        fetch('/api/v1/admin/employees', {headers}),
-        fetch('/api/v1/admin/heatmap', {headers}),
+        fetch('/api/v1/admin/employees', {headers: h}),
+        fetch('/api/v1/admin/heatmap', {headers: h}),
       ]);
-
       const empData = await empRes.json();
       allEmployees = empData.employees || [];
       renderEmployeeTable(allEmployees);
@@ -233,66 +274,63 @@
       renderStats(heat);
       renderWorstGaps(heat.worst_gaps || []);
 
-      // Populate function filter
       const fnFilter = document.getElementById('fn-filter');
       [...new Set(allEmployees.map(e => e.function_code))].sort().forEach(fn => {
-        const opt = document.createElement('option');
-        opt.value = fn; opt.textContent = fn;
+        const opt = document.createElement('option'); opt.value = fn; opt.textContent = fn;
         fnFilter.appendChild(opt);
       });
+
+      // Load gaps for assessed employees, then render 9-box + fn heatmap
+      await preloadGaps();
+      renderNineBox();
+      renderFnTabs();
     }
 
+    async function preloadGaps() {
+      const h = adminKey ? {'X-Admin-Key': adminKey} : {};
+      const assessed = allEmployees.filter(e => e.assessment_status === 'submitted');
+      await Promise.all(assessed.map(e =>
+        fetch(`/api/v1/admin/gaps/${e.employee_id}`, {headers: h})
+          .then(r => r.json())
+          .then(d => { empGapCache[e.employee_id] = d.gaps || []; })
+          .catch(() => { empGapCache[e.employee_id] = []; })
+      ));
+    }
+
+    // ── Stats ──────────────────────────────────────────────────────────────
     function renderStats(heat) {
       document.getElementById('stat-assessed').textContent = heat.assessed_count ?? '—';
       document.getElementById('stat-total').textContent = heat.total_count ?? '—';
-
       const allGaps = Object.values(heat.matrix || {}).flatMap(obj => Object.values(obj)).filter(v => v > 0);
-      const avg = allGaps.length ? (allGaps.reduce((a,b) => a+b, 0) / allGaps.length).toFixed(1) : '0';
+      const avg = allGaps.length ? (allGaps.reduce((a,b)=>a+b,0)/allGaps.length).toFixed(1) : '0';
       document.getElementById('stat-avg-gap').textContent = avg;
-
-      const critical = allGaps.filter(v => v >= 2).length;
-      document.getElementById('stat-critical').textContent = critical;
+      document.getElementById('stat-critical').textContent = allGaps.filter(v => v >= 2).length;
     }
 
+    // ── Org Heatmap ────────────────────────────────────────────────────────
     function renderHeatmap(heat) {
       const fns = heat.functions || [];
       const container = document.getElementById('heatmap-container');
-      if (!fns.length) {
-        container.innerHTML = '<p class="text-muted text-sm">No data yet. Run assessments first.</p>';
-        return;
-      }
-
-      const cols = CATS.length + 1; // fn label + 4 categories
+      if (!fns.length) { container.innerHTML = '<p class="text-muted text-sm">No assessment data yet.</p>'; return; }
       const gridStyle = `grid-template-columns: 80px repeat(${CATS.length}, 1fr)`;
-
-      let html = `
-        <div class="heatmap-header-row" style="${gridStyle}">
-          <div></div>
-          ${CATS.map(c => `<div class="heatmap-header-cell">${c}</div>`).join('')}
-        </div>
-      `;
-
+      let html = `<div class="heatmap-header-row" style="${gridStyle}"><div></div>${CATS.map(c=>`<div class="heatmap-header-cell">${c}</div>`).join('')}</div>`;
       fns.forEach(fn => {
         const fnData = heat.matrix[fn] || {};
         html += `<div class="heatmap-row" style="${gridStyle}">
           <div class="heatmap-fn-label">${fn}</div>
-          ${CATS.map((cat, i) => {
+          ${CATS.map(cat => {
             const val = fnData[cat] || 0;
             const bg = gapColor(val);
-            const textColor = val > 1 ? '#fff' : (val > 0.5 ? '#161021' : '#9B89B0');
-            return `<div class="heatmap-cell" style="background:${bg};color:${textColor}"
-              onclick="openPanel('${fn}', '${cat}')" title="${fn} · ${cat}: ${val}">
-              ${val > 0 ? val.toFixed(1) : '·'}
-            </div>`;
+            const tc = val > 1 ? '#fff' : (val > 0.5 ? '#eee' : '#9B89B0');
+            return `<div class="heatmap-cell" style="background:${bg};color:${tc}" onclick="openPanel('${fn}','${cat}')" title="${fn}·${cat}: ${val}">${val > 0 ? val.toFixed(1) : '·'}</div>`;
           }).join('')}
         </div>`;
       });
-
       container.innerHTML = html;
     }
 
     function gapColor(val) {
-      if (val <= 0) return 'rgba(0,128,67,0.2)';
+      if (val <= 0)  return 'rgba(0,128,67,0.2)';
       if (val < 0.5) return 'rgba(0,128,67,0.45)';
       if (val < 1.0) return 'rgba(255,128,0,0.35)';
       if (val < 1.5) return 'rgba(255,128,0,0.65)';
@@ -300,36 +338,202 @@
       return 'rgba(224,30,0,0.85)';
     }
 
+    // ── Worst gaps ──────────────────────────────────────────────────────────
     function renderWorstGaps(gaps) {
       const el = document.getElementById('worst-gaps-list');
-      if (!gaps.length) { el.innerHTML = '<p class="text-sm text-muted">No gap data yet.</p>'; return; }
+      if (!gaps.length) { el.innerHTML = '<p class="text-sm text-muted">No data yet.</p>'; return; }
       el.innerHTML = gaps.map(g => `
         <div class="worst-gap-item">
-          <div>
-            <div class="font-bold text-sm">${g.skill}</div>
-            <div class="text-xs text-muted">${g.function}</div>
-          </div>
+          <div><div class="font-bold text-sm">${g.skill}</div><div class="text-xs text-muted">${g.function}</div></div>
           <span class="wg-score">${g.avg_gap.toFixed(1)}</span>
-        </div>
-      `).join('');
+        </div>`).join('');
     }
 
+    // ── 9-Box Grid ─────────────────────────────────────────────────────────
+    // X = Skill Readiness (derived from avg gap: 0=high readiness, 2+=low)
+    // Y = Performance Potential (derived from seniority)
+    const NINE_BOX_COLORS = [
+      // row 3 (High perf): left=Inconsistent Star, mid=Strong Performer, right=Star
+      ['rgba(255,128,0,0.25)','rgba(0,128,67,0.25)','rgba(0,128,67,0.45)'],
+      // row 2 (Med perf): left=Underperformer, mid=Core Player, right=High Potential
+      ['rgba(224,30,0,0.2)','rgba(255,128,0,0.2)','rgba(0,128,67,0.25)'],
+      // row 1 (Low perf): left=Poor Fit, mid=Risk, right=Rough Diamond
+      ['rgba(224,30,0,0.35)','rgba(224,30,0,0.25)','rgba(255,128,0,0.2)'],
+    ];
+    const NINE_BOX_LABELS = [
+      ['Inconsistent Star','Strong Performer','Star'],
+      ['Underperformer','Core Player','High Potential'],
+      ['Poor Fit','Risk','Rough Diamond'],
+    ];
+    const PERF_COLORS = ['#E01E00','#FF8000','#008043'];
+    const DOT_COLORS = ['#D9008D','#6D17CE','#008043','#FF8000','#0078D4','#E01E00','#443152','#00B4D8','#F72585','#3A86FF','#8338EC'];
+
+    function getReadinessBucket(empId) {
+      const gaps = empGapCache[empId] || [];
+      if (!gaps.length) return 1; // mid
+      const mustHave = gaps.filter(g => g.type === 'must_have');
+      const relevant = mustHave.length ? mustHave : gaps;
+      const avgGap = relevant.reduce((s,g) => s + Math.max(0, g.gap_score), 0) / relevant.length;
+      if (avgGap >= 1.8) return 0; // Low
+      if (avgGap >= 0.8) return 1; // Medium
+      return 2; // High
+    }
+
+    function getPerfBucket(emp) {
+      const s = (emp.seniority || '').toLowerCase();
+      if (s === 'director') return 2; // High
+      if (s === 'lead' || s === 'manager') return 1; // Med-High → show as High for demo
+      return 1; // IC → Medium (most employees)
+    }
+
+    function renderNineBox() {
+      const assessed = allEmployees.filter(e => e.assessment_status === 'submitted');
+      // bucket[row][col] → array of employees (row 0=bottom, but grid is top-to-bottom so invert)
+      const buckets = [[],[],[],[],[],[],[],[],[]]; // 9 cells, index = row*3+col (row 0=high perf top)
+
+      assessed.forEach(emp => {
+        const col = getReadinessBucket(emp.employee_id);
+        const rawPerf = getPerfBucket(emp);
+        const row = 2 - rawPerf; // invert: high perf = row 0 (top)
+        buckets[row * 3 + col].push(emp);
+      });
+
+      const grid = document.getElementById('nine-box-grid');
+      let html = '';
+      for (let row = 0; row < 3; row++) {
+        const perfLabel = ['High', 'Medium', 'Low'][row];
+        html += `<div class="nine-box-row-label">${perfLabel}</div>`;
+        for (let col = 0; col < 3; col++) {
+          const cell = buckets[row * 3 + col];
+          const bg = NINE_BOX_COLORS[row][col];
+          const label = NINE_BOX_LABELS[row][col];
+          const dots = cell.map((e, i) => {
+            const initials = e.name.split(' ').map(n=>n[0]).join('').slice(0,2);
+            const color = DOT_COLORS[allEmployees.indexOf(e) % DOT_COLORS.length];
+            return `<span class="nine-box-dot" style="background:${color}" title="${e.name} — ${e.role_title}">${initials}</span>`;
+          }).join('');
+          html += `<div class="nine-box-cell" style="background:${bg}">
+            ${dots}
+            <span class="nine-box-corner-label" style="color:rgba(255,255,255,0.5)">${label}</span>
+          </div>`;
+        }
+      }
+      // empty placeholder row for x-axis labels
+      html += `<div></div><div></div><div></div><div></div>`;
+      grid.innerHTML = html;
+
+      // Legend
+      const legend = document.getElementById('nine-box-legend');
+      assessed.forEach((e, i) => {
+        const initials = e.name.split(' ').map(n=>n[0]).join('').slice(0,2);
+        const color = DOT_COLORS[allEmployees.indexOf(e) % DOT_COLORS.length];
+        legend.innerHTML += `<span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)">
+          <span style="width:20px;height:20px;border-radius:50%;background:${color};display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">${initials}</span>
+          ${e.name}
+        </span>`;
+      });
+    }
+
+    // ── Function-level heatmap ─────────────────────────────────────────────
+    function renderFnTabs() {
+      const fns = [...new Set(allEmployees.map(e => e.function_code))].sort();
+      const tabsEl = document.getElementById('fn-tabs');
+      tabsEl.innerHTML = fns.map((fn, i) =>
+        `<button class="fn-tab${i===0?' active':''}" onclick="showFnDetail('${fn}', this)">${fn}</button>`
+      ).join('');
+      if (fns.length) showFnDetail(fns[0], tabsEl.querySelector('.fn-tab'));
+    }
+
+    function showFnDetail(fn, tabEl) {
+      document.querySelectorAll('.fn-tab').forEach(t => t.classList.remove('active'));
+      tabEl.classList.add('active');
+
+      const fnEmps = allEmployees.filter(e => e.function_code === fn);
+      const assessed = fnEmps.filter(e => e.assessment_status === 'submitted');
+      const container = document.getElementById('fn-detail-container');
+
+      if (!assessed.length) {
+        container.innerHTML = `
+          <p class="text-sm text-muted">${fnEmps.length} employee(s) in ${fn} — no assessments submitted yet.</p>
+          <div class="fn-emp-grid mt-16">
+            ${fnEmps.map(e => `<div class="fn-emp-card">
+              <div class="fn-emp-name">${e.name}</div>
+              <div class="fn-emp-role">${e.role_title}</div>
+              <span class="badge badge-pending">Assessment pending</span>
+            </div>`).join('')}
+          </div>`;
+        return;
+      }
+
+      // Category avg gaps for this function
+      const catAvg = {};
+      CATS.forEach(cat => {
+        const scores = assessed.flatMap(e =>
+          (empGapCache[e.employee_id] || []).filter(g => g.category === cat && g.gap_score > 0).map(g => g.gap_score)
+        );
+        catAvg[cat] = scores.length ? (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1) : null;
+      });
+
+      // Mini heatmap row for this function
+      const miniHeatmap = `
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px">
+          ${CATS.map(cat => {
+            const v = parseFloat(catAvg[cat]) || 0;
+            const bg = gapColor(v);
+            const tc = v > 1 ? '#fff' : '#9B89B0';
+            return `<div style="background:${bg};border-radius:10px;padding:12px;text-align:center">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:${tc};opacity:0.7">${cat}</div>
+              <div style="font-size:22px;font-weight:800;color:${tc}">${v > 0 ? v : '·'}</div>
+            </div>`;
+          }).join('')}
+        </div>`;
+
+      // Employee cards
+      const empCards = assessed.map(e => {
+        const gaps = empGapCache[e.employee_id] || [];
+        const topGaps = gaps.filter(g => g.gap_score > 0).slice(0, 3);
+        return `<div class="fn-emp-card">
+          <div class="fn-emp-name">${e.name}</div>
+          <div class="fn-emp-role">${e.role_title}</div>
+          ${topGaps.map(g => {
+            const pct = Math.min(100, (g.gap_score / 4) * 100);
+            const fillColor = g.gap_score >= 2 ? 'var(--gap-high)' : g.gap_score >= 1 ? 'var(--gap-med)' : 'var(--gap-low)';
+            return `<div class="fn-skill-bar">
+              <div class="fn-bar-row">
+                <span class="fn-bar-label">${g.skill_name.length > 20 ? g.skill_name.slice(0,20)+'…' : g.skill_name}</span>
+                <span class="fn-bar-val" style="color:${fillColor}">${g.gap_score.toFixed(1)}</span>
+              </div>
+              <div class="fn-mini-bar"><div class="fn-mini-fill" style="width:${pct}%;background:${fillColor}"></div></div>
+            </div>`;
+          }).join('')}
+          ${!topGaps.length ? '<span class="badge badge-met" style="font-size:10px">No major gaps</span>' : ''}
+          <a href="/admin/employee.html?id=${e.employee_id}" class="text-pink text-xs" style="margin-top:8px;display:block">Full profile →</a>
+        </div>`;
+      }).join('');
+
+      const pendingEmps = fnEmps.filter(e => e.assessment_status !== 'submitted');
+      const pendingHtml = pendingEmps.length ? `
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+          <p class="text-xs text-muted mb-8">Pending assessment (${pendingEmps.length})</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            ${pendingEmps.map(e => `<span class="badge badge-pending">${e.name}</span>`).join('')}
+          </div>
+        </div>` : '';
+
+      container.innerHTML = miniHeatmap + `<div class="fn-emp-grid">${empCards}</div>` + pendingHtml;
+    }
+
+    // ── Employee table ──────────────────────────────────────────────────────
     function renderEmployeeTable(employees) {
-      const tbody = document.getElementById('emp-tbody');
-      tbody.innerHTML = employees.map(e => `
+      document.getElementById('emp-tbody').innerHTML = employees.map(e => `
         <tr>
           <td class="font-bold">${e.name}</td>
           <td class="text-sm">${e.role_title}</td>
           <td><span class="badge badge-pending">${e.function_code}</span></td>
-          <td><span class="badge ${e.assessment_status === 'submitted' ? 'badge-done' : 'badge-pending'}">
-            ${e.assessment_status === 'submitted' ? '✓ Done' : 'Pending'}
-          </span></td>
-          <td><span class="badge ${e.manager_rating_status === 'submitted' ? 'badge-done' : 'badge-pending'}">
-            ${e.manager_rating_status === 'submitted' ? '✓ Rated' : 'Pending'}
-          </span></td>
+          <td><span class="badge ${e.assessment_status==='submitted'?'badge-done':'badge-pending'}">${e.assessment_status==='submitted'?'✓ Done':'Pending'}</span></td>
+          <td><span class="badge ${e.manager_rating_status==='submitted'?'badge-done':'badge-pending'}">${e.manager_rating_status==='submitted'?'✓ Rated':'Pending'}</span></td>
           <td><a href="/admin/employee.html?id=${e.employee_id}" class="text-pink text-sm">View →</a></td>
-        </tr>
-      `).join('');
+        </tr>`).join('');
       document.getElementById('emp-count').textContent = `${employees.length} employees`;
     }
 
@@ -337,42 +541,47 @@
       const q = document.getElementById('emp-search').value.toLowerCase();
       const fn = document.getElementById('fn-filter').value;
       const status = document.getElementById('status-filter').value;
-      const filtered = allEmployees.filter(e => {
-        const matchQ = !q || e.name.toLowerCase().includes(q) || e.role_title.toLowerCase().includes(q);
-        const matchFn = !fn || e.function_code === fn;
-        const matchS = !status || e.assessment_status === status;
-        return matchQ && matchFn && matchS;
-      });
-      renderEmployeeTable(filtered);
+      renderEmployeeTable(allEmployees.filter(e =>
+        (!q || e.name.toLowerCase().includes(q) || e.role_title.toLowerCase().includes(q)) &&
+        (!fn || e.function_code === fn) &&
+        (!status || e.assessment_status === status)
+      ));
     }
 
+    // ── AI Insights ────────────────────────────────────────────────────────
+    async function loadAIInsights() {
+      const el = document.getElementById('ai-insights-container');
+      el.innerHTML = '<div class="spinner"></div>';
+      const headers = {'Content-Type':'application/json', ...(adminKey?{'X-Admin-Key':adminKey}:{})};
+      try {
+        const res = await fetch('/api/v1/ai/heatmap-insights', {method:'POST', headers});
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Failed');
+        el.innerHTML = `
+          <div class="ai-card"><div class="ai-label">Biggest Gap</div><p>${data.biggest_gap||'—'}</p></div>
+          <div class="ai-card"><div class="ai-label">Emerging Risk</div><p>${data.emerging_risk||'—'}</p></div>
+          <div class="ai-card"><div class="ai-label">Strategic Recommendation</div><p>${data.strategic_recommendation||'—'}</p></div>`;
+      } catch(e) {
+        el.innerHTML = `<div class="alert alert-error">AI insights failed: ${e.message}. Check GEMINI_API_KEY in Railway env.</div>
+          <button class="btn btn-ghost btn-sm btn-full mt-16" onclick="loadAIInsights()">Retry</button>`;
+      }
+    }
+
+    // ── Slide panel ─────────────────────────────────────────────────────────
     async function openPanel(fn, cat) {
       document.getElementById('panel-title').textContent = `${fn} · ${cat}`;
       document.getElementById('panel-content').innerHTML = '<div class="spinner"></div>';
       document.getElementById('slide-panel').classList.add('open');
       document.getElementById('panel-overlay').classList.add('open');
-
-      // Get employees in this function with gaps in this category
+      const h = adminKey ? {'X-Admin-Key': adminKey} : {};
       const fnEmps = allEmployees.filter(e => e.function_code === fn && e.assessment_status === 'submitted');
-      const headers = adminKey ? {'X-Admin-Key': adminKey} : {};
-
-      const gapPromises = fnEmps.slice(0, 10).map(e =>
-        fetch(`/api/v1/admin/gaps/${e.employee_id}`, {headers})
-          .then(r => r.json())
-          .then(d => ({name: e.name, gaps: (d.gaps || []).filter(g => g.category === cat && g.gap_score > 0)}))
-      );
-
-      const results = await Promise.all(gapPromises);
-      const all_cat_gaps = results.flatMap(r =>
-        r.gaps.map(g => ({...g, employee: r.name}))
-      ).sort((a,b) => b.priority_score - a.priority_score).slice(0, 8);
-
-      if (!all_cat_gaps.length) {
-        document.getElementById('panel-content').innerHTML = '<p class="text-sm text-muted">No gaps in this area.</p>';
-        return;
-      }
-
-      document.getElementById('panel-content').innerHTML = all_cat_gaps.map(g => `
+      const results = await Promise.all(fnEmps.slice(0,10).map(e =>
+        fetch(`/api/v1/admin/gaps/${e.employee_id}`,{headers:h}).then(r=>r.json())
+          .then(d=>({name:e.name, gaps:(d.gaps||[]).filter(g=>g.category===cat&&g.gap_score>0)}))
+      ));
+      const allCatGaps = results.flatMap(r=>r.gaps.map(g=>({...g,employee:r.name}))).sort((a,b)=>b.priority_score-a.priority_score).slice(0,8);
+      if (!allCatGaps.length) { document.getElementById('panel-content').innerHTML='<p class="text-sm text-muted">No gaps in this area.</p>'; return; }
+      document.getElementById('panel-content').innerHTML = allCatGaps.map(g=>`
         <div class="gap-priority-card" style="margin-bottom:10px">
           <div class="text-xs text-muted">${g.employee}</div>
           <div class="font-bold text-sm" style="margin:4px 0">${g.skill_name}</div>
@@ -380,30 +589,12 @@
             <span>Gap: <strong class="text-pink">${g.gap_score}</strong></span>
             <span>Priority: <strong>${g.priority_score}</strong></span>
           </div>
-        </div>
-      `).join('');
+        </div>`).join('');
     }
 
     function closePanel() {
       document.getElementById('slide-panel').classList.remove('open');
       document.getElementById('panel-overlay').classList.remove('open');
-    }
-
-    async function loadAIInsights() {
-      const el = document.getElementById('ai-insights-container');
-      el.innerHTML = '<div class="spinner"></div>';
-      const headers = {'Content-Type': 'application/json', ...(adminKey ? {'X-Admin-Key': adminKey} : {})};
-      try {
-        const res = await fetch('/api/v1/ai/heatmap-insights', {method: 'POST', headers});
-        const data = await res.json();
-        el.innerHTML = `
-          <div class="ai-card"><div class="ai-label">Biggest Gap</div><p>${data.biggest_gap || '—'}</p></div>
-          <div class="ai-card"><div class="ai-label">Emerging Risk</div><p>${data.emerging_risk || '—'}</p></div>
-          <div class="ai-card"><div class="ai-label">Strategic Recommendation</div><p>${data.strategic_recommendation || '—'}</p></div>
-        `;
-      } catch (e) {
-        el.innerHTML = '<div class="alert alert-error">AI insights failed. Try again.</div>';
-      }
     }
 
     init();

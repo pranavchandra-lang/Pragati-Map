@@ -81,11 +81,32 @@ def get_heatmap_insights(request: Request, x_admin_key: Optional[str] = Header(d
   "strategic_recommendation": "1-2 sentence actionable recommendation tied to business growth"
 }"""
 
+    # Build rich heatmap summary for Gemini
+    from backend.routers.admin import get_heatmap as _get_heatmap
+    try:
+        from fastapi import Request as _Req
+        import types
+        fake_req = types.SimpleNamespace(session={})
+        heat = _get_heatmap(fake_req, x_admin_key=None)  # already auth-checked above
+        matrix_lines = []
+        for fn, cats in heat.get("matrix", {}).items():
+            cats_str = ", ".join(f"{k}: {v}" for k, v in cats.items() if v > 0)
+            matrix_lines.append(f"  {fn}: {cats_str}")
+        worst = heat.get("worst_gaps", [])
+        worst_str = ", ".join(f"{g['skill']} ({g['function']}: {g['avg_gap']})" for g in worst[:5])
+        matrix_summary = (
+            f"Total employees: {heat.get('total_count',0)}, assessed: {heat.get('assessed_count',0)}\n"
+            f"Skill gap matrix (avg gap scores by function × category):\n" + "\n".join(matrix_lines) +
+            f"\nTop skill gaps: {worst_str}"
+        )
+    except Exception:
+        matrix_summary = f"Total employees: {len(read_json('employees.json').get('employees',[]))}"
+
     user_msg = f"Wiom org skill heatmap summary:\n{matrix_summary}\n\nProvide 3 strategic insights for the HRBP and leadership team."
 
     try:
         result = call_claude(system, user_msg, max_tokens=600)
-    except ValueError as e:
+    except Exception as e:
         raise HTTPException(status_code=422, detail={"error": "AI analysis failed", "detail": str(e)})
 
     return result
