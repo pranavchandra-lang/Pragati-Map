@@ -3,133 +3,175 @@
     {
       "employee_id": "EMP002",
       "function_code": "TECH",
-      "role_title": "Backend Engineer",
-      "role_slug": "backend_engineer",
-      "submitted_at": "2025-03-15T10:00:00",
+      "role_title": "Python Developer",
+      "role_slug": "python_developer",
+      "submitted_at": "2026-03-18T10:00:00",
       "ratings": [
         {
-          "skill_id": "tech_python_backend",
-          "skill_name": "Python / Backend Development",
+          "skill_id": "tech_flutter_development",
+          "skill_name": "Flutter development",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "tech_api_design",
-          "skill_name": "REST API Design",
+          "skill_id": "tech_dart_programming",
+          "skill_name": "Dart programming",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "tech_database",
-          "skill_name": "Database Management (SQL/NoSQL)",
+          "skill_id": "tech_mvvm_architecture",
+          "skill_name": "MVVM architecture",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "tech_custom_flutter_plugins",
+          "skill_name": "Custom Flutter plugins",
           "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_method_channels",
+          "skill_name": "Method channels",
+          "self_rating": 3,
           "confidence": "high"
         },
         {
-          "skill_id": "tech_problem_solving",
-          "skill_name": "Structured Problem Solving",
+          "skill_id": "tech_state_management",
+          "skill_name": "State management",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "tech_system_design",
-          "skill_name": "System Design",
+          "skill_id": "tech_rest_api_integration",
+          "skill_name": "REST API integration",
           "self_rating": 1,
           "confidence": "low"
         },
         {
-          "skill_id": "tech_cloud",
-          "skill_name": "Cloud Infrastructure (GCP/AWS)",
-          "self_rating": 1,
-          "confidence": "low"
+          "skill_id": "tech_problem_solving",
+          "skill_name": "Problem-solving",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 2,
+          "confidence": "medium"
         }
       ]
     },
     {
       "employee_id": "EMP005",
-      "function_code": "OPS",
-      "role_title": "LCO Partner Manager",
-      "role_slug": "lco_partner_manager",
-      "submitted_at": "2025-03-15T11:00:00",
+      "function_code": "TECH",
+      "role_title": "Data Analyst",
+      "role_slug": "data_analyst",
+      "submitted_at": "2026-03-18T11:00:00",
       "ratings": [
         {
-          "skill_id": "ops_partner_mgmt",
-          "skill_name": "LCO Partner Relationship Management",
+          "skill_id": "tech_sql",
+          "skill_name": "SQL",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "ops_sla_mgmt",
-          "skill_name": "SLA & KPI Management",
+          "skill_id": "tech_data_visualization",
+          "skill_name": "Data visualization",
           "self_rating": 1,
           "confidence": "low"
         },
         {
-          "skill_id": "ops_escalation",
-          "skill_name": "Escalation & Conflict Resolution",
-          "self_rating": 2,
-          "confidence": "medium"
-        },
-        {
-          "skill_id": "ops_field_ops",
-          "skill_name": "Field Operations Coordination",
+          "skill_id": "tech_excel",
+          "skill_name": "Excel",
           "self_rating": 3,
           "confidence": "high"
         },
         {
-          "skill_id": "ops_network_basics",
-          "skill_name": "Basic Networking / ISP Knowledge",
+          "skill_id": "tech_eda",
+          "skill_name": "EDA",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "ops_data_analysis",
-          "skill_name": "Data Analysis (Excel/Sheets)",
+          "skill_id": "tech_analytical_thinking",
+          "skill_name": "Analytical thinking",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_stakeholder_collaboration",
+          "skill_name": "Stakeholder collaboration",
           "self_rating": 1,
           "confidence": "low"
+        },
+        {
+          "skill_id": "tech_data_quality",
+          "skill_name": "Data quality",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_bi_reporting",
+          "skill_name": "BI reporting",
+          "self_rating": 2,
+          "confidence": "medium"
         }
       ]
     },
     {
       "employee_id": "EMP006",
-      "function_code": "OPS",
-      "role_title": "LCO Partner Manager",
-      "role_slug": "lco_partner_manager",
-      "submitted_at": "2025-03-15T12:00:00",
+      "function_code": "TECH",
+      "role_title": "Data Analyst",
+      "role_slug": "data_analyst",
+      "submitted_at": "2026-03-18T12:00:00",
       "ratings": [
         {
-          "skill_id": "ops_partner_mgmt",
-          "skill_name": "LCO Partner Relationship Management",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "ops_sla_mgmt",
-          "skill_name": "SLA & KPI Management",
-          "self_rating": 2,
-          "confidence": "medium"
-        },
-        {
-          "skill_id": "ops_escalation",
-          "skill_name": "Escalation & Conflict Resolution",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "ops_field_ops",
-          "skill_name": "Field Operations Coordination",
-          "self_rating": 2,
-          "confidence": "medium"
-        },
-        {
-          "skill_id": "ops_network_basics",
-          "skill_name": "Basic Networking / ISP Knowledge",
+          "skill_id": "tech_sql",
+          "skill_name": "SQL",
           "self_rating": 1,
           "confidence": "low"
         },
         {
-          "skill_id": "ops_data_analysis",
-          "skill_name": "Data Analysis (Excel/Sheets)",
+          "skill_id": "tech_data_visualization",
+          "skill_name": "Data visualization",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_excel",
+          "skill_name": "Excel",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_eda",
+          "skill_name": "EDA",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "tech_analytical_thinking",
+          "skill_name": "Analytical thinking",
+          "self_rating": 3,
+          "confidence": "high"
+        },
+        {
+          "skill_id": "tech_stakeholder_collaboration",
+          "skill_name": "Stakeholder collaboration",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "tech_data_quality",
+          "skill_name": "Data quality",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "tech_bi_reporting",
+          "skill_name": "BI reporting",
           "self_rating": 2,
           "confidence": "medium"
         }
@@ -137,118 +179,139 @@
     },
     {
       "employee_id": "EMP008",
-      "function_code": "GROWTH",
-      "role_title": "Growth Manager",
-      "role_slug": "growth_manager",
-      "submitted_at": "2025-03-16T09:00:00",
+      "function_code": "PROD",
+      "role_title": "Product Manager",
+      "role_slug": "product_manager",
+      "submitted_at": "2026-03-18T09:00:00",
       "ratings": [
         {
-          "skill_id": "growth_lead_gen",
-          "skill_name": "Lead Generation & Pipeline",
+          "skill_id": "prod_sql",
+          "skill_name": "SQL",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "growth_onboarding",
-          "skill_name": "Customer Onboarding",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "growth_crm",
-          "skill_name": "CRM Usage (Kapture/Salesforce)",
-          "self_rating": 1,
-          "confidence": "low"
-        },
-        {
-          "skill_id": "growth_communication",
-          "skill_name": "Stakeholder Communication",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "growth_analytics",
-          "skill_name": "Growth Analytics & Metrics",
-          "self_rating": 1,
-          "confidence": "low"
-        }
-      ]
-    },
-    {
-      "employee_id": "EMP011",
-      "function_code": "HR",
-      "role_title": "HR Manager",
-      "role_slug": "hr_manager",
-      "submitted_at": "2025-03-16T10:00:00",
-      "ratings": [
-        {
-          "skill_id": "hr_talent_acq",
-          "skill_name": "Talent Acquisition & Hiring",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "hr_perf_mgmt",
-          "skill_name": "Performance Management",
+          "skill_id": "prod_analytics_tools_mixpanel_clevertap_metabase",
+          "skill_name": "Analytics tools (MixPanel/CleverTap/Metabase)",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "hr_lnd",
-          "skill_name": "Learning & Development",
+          "skill_id": "prod_product_roadmapping",
+          "skill_name": "Product roadmapping",
           "self_rating": 1,
           "confidence": "low"
         },
         {
-          "skill_id": "hr_employee_engagement",
-          "skill_name": "Employee Engagement",
+          "skill_id": "prod_project_management",
+          "skill_name": "Project management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "prod_user_first_thinking",
+          "skill_name": "User-first thinking",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "prod_root_cause_analysis",
+          "skill_name": "Root cause analysis",
           "self_rating": 3,
           "confidence": "high"
         },
         {
-          "skill_id": "hr_hris",
-          "skill_name": "HRIS / HR Tools",
+          "skill_id": "prod_stakeholder_communication",
+          "skill_name": "Stakeholder communication",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "prod_excel_spreadsheets",
+          "skill_name": "Excel/spreadsheets",
+          "self_rating": 1,
+          "confidence": "low"
+        },
+        {
+          "skill_id": "prod_jira",
+          "skill_name": "JIRA",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "prod_autonomous_execution",
+          "skill_name": "Autonomous execution",
           "self_rating": 2,
           "confidence": "medium"
         }
       ]
     },
     {
-      "employee_id": "EMP012",
+      "employee_id": "EMP011",
       "function_code": "FIN",
-      "role_title": "Finance Manager",
-      "role_slug": "finance_manager",
-      "submitted_at": "2025-03-16T11:00:00",
+      "role_title": "Record to Report (R2R)",
+      "role_slug": "r2r_finance",
+      "submitted_at": "2026-03-18T13:00:00",
       "ratings": [
         {
-          "skill_id": "fin_financial_analysis",
-          "skill_name": "Financial Analysis & Reporting",
+          "skill_id": "fin_ca_qualification",
+          "skill_name": "CA qualification",
           "self_rating": 3,
           "confidence": "high"
         },
         {
-          "skill_id": "fin_accounting",
-          "skill_name": "Accounting & Compliance",
-          "self_rating": 3,
-          "confidence": "high"
-        },
-        {
-          "skill_id": "fin_cash_flow",
-          "skill_name": "Cash Flow Management",
+          "skill_id": "fin_month_end_close",
+          "skill_name": "Month-end close",
           "self_rating": 2,
           "confidence": "medium"
         },
         {
-          "skill_id": "fin_excel",
-          "skill_name": "Advanced Excel / Sheets",
-          "self_rating": 3,
-          "confidence": "high"
+          "skill_id": "fin_gst_compliance",
+          "skill_name": "GST compliance",
+          "self_rating": 2,
+          "confidence": "medium"
         },
         {
-          "skill_id": "fin_startup_finance",
-          "skill_name": "Startup Finance / Fundraising Basics",
-          "self_rating": 1,
-          "confidence": "low"
+          "skill_id": "fin_tds_compliance",
+          "skill_name": "TDS compliance",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_gl_management",
+          "skill_name": "GL management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_far_management",
+          "skill_name": "FAR management",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_zoho_books",
+          "skill_name": "Zoho Books",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_ownership_mindset",
+          "skill_name": "Ownership mindset",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_process_automation",
+          "skill_name": "Process automation",
+          "self_rating": 2,
+          "confidence": "medium"
+        },
+        {
+          "skill_id": "fin_audit_management",
+          "skill_name": "Audit management",
+          "self_rating": 2,
+          "confidence": "medium"
         }
       ]
     }

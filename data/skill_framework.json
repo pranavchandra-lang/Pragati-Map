@@ -3,337 +3,530 @@
     "last_updated": "2026-03-19"
   },
   "functions": {
-    "TECH": {
-      "roles": {
-        "backend_engineer": {
-          "role_title": "Backend Engineer",
-          "seniority": "IC",
-          "must_have_skills": [
-            {
-              "skill_id": "tech_python_backend",
-              "skill_name": "Python / Backend Development",
-              "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_api_design",
-              "skill_name": "REST API Design",
-              "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_database",
-              "skill_name": "Database Management (SQL/NoSQL)",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_problem_solving",
-              "skill_name": "Structured Problem Solving",
-              "category": "Behavioural",
-              "expected_level": 3,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": true,
-              "type": "must_have"
-            }
-          ],
-          "good_to_have_skills": [
-            {
-              "skill_id": "tech_system_design",
-              "skill_name": "System Design",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.2,
-              "strategic_priority": false,
-              "type": "good_to_have"
-            },
-            {
-              "skill_id": "tech_cloud",
-              "skill_name": "Cloud Infrastructure (GCP/AWS)",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.0,
-              "strategic_priority": false,
-              "type": "good_to_have"
-            }
-          ],
-          "skill_gaps_to_watch": []
-        },
-        "tech_lead": {
-          "role_title": "Tech Lead",
-          "seniority": "Manager",
-          "must_have_skills": [
-            {
-              "skill_id": "tech_python_backend",
-              "skill_name": "Python / Backend Development",
-              "category": "Technical",
-              "expected_level": 4,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_architecture",
-              "skill_name": "System Architecture",
-              "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_team_leadership",
-              "skill_name": "Engineering Team Leadership",
-              "category": "Behavioural",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "tech_code_review",
-              "skill_name": "Code Review & Standards",
-              "category": "Technical",
-              "expected_level": 4,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            }
-          ],
-          "good_to_have_skills": [],
-          "skill_gaps_to_watch": []
-        }
-      }
-    },
-    "OPS": {
-      "roles": {
-        "lco_partner_manager": {
-          "role_title": "LCO Partner Manager",
-          "seniority": "IC",
-          "must_have_skills": [
-            {
-              "skill_id": "ops_partner_mgmt",
-              "skill_name": "LCO Partner Relationship Management",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_sla_mgmt",
-              "skill_name": "SLA & KPI Management",
-              "category": "Domain",
-              "expected_level": 2,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_escalation",
-              "skill_name": "Escalation & Conflict Resolution",
-              "category": "Behavioural",
-              "expected_level": 3,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_field_ops",
-              "skill_name": "Field Operations Coordination",
-              "category": "Domain",
-              "expected_level": 2,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            }
-          ],
-          "good_to_have_skills": [
-            {
-              "skill_id": "ops_network_basics",
-              "skill_name": "Basic Networking / ISP Knowledge",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.2,
-              "strategic_priority": false,
-              "type": "good_to_have"
-            },
-            {
-              "skill_id": "ops_data_analysis",
-              "skill_name": "Data Analysis (Excel/Sheets)",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.0,
-              "strategic_priority": false,
-              "type": "good_to_have"
-            }
-          ],
-          "skill_gaps_to_watch": []
-        },
-        "ops_head": {
-          "role_title": "Head of Operations",
-          "seniority": "Manager",
-          "must_have_skills": [
-            {
-              "skill_id": "ops_strategic_ops",
-              "skill_name": "Strategic Operations Planning",
-              "category": "Strategic",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_partner_mgmt",
-              "skill_name": "LCO Partner Relationship Management",
-              "category": "Domain",
-              "expected_level": 4,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_team_mgmt",
-              "skill_name": "Team Management",
-              "category": "Behavioural",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "ops_reporting",
-              "skill_name": "Ops Reporting & Dashboards",
-              "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            }
-          ],
-          "good_to_have_skills": [],
-          "skill_gaps_to_watch": []
-        }
-      }
-    },
-    "GROWTH": {
-      "roles": {
-        "growth_manager": {
-          "role_title": "Growth Manager",
-          "seniority": "IC",
-          "must_have_skills": [
-            {
-              "skill_id": "growth_lead_gen",
-              "skill_name": "Lead Generation & Pipeline",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "growth_onboarding",
-              "skill_name": "Customer Onboarding",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "growth_crm",
-              "skill_name": "CRM Usage (Kapture/Salesforce)",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": false,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "growth_communication",
-              "skill_name": "Stakeholder Communication",
-              "category": "Behavioural",
-              "expected_level": 3,
-              "business_criticality_weight": 1.5,
-              "strategic_priority": true,
-              "type": "must_have"
-            }
-          ],
-          "good_to_have_skills": [
-            {
-              "skill_id": "growth_analytics",
-              "skill_name": "Growth Analytics & Metrics",
-              "category": "Technical",
-              "expected_level": 2,
-              "business_criticality_weight": 1.2,
-              "strategic_priority": false,
-              "type": "good_to_have"
-            }
-          ],
-          "skill_gaps_to_watch": []
-        }
-      }
-    },
     "PROD": {
       "roles": {
         "product_manager": {
           "role_title": "Product Manager",
-          "seniority": "Manager",
+          "seniority": "IC",
           "must_have_skills": [
             {
-              "skill_id": "prod_roadmap",
-              "skill_name": "Product Roadmapping & Prioritisation",
-              "category": "Strategic",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "prod_user_research",
-              "skill_name": "User Research & Discovery",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "prod_data_driven",
-              "skill_name": "Data-Driven Decision Making",
+              "skill_id": "prod_sql",
+              "skill_name": "SQL",
               "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data analysis",
               "type": "must_have"
             },
             {
-              "skill_id": "prod_cross_fn",
-              "skill_name": "Cross-functional Collaboration",
+              "skill_id": "prod_analytics_tools_mixpanel_clevertap_metabase",
+              "skill_name": "Analytics tools (MixPanel/CleverTap/Metabase)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "KPI tracking",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_product_roadmapping",
+              "skill_name": "Product roadmapping",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Strategy",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_project_management",
+              "skill_name": "Project management",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Execution",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_user_first_thinking",
+              "skill_name": "User-first thinking",
               "category": "Behavioural",
               "expected_level": 3,
               "business_criticality_weight": 1.5,
               "strategic_priority": false,
+              "rationale": "User focus",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_root_cause_analysis",
+              "skill_name": "Root cause analysis",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Problem solving",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_stakeholder_communication",
+              "skill_name": "Stakeholder communication",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Alignment",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_excel_spreadsheets",
+              "skill_name": "Excel/spreadsheets",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data handling",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_jira",
+              "skill_name": "JIRA",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Execution tracking",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_autonomous_execution",
+              "skill_name": "Autonomous execution",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Ownership",
               "type": "must_have"
             }
           ],
           "good_to_have_skills": [
             {
-              "skill_id": "prod_technical",
-              "skill_name": "Technical Product Understanding",
+              "skill_id": "prod_startup_experience",
+              "skill_name": "Startup experience",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_market_research",
+              "skill_name": "Market research",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_confluence",
+              "skill_name": "Confluence",
               "category": "Technical",
               "expected_level": 2,
-              "business_criticality_weight": 1.2,
+              "business_criticality_weight": 1.0,
               "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_pm_frameworks_okrs_rice",
+              "skill_name": "PM frameworks (OKRs, RICE)",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_b2c_experience",
+              "skill_name": "B2C experience",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_cross_functional_coordination",
+              "skill_name": "Cross-functional coordination",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_tier_1_education",
+              "skill_name": "Tier 1 education",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "director_solution_design": {
+          "role_title": "Director – Solution Design",
+          "seniority": "Director",
+          "must_have_skills": [
+            {
+              "skill_id": "prod_systems_thinking_service_design",
+              "skill_name": "Systems thinking & service design",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Architecture",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_jtbd_framework",
+              "skill_name": "JTBD framework",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "User alignment",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_heart_metrics",
+              "skill_name": "HEART metrics",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Measurement",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_service_blueprinting",
+              "skill_name": "Service blueprinting",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "End-to-end design",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_design_sprint_facilitation",
+              "skill_name": "Design sprint facilitation",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Rapid prototyping",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_team_leadership",
+              "skill_name": "Team leadership",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Team building",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_stakeholder_alignment",
+              "skill_name": "Stakeholder alignment",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Cross-functional",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_strategic_storytelling",
+              "skill_name": "Strategic storytelling",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Influence",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_data_driven_design",
+              "skill_name": "Data-driven design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Insights",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_behavioral_design",
+              "skill_name": "Behavioral design",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "User behavior",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "prod_designops",
+              "skill_name": "DesignOps",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_emerging_market_design",
+              "skill_name": "Emerging market design",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_marketplace_design",
+              "skill_name": "Marketplace design",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_rapid_prototyping",
+              "skill_name": "Rapid prototyping",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_funnel_analysis",
+              "skill_name": "Funnel analysis",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_cost_modeling",
+              "skill_name": "Cost modeling",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_design_systems",
+              "skill_name": "Design systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "senior_product_manager": {
+          "role_title": "Senior Product Manager / Product Manager",
+          "seniority": "IC / Manager",
+          "must_have_skills": [
+            {
+              "skill_id": "prod_sql",
+              "skill_name": "SQL",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data querying",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_data_analytics",
+              "skill_name": "Data analytics",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Insights",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_product_roadmap",
+              "skill_name": "Product roadmap",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Strategy",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_stakeholder_management",
+              "skill_name": "Stakeholder management",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Collaboration",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_root_cause_analysis",
+              "skill_name": "Root cause analysis",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Problem solving",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_autonomous_ownership",
+              "skill_name": "Autonomous ownership",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Execution",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_user_first_thinking",
+              "skill_name": "User-first thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "User focus",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_jira_tools",
+              "skill_name": "JIRA/tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Execution",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "prod_communication_storytelling",
+              "skill_name": "Communication & storytelling",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Alignment",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "prod_mixpanel_clevertap",
+              "skill_name": "MixPanel/CleverTap",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_excel_sheets_advanced",
+              "skill_name": "Excel/Sheets advanced",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_market_research",
+              "skill_name": "Market research",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_startup_experience",
+              "skill_name": "Startup experience",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_bi_tools",
+              "skill_name": "BI tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_documentation_confluence",
+              "skill_name": "Documentation (Confluence)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "prod_distributed_systems_understanding",
+              "skill_name": "Distributed systems understanding",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
               "type": "good_to_have"
             }
           ],
@@ -341,57 +534,838 @@
         }
       }
     },
-    "HR": {
+    "TECH": {
       "roles": {
-        "hr_manager": {
-          "role_title": "HR Manager",
+        "python_developer": {
+          "role_title": "Python Developer",
           "seniority": "IC",
           "must_have_skills": [
             {
-              "skill_id": "hr_talent_acq",
-              "skill_name": "Talent Acquisition & Hiring",
-              "category": "Domain",
+              "skill_id": "tech_flutter_development",
+              "skill_name": "Flutter development",
+              "category": "Technical",
               "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Core mobile app requirement",
               "type": "must_have"
             },
             {
-              "skill_id": "hr_perf_mgmt",
-              "skill_name": "Performance Management",
-              "category": "Domain",
+              "skill_id": "tech_dart_programming",
+              "skill_name": "Dart programming",
+              "category": "Technical",
               "expected_level": 3,
-              "business_criticality_weight": 1.8,
-              "strategic_priority": true,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Primary Flutter language",
               "type": "must_have"
             },
             {
-              "skill_id": "hr_lnd",
-              "skill_name": "Learning & Development",
-              "category": "Domain",
+              "skill_id": "tech_mvvm_architecture",
+              "skill_name": "MVVM architecture",
+              "category": "Technical",
               "expected_level": 2,
               "business_criticality_weight": 1.5,
-              "strategic_priority": true,
+              "strategic_priority": false,
+              "rationale": "Clean architecture",
               "type": "must_have"
             },
             {
-              "skill_id": "hr_employee_engagement",
-              "skill_name": "Employee Engagement",
+              "skill_id": "tech_custom_flutter_plugins",
+              "skill_name": "Custom Flutter plugins",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Extend Flutter capabilities",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_method_channels",
+              "skill_name": "Method channels",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Native integration",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_state_management",
+              "skill_name": "State management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "App responsiveness",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_rest_api_integration",
+              "skill_name": "REST API integration",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Backend connectivity",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_problem_solving",
+              "skill_name": "Problem-solving",
               "category": "Behavioural",
               "expected_level": 3,
               "business_criticality_weight": 1.5,
               "strategic_priority": false,
+              "rationale": "Complex challenges",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_ownership_mindset",
+              "skill_name": "Ownership mindset",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Autonomous teams",
               "type": "must_have"
             }
           ],
           "good_to_have_skills": [
             {
-              "skill_id": "hr_hris",
-              "skill_name": "HRIS / HR Tools",
+              "skill_id": "tech_python_backend",
+              "skill_name": "Python backend",
               "category": "Technical",
               "expected_level": 2,
               "business_criticality_weight": 1.0,
               "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_microservices",
+              "skill_name": "Microservices",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_documentation",
+              "skill_name": "Documentation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_code_reviews",
+              "skill_name": "Code reviews",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_mentoring",
+              "skill_name": "Mentoring",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_performance_optimization",
+              "skill_name": "Performance optimization",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "senior_backend_engineer": {
+          "role_title": "Senior Backend Engineer",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_system_design",
+              "skill_name": "System Design",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Scalable systems",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_core_java",
+              "skill_name": "Core Java",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Backend foundation",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_microservices",
+              "skill_name": "Microservices",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Distributed systems",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_jvm_multithreading",
+              "skill_name": "JVM & Multithreading",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Performance",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_docker_kubernetes",
+              "skill_name": "Docker & Kubernetes",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Deployment",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_debugging",
+              "skill_name": "Debugging",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Production reliability",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_message_brokers",
+              "skill_name": "Message brokers",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Async systems",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_nosql_dbs",
+              "skill_name": "NoSQL DBs",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data architecture",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_cloud_aws_gcp",
+              "skill_name": "Cloud (AWS/GCP)",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Infrastructure",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_technical_leadership",
+              "skill_name": "Technical leadership",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Ownership culture",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "tech_service_mesh",
+              "skill_name": "Service mesh",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_scala",
+              "skill_name": "Scala",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_distributed_systems",
+              "skill_name": "Distributed systems",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_streaming_tech",
+              "skill_name": "Streaming tech",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_documentation",
+              "skill_name": "Documentation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_open_source",
+              "skill_name": "Open source",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_big_data",
+              "skill_name": "Big data",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_mentoring",
+              "skill_name": "Mentoring",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "data_analyst": {
+          "role_title": "Data Analyst",
+          "seniority": "IC",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_sql",
+              "skill_name": "SQL",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Querying",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_data_visualization",
+              "skill_name": "Data visualization",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Dashboards",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_excel",
+              "skill_name": "Excel",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data manipulation",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_eda",
+              "skill_name": "EDA",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Exploration",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_analytical_thinking",
+              "skill_name": "Analytical thinking",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Problem solving",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_stakeholder_collaboration",
+              "skill_name": "Stakeholder collaboration",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Cross-team work",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_data_quality",
+              "skill_name": "Data quality",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Accuracy",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_bi_reporting",
+              "skill_name": "BI reporting",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Reporting",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "tech_python_r",
+              "skill_name": "Python/R",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_data_warehousing",
+              "skill_name": "Data warehousing",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_process_optimization",
+              "skill_name": "Process optimization",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_documentation",
+              "skill_name": "Documentation",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_marketplace_analytics",
+              "skill_name": "Marketplace analytics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_statistical_modeling",
+              "skill_name": "Statistical modeling",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "head_lead_analytics": {
+          "role_title": "Head / Lead Analytics",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_snowflake",
+              "skill_name": "Snowflake",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data warehouse",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_dbt",
+              "skill_name": "DBT",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Transformations",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_analytics_strategy",
+              "skill_name": "Analytics strategy",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Roadmap",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_data_modeling",
+              "skill_name": "Data modeling",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Scalable models",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_stakeholder_mgmt",
+              "skill_name": "Stakeholder mgmt",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Cross-functional",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_team_building",
+              "skill_name": "Team building",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Hiring",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_business_translation",
+              "skill_name": "Business translation",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data → decisions",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_bi_tools",
+              "skill_name": "BI tools",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Self-serve analytics",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "tech_ai_ml_analytics",
+              "skill_name": "AI/ML analytics",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_python",
+              "skill_name": "Python",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_startup_experience",
+              "skill_name": "Startup experience",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_data_governance",
+              "skill_name": "Data governance",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_product_analytics",
+              "skill_name": "Product analytics",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_a_b_testing",
+              "skill_name": "A/B testing",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            }
+          ],
+          "skill_gaps_to_watch": []
+        },
+        "mobile_lead": {
+          "role_title": "Mobile Lead",
+          "seniority": "Lead",
+          "must_have_skills": [
+            {
+              "skill_id": "tech_flutter",
+              "skill_name": "Flutter",
+              "category": "Technical",
+              "expected_level": 4,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Core stack",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_dart",
+              "skill_name": "Dart",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Language",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_ios_android",
+              "skill_name": "iOS/Android",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Native support",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_leadership",
+              "skill_name": "Leadership",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Team scaling",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_app_architecture",
+              "skill_name": "App architecture",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Scalability",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_api_integration",
+              "skill_name": "API integration",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Backend connection",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_ci_cd",
+              "skill_name": "CI/CD",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Release pipelines",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_performance_optimization",
+              "skill_name": "Performance optimization",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "App quality",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_collaboration",
+              "skill_name": "Collaboration",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Cross-team",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "tech_security",
+              "skill_name": "Security",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Data protection",
+              "type": "must_have"
+            }
+          ],
+          "good_to_have_skills": [
+            {
+              "skill_id": "tech_backend_tech",
+              "skill_name": "Backend tech",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_ux_ui",
+              "skill_name": "UX/UI",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_agile",
+              "skill_name": "Agile",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_testing_frameworks",
+              "skill_name": "Testing frameworks",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_hiring",
+              "skill_name": "Hiring",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_ai_ml_ar",
+              "skill_name": "AI/ML/AR",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_multi_project_mgmt",
+              "skill_name": "Multi-project mgmt",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "tech_culture_building",
+              "skill_name": "Culture building",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
               "type": "good_to_have"
             }
           ],
@@ -401,55 +1375,180 @@
     },
     "FIN": {
       "roles": {
-        "finance_manager": {
-          "role_title": "Finance Manager",
+        "r2r_finance": {
+          "role_title": "Record to Report (R2R)",
           "seniority": "IC",
           "must_have_skills": [
             {
-              "skill_id": "fin_financial_analysis",
-              "skill_name": "Financial Analysis & Reporting",
+              "skill_id": "fin_ca_qualification",
+              "skill_name": "CA qualification",
               "category": "Technical",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "fin_accounting",
-              "skill_name": "Accounting & Compliance",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 1.8,
+              "expected_level": 4,
+              "business_criticality_weight": 1.5,
               "strategic_priority": false,
+              "rationale": "Baseline",
               "type": "must_have"
             },
             {
-              "skill_id": "fin_cash_flow",
-              "skill_name": "Cash Flow Management",
-              "category": "Domain",
-              "expected_level": 3,
-              "business_criticality_weight": 2.0,
-              "strategic_priority": true,
-              "type": "must_have"
-            },
-            {
-              "skill_id": "fin_excel",
-              "skill_name": "Advanced Excel / Sheets",
+              "skill_id": "fin_month_end_close",
+              "skill_name": "Month-end close",
               "category": "Technical",
               "expected_level": 3,
               "business_criticality_weight": 1.5,
               "strategic_priority": false,
+              "rationale": "Accounting",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_gst_compliance",
+              "skill_name": "GST compliance",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Regulatory",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_tds_compliance",
+              "skill_name": "TDS compliance",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Tax filing",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_gl_management",
+              "skill_name": "GL management",
+              "category": "Technical",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Accounting ops",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_far_management",
+              "skill_name": "FAR management",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Assets",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_zoho_books",
+              "skill_name": "Zoho Books",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Tooling",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_ownership_mindset",
+              "skill_name": "Ownership mindset",
+              "category": "Behavioural",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Autonomy",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_process_automation",
+              "skill_name": "Process automation",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "System building",
+              "type": "must_have"
+            },
+            {
+              "skill_id": "fin_audit_management",
+              "skill_name": "Audit management",
+              "category": "Domain",
+              "expected_level": 3,
+              "business_criticality_weight": 1.5,
+              "strategic_priority": false,
+              "rationale": "Compliance",
               "type": "must_have"
             }
           ],
           "good_to_have_skills": [
             {
-              "skill_id": "fin_startup_finance",
-              "skill_name": "Startup Finance / Fundraising Basics",
-              "category": "Strategic",
+              "skill_id": "fin_zoho_flow",
+              "skill_name": "Zoho Flow",
+              "category": "Technical",
               "expected_level": 2,
-              "business_criticality_weight": 1.2,
+              "business_criticality_weight": 1.0,
               "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_uat",
+              "skill_name": "UAT",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_product_collaboration",
+              "skill_name": "Product collaboration",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_revenue_leakage",
+              "skill_name": "Revenue leakage",
+              "category": "Domain",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_payroll_compliance",
+              "skill_name": "Payroll compliance",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_cloud_accounting",
+              "skill_name": "Cloud accounting",
+              "category": "Technical",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
+              "type": "good_to_have"
+            },
+            {
+              "skill_id": "fin_execution_speed",
+              "skill_name": "Execution speed",
+              "category": "Behavioural",
+              "expected_level": 2,
+              "business_criticality_weight": 1.0,
+              "strategic_priority": false,
+              "rationale": "",
               "type": "good_to_have"
             }
           ],
