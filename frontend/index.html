@@ -3,58 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wiom Talent Intelligence</title>
+  <title>Pragati Map — Wiom Talent Intelligence</title>
   <link rel="stylesheet" href="/style.css">
   <style>
     .hero {
       min-height: calc(100vh - 56px);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 40px 20px;
+      text-align: center; padding: 48px 20px 60px;
     }
     .hero-badge {
-      display: inline-block; padding: 4px 14px; border-radius: 20px;
-      background: rgba(217, 0, 141, 0.15); color: var(--pink);
-      font-size: 12px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.6px; margin-bottom: 20px;
+      display: inline-block; padding: 5px 16px; border-radius: 20px;
+      background: rgba(217, 0, 141, 0.15); border: 1px solid rgba(217,0,141,0.3);
+      color: var(--pink); font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; margin-bottom: 20px;
     }
-    .hero h1 { margin-bottom: 12px; }
-    .hero .sub {
-      font-size: 16px; color: var(--muted); max-width: 500px; margin: 0 auto 40px;
+    .hero-title {
+      font-size: clamp(26px, 5vw, 40px); font-weight: 900;
+      line-height: 1.2; margin-bottom: 6px; color: #ffffff;
     }
-    .cta-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 16px; width: 100%; max-width: 480px; margin-bottom: 40px;
+    .hero-title .brand { color: var(--pink); }
+    .hero-subtitle {
+      font-size: 14px; color: var(--muted); margin-bottom: 6px;
+      font-weight: 500; letter-spacing: 0.2px;
     }
-    @media (max-width: 480px) { .cta-grid { grid-template-columns: 1fr; } }
-    .cta-card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 28px 20px; text-decoration: none; color: var(--text);
-      transition: border-color 0.2s, transform 0.2s; text-align: center;
-      display: flex; flex-direction: column; align-items: center; gap: 12px;
+    .hero-desc {
+      font-size: 15px; color: #B8A8CC; max-width: 520px;
+      margin: 0 auto 36px; line-height: 1.7;
     }
-    .cta-card:hover { border-color: var(--pink); transform: translateY(-2px); }
-    .cta-card .icon { font-size: 32px; }
-    .cta-card .cta-title { font-weight: 800; font-size: 16px; }
-    .cta-card .cta-desc { font-size: 12px; color: var(--muted); }
-    .cta-card .cta-action {
-      display: inline-block; margin-top: 8px; padding: 8px 20px;
-      background: var(--pink); color: white; border-radius: 8px;
-      font-size: 13px; font-weight: 700;
-    }
-    .admin-link { font-size: 13px; color: var(--muted); text-decoration: none; }
-    .admin-link:hover { color: var(--text); }
+
+    /* Stats */
     .stats-row {
-      display: flex; gap: 32px; justify-content: center;
-      margin-bottom: 40px; flex-wrap: wrap;
+      display: flex; gap: 40px; justify-content: center;
+      margin-bottom: 44px; flex-wrap: wrap;
     }
-    .stats-row .stat { text-align: center; }
-    .stats-row .stat-num { font-size: 24px; font-weight: 800; color: var(--pink); }
-    .stats-row .stat-label { font-size: 12px; color: var(--muted); }
+    .stat { text-align: center; }
+    .stat-num { font-size: 26px; font-weight: 800; color: var(--pink); }
+    .stat-label { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .stat-divider { width: 1px; background: var(--border); }
+
+    /* 3-column cards */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 820px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 680px) { .cta-grid { grid-template-columns: 1fr; } }
+    @media (min-width: 481px) and (max-width: 680px) { .cta-grid { grid-template-columns: 1fr 1fr; } }
+
+    .cta-card {
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 32px 22px 28px;
+      text-decoration: none; color: var(--text);
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      position: relative; overflow: hidden;
+    }
+    .cta-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--pink); opacity: 0; transition: opacity 0.2s;
+    }
+    .cta-card:hover { border-color: var(--pink); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(217,0,141,0.15); }
+    .cta-card:hover::before { opacity: 1; }
+
+    .cta-icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; margin-bottom: 4px;
+    }
+    .cta-icon.emp   { background: rgba(217, 0, 141, 0.12); }
+    .cta-icon.mgr   { background: rgba(68, 49, 82, 0.6); }
+    .cta-icon.admin { background: rgba(109, 23, 206, 0.12); }
+
+    .cta-tag {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.8px; padding: 3px 10px; border-radius: 10px;
+      margin-bottom: 2px;
+    }
+    .cta-tag.emp   { background: rgba(217,0,141,0.12); color: var(--pink); }
+    .cta-tag.mgr   { background: rgba(68,49,82,0.5);   color: #C4AADC; }
+    .cta-tag.admin { background: rgba(109,23,206,0.12); color: #a775e8; }
+
+    .cta-title { font-weight: 800; font-size: 17px; color: #ffffff; line-height: 1.3; }
+    .cta-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    .cta-action {
+      display: inline-block; margin-top: 12px; padding: 10px 24px;
+      border-radius: 10px; font-size: 13px; font-weight: 700;
+      transition: opacity 0.2s;
+    }
+    .cta-action:hover { opacity: 0.85; }
+    .cta-action.emp   { background: var(--pink); color: white; }
+    .cta-action.mgr   { background: var(--purple); color: white; }
+    .cta-action.admin { background: rgba(109,23,206,0.8); color: white; }
   </style>
 </head>
 <body>
   <nav class="navbar">
-    <a href="/" class="logo">Wiom</a>
+    <a href="/" class="logo">Pragati Map</a>
     <div class="nav-links">
       <span id="user-name" class="text-muted text-sm"></span>
       <a href="/logout" class="nav-link">Logout</a>
@@ -62,41 +113,66 @@
   </nav>
 
   <div class="hero">
-    <div class="hero-badge">Talent Intelligence Platform</div>
-    <h1>अपना Skill Map बनाएं</h1>
-    <p class="sub">Wiom team के हर member के लिए — honest self-assessment से शुरू होती है असली growth</p>
+    <div class="hero-badge">Wiom · Talent Intelligence</div>
 
+    <h1 class="hero-title">
+      <span class="brand">Pragati Map</span>
+    </h1>
+    <p class="hero-subtitle">Wiom's Talent Intelligence Platform</p>
+    <p class="hero-desc">
+      हर Wiom employee का personalized skill map और growth plan —<br>
+      honest self-assessment से शुरू होती है असली pragati.
+    </p>
+
+    <!-- Live stats -->
     <div id="stats-row" class="stats-row hidden">
       <div class="stat">
         <div class="stat-num" id="stat-assessed">—</div>
         <div class="stat-label">Assessments done</div>
       </div>
+      <div class="stat-divider"></div>
       <div class="stat">
         <div class="stat-num" id="stat-total">—</div>
         <div class="stat-label">Total employees</div>
       </div>
+      <div class="stat-divider"></div>
       <div class="stat">
         <div class="stat-num" id="stat-roles">—</div>
         <div class="stat-label">Roles mapped</div>
       </div>
     </div>
 
+    <!-- 3 role cards -->
     <div class="cta-grid">
-      <a href="/assess.html" class="cta-card">
-        <div class="icon">📋</div>
-        <div class="cta-title">अपना Assessment दें</div>
-        <div class="cta-desc">3 मिनट · Skill map + Growth plan</div>
-        <span class="cta-action">शुरू करें</span>
-      </a>
-      <a href="/manager.html" class="cta-card">
-        <div class="icon">👥</div>
-        <div class="cta-title">Team को Rate करें</div>
-        <div class="cta-desc">Manager assessment · Coaching starters</div>
-        <span class="cta-action">Rate करें</span>
-      </a>
-    </div>
 
-    <a href="/admin/dashboard.html" class="admin-link">Admin Dashboard →</a>
+      <!-- Employee -->
+      <a href="/assess.html" class="cta-card">
+        <div class="cta-icon emp">📋</div>
+        <div class="cta-tag emp">Employee</div>
+        <div class="cta-title">अपना Assessment दें</div>
+        <div class="cta-desc">3 मिनट में अपना skill map बनाएं और personalized growth plan पाएं</div>
+        <span class="cta-action emp">शुरू करें</span>
+      </a>
+
+      <!-- Manager -->
+      <a href="/manager.html" class="cta-card">
+        <div class="cta-icon mgr">👥</div>
+        <div class="cta-tag mgr">Manager</div>
+        <div class="cta-title">Team को Rate करें</div>
+        <div class="cta-desc">अपनी team के skills assess करें और coaching conversation starters पाएं</div>
+        <span class="cta-action mgr">Rate करें</span>
+      </a>
+
+      <!-- Admin / People Team -->
+      <a href="/admin/dashboard.html" class="cta-card">
+        <div class="cta-icon admin">📊</div>
+        <div class="cta-tag admin">People Team (Admin)</div>
+        <div class="cta-title">Org Skill Heatmap</div>
+        <div class="cta-desc">पूरे org के skill gaps देखें, AI insights लें और priorities set करें</div>
+        <span class="cta-action admin">Dashboard खोलें</span>
+      </a>
+
+    </div>
   </div>
 
   <script>
@@ -108,7 +184,14 @@
       }
     }).catch(() => {});
 
-    // Show user info
+    fetch('/api/v1/admin/employees', {headers: {'X-Admin-Key': sessionStorage.getItem('adminKey') || ''}})
+      .then(r => r.ok ? r.json() : null).then(d => {
+        if (d) {
+          const assessed = d.employees.filter(e => e.assessment_status === 'submitted').length;
+          document.getElementById('stat-assessed').textContent = assessed;
+        }
+      }).catch(() => {});
+
     const user = JSON.parse(sessionStorage.getItem('wiom_user') || 'null');
     if (user) document.getElementById('user-name').textContent = user.name || user.email;
   </script>
