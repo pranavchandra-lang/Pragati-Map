@@ -2,40 +2,42 @@
 Admin router — heatmap, gaps, employee list, framework
 All endpoints require X-Admin-Key header OR admin session.
 """
-from fastapi import APIRouter, HTTPException, Depends, Request
+from typing import Optional
+from fastapi import APIRouter, HTTPException, Request, Header
 from backend.services.storage import read_json, write_json
-from backend.services.skill_engine import get_employee_gaps, triangulate, compute_gap
-from backend.deps import verify_admin_key
+from backend.services.skill_engine import get_employee_gaps
+import os
 
 router = APIRouter()
 
 CATEGORIES = ["Technical", "Behavioural", "Domain", "Strategic"]
 
 
-def _admin_auth(request: Request, x_admin_key: str = None):
+def _admin_auth(request: Request, x_admin_key: Optional[str]):
     """Accept either session-based admin or X-Admin-Key header."""
     user = request.session.get("user")
     if user and user.get("role") == "admin":
         return True
-    return verify_admin_key(x_admin_key)
+    expected = os.getenv("ADMIN_PASSWORD", "changeme")
+    if x_admin_key != expected:
+        raise HTTPException(status_code=403, detail="Invalid admin key")
+    return True
 
 
 @router.get("/admin/heatmap")
-def get_heatmap(request: Request, x_admin_key: str = None):
+def get_heatmap(request: Request, x_admin_key: Optional[str] = Header(default=None)):
     _admin_auth(request, x_admin_key)
 
     employees_data = read_json("employees.json")
     employees = employees_data.get("employees", [])
     assessments = read_json("assessments.json")
-    mgr_ratings = read_json("manager_ratings.json")
     framework = read_json("skill_framework.json")
 
     assessed_ids = {a["employee_id"] for a in assessments.get("assessments", [])}
     assessed_count = len(assessed_ids)
 
-    # Build matrix: {function_code: {category: [gap_scores]}}
     gap_accumulator: dict = {}
-    worst: dict = {}  # {(fn, skill_name): [scores]}
+    worst: dict = {}
 
     for emp in employees:
         eid = emp["employee_id"]
@@ -53,11 +55,9 @@ def get_heatmap(request: Request, x_admin_key: str = None):
             cat = g.get("category", "Technical")
             if cat in gap_accumulator[fn]:
                 gap_accumulator[fn][cat].append(g["gap_score"])
-            # Track worst gaps
             key = (fn, g["skill_name"])
             worst.setdefault(key, []).append(g["gap_score"])
 
-    # Compute averages
     matrix = {}
     for fn, cats in gap_accumulator.items():
         matrix[fn] = {
@@ -65,7 +65,6 @@ def get_heatmap(request: Request, x_admin_key: str = None):
             for cat, scores in cats.items()
         }
 
-    # Top 5 worst gaps
     worst_gaps = sorted(
         [{"function": k[0], "skill": k[1], "avg_gap": round(sum(v)/len(v), 2)} for k, v in worst.items()],
         key=lambda x: x["avg_gap"],
@@ -87,7 +86,7 @@ def get_heatmap(request: Request, x_admin_key: str = None):
 
 
 @router.get("/admin/gaps/{employee_id}")
-def get_employee_gap_report(employee_id: str, request: Request, x_admin_key: str = None):
+def get_employee_gap_report(employee_id: str, request: Request, x_admin_key: Optional[str] = Header(default=None)):
     _admin_auth(request, x_admin_key)
     gaps = get_employee_gaps(employee_id)
     if gaps is None:
@@ -96,14 +95,14 @@ def get_employee_gap_report(employee_id: str, request: Request, x_admin_key: str
 
 
 @router.get("/admin/employees")
-def list_employees(request: Request, x_admin_key: str = None):
+def list_employees(request: Request, x_admin_key: Optional[str] = Header(default=None)):
     _admin_auth(request, x_admin_key)
     data = read_json("employees.json")
     return {"employees": data.get("employees", []), "count": len(data.get("employees", []))}
 
 
 @router.get("/admin/framework")
-def get_framework(request: Request, x_admin_key: str = None):
+def get_framework(request: Request, x_admin_key: Optional[str] = Header(default=None)):
     _admin_auth(request, x_admin_key)
     return read_json("skill_framework.json")
 
@@ -113,9 +112,8 @@ def update_skill(
     skill_id: str,
     body: dict,
     request: Request,
-    x_admin_key: str = None,
+    x_admin_key: Optional[str] = Header(default=None),
 ):
-    """Update expected_level, business_criticality_weight, or strategic_priority for one skill."""
     _admin_auth(request, x_admin_key)
     framework = read_json("skill_framework.json")
 

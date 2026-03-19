@@ -3,13 +3,13 @@ AI router — Claude-powered analysis endpoints
 """
 import os
 import json
+from typing import Optional
 from pathlib import Path
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, Header
 from backend.services.path_engine import generate_upskilling_path
 from backend.services.claude_client import call_claude
 from backend.services.storage import read_json
 from backend.models.schemas import PathRequest
-from backend.deps import verify_admin_key
 
 router = APIRouter()
 
@@ -53,7 +53,7 @@ def get_upskilling_path(payload: PathRequest):
 
 
 @router.post("/ai/heatmap-insights")
-def get_heatmap_insights(request: Request, x_admin_key: str = None):
+def get_heatmap_insights(request: Request, x_admin_key: Optional[str] = Header(default=None)):
     """
     Send heatmap matrix to Claude and return 3 org-level narratives.
     """
@@ -101,8 +101,11 @@ def clear_path_cache(employee_id: str):
     return {"status": "no_cache", "employee_id": employee_id}
 
 
-def _admin_auth(request: Request, x_admin_key: str = None):
+def _admin_auth(request: Request, x_admin_key: Optional[str]):
     user = request.session.get("user")
     if user and user.get("role") == "admin":
         return True
-    return verify_admin_key(x_admin_key)
+    expected = os.getenv("ADMIN_PASSWORD", "changeme")
+    if x_admin_key != expected:
+        raise HTTPException(status_code=403, detail="Invalid admin key")
+    return True
