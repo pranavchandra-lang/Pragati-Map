@@ -159,7 +159,14 @@
       </div>
       <div>
         <div class="card mb-0">
-          <h3 class="mb-16">Org Skill Heatmap</h3>
+          <h3 style="margin-bottom:4px">Org Skill Heatmap</h3>
+          <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Each cell = average skill gap for that function × category. Gap = expected level − (self + manager score). Click any cell for details.</p>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;font-size:11px;font-weight:700">
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(0,128,67,0.45);display:inline-block"></span>✓ All met (gap = 0)</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(255,128,0,0.65);display:inline-block"></span>Moderate gap (~1 level)</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(224,30,0,0.75);display:inline-block"></span>Critical gap (≥1.5 levels)</span>
+            <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(46,34,69,0.4);border:1px solid var(--border);display:inline-block"></span>— No skills mapped</span>
+          </div>
           <div class="heatmap-wrapper">
             <div id="heatmap-container"><div class="spinner"></div></div>
           </div>
@@ -330,7 +337,10 @@
             const bg = gapColor(val);
             const tc = val > 1 ? '#fff' : (val > 0.5 ? '#eee' : '#9B89B0');
             const label = val > 0 ? val.toFixed(1) : '✓';
-            return `<div class="heatmap-cell" style="background:${bg};color:${tc}" onclick="openPanel('${fn}','${cat}')" title="${fn} · ${cat}: ${val.toFixed(1)}">${label}</div>`;
+            const tooltip = val > 0
+              ? `${fn} · ${cat}: avg gap ${val.toFixed(1)} — employees are ${val.toFixed(1)} level(s) below role expectations`
+              : `${fn} · ${cat}: all skills at or above expected level`;
+            return `<div class="heatmap-cell" style="background:${bg};color:${tc}" onclick="openPanel('${fn}','${cat}')" title="${tooltip}">${label}</div>`;
           }).join('')}
         </div>`;
       });
