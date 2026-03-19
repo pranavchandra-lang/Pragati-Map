@@ -566,8 +566,14 @@
           <div class="ai-card"><div class="ai-label">Emerging Risk</div><p>${data.emerging_risk||'—'}</p></div>
           <div class="ai-card"><div class="ai-label">Strategic Recommendation</div><p>${data.strategic_recommendation||'—'}</p></div>`;
       } catch(e) {
-        el.innerHTML = `<div class="alert alert-error" style="word-break:break-word">${e.message}</div>
-          <button class="btn btn-ghost btn-sm btn-full mt-16" onclick="loadAIInsights()">Retry</button>`;
+        const isQuota = e.message && e.message.includes('quota');
+        el.innerHTML = `
+          <div class="alert alert-error" style="word-break:break-word;margin-bottom:12px">
+            ${isQuota
+              ? 'Gemini API quota exceeded. Get a free key from <strong>aistudio.google.com</strong> → Update <code>GEMINI_API_KEY</code> in Railway Variables.'
+              : e.message}
+          </div>
+          <button class="btn btn-ghost btn-sm btn-full" onclick="loadAIInsights()">Retry</button>`;
       }
     }
 

@@ -7,7 +7,7 @@ import json
 import google.generativeai as genai
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = "gemini-1.5-pro-latest"
+MODEL = "gemini-2.0-flash"
 
 
 def call_claude(system_prompt: str, user_message: str, max_tokens: int = 4000) -> dict:
