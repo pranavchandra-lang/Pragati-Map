@@ -139,18 +139,35 @@ def update_skill(
 
 @router.post("/admin/seed")
 def seed_demo_data(request: Request, x_admin_key: Optional[str] = Header(default=None)):
-    """Seed all data files with realistic Wiom demo data. Idempotent."""
+    """
+    Copy the repo-committed data files (real CSV-based skill framework) into the
+    Railway volume (DATA_DIR). This is idempotent and safe to re-run.
+    """
     _admin_auth(request, x_admin_key)
-    import sys, importlib
+    import shutil
     from pathlib import Path
-    # Run the seed script inline
-    seed_path = Path(__file__).parents[2] / "scripts" / "seed_demo.py"
-    import importlib.util
-    spec = importlib.util.spec_from_file_location("seed_demo", seed_path)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
-    mod.seed_all()
-    return {"status": "seeded", "message": "Demo data loaded. Check /api/v1/admin/employees for employee list."}
+
+    # Repo data dir (bundled with the deployed app)
+    repo_data = Path(__file__).parents[2] / "data"
+    # Volume / target data dir
+    volume_data = Path(os.getenv("DATA_DIR", "./data"))
+    volume_data.mkdir(parents=True, exist_ok=True)
+
+    files = ["org_structure.json", "skill_framework.json", "employees.json",
+             "assessments.json", "manager_ratings.json"]
+    copied = []
+    for fname in files:
+        src = repo_data / fname
+        dst = volume_data / fname
+        if src.exists():
+            shutil.copy2(src, dst)
+            copied.append(fname)
+
+    return {
+        "status": "seeded",
+        "files_copied": copied,
+        "message": "Real CSV skill data loaded into volume. Heatmap is ready."
+    }
 
 
 @router.post("/admin/import-framework")
