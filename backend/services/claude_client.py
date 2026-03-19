@@ -20,8 +20,8 @@ def call_claude(system_prompt: str, user_message: str, max_tokens: int = 4000) -
         raise ValueError("GEMINI_API_KEY is not set in environment variables.")
 
     payload = {
-        "system_instruction": {"parts": [{"text": system_prompt}]},
-        "contents": [{"parts": [{"text": user_message}]}],
+        "systemInstruction": {"parts": [{"text": system_prompt}]},
+        "contents": [{"role": "user", "parts": [{"text": user_message}]}],
         "generationConfig": {
             "maxOutputTokens": max_tokens,
             "temperature": 0.4,
