@@ -7,7 +7,7 @@ import json
 import httpx
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-MODEL = "gemini-1.5-flash"
+MODEL = "gemini-2.0-flash-lite"
 API_URL = f"https://generativelanguage.googleapis.com/v1/models/{MODEL}:generateContent"
 
 
