@@ -136,25 +136,49 @@
 
     <!-- Stats strip -->
     <div class="stats-strip">
-      <div class="stat-card accent"><div class="stat-value" id="stat-assessed">—</div><div class="stat-label">Assessments complete</div></div>
-      <div class="stat-card"><div class="stat-value" id="stat-total">—</div><div class="stat-label">Total employees</div></div>
-      <div class="stat-card"><div class="stat-value" id="stat-avg-gap">—</div><div class="stat-label">Avg gap score</div></div>
-      <div class="stat-card"><div class="stat-value" id="stat-critical">—</div><div class="stat-label">Critical gaps (≥2)</div></div>
+      <div class="stat-card accent">
+        <div class="stat-value" id="stat-assessed">—</div>
+        <div class="stat-label">Assessments complete</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">Employees who have submitted their self-assessment</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-total">—</div>
+        <div class="stat-label">Total employees</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">All employees in the org roster</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-avg-gap">—</div>
+        <div class="stat-label">Avg gap score</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">Avg levels below role expectations across all assessed employees (scale 0–3)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-critical">—</div>
+        <div class="stat-label">Critical gaps (≥2)</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">Skills where employees are 2+ levels below expectations — urgent training priorities</div>
+      </div>
     </div>
 
-    <!-- Row 1: Worst gaps + AI | Org Heatmap -->
+    <!-- AI Insights banner -->
+    <div class="card mb-24" style="background:rgba(109,23,206,0.08);border-color:rgba(109,23,206,0.25)">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div style="flex:1;min-width:200px">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#a775e8;letter-spacing:0.6px;margin-bottom:4px">✦ AI Insights</div>
+          <div class="section-title" style="font-size:16px;margin-bottom:2px">Gemini analysis of your org skill data</div>
+          <p style="font-size:13px;color:var(--muted);margin:0">Identifies patterns in skill gaps, flags at-risk functions, and suggests priority interventions — in plain English.</p>
+        </div>
+        <div style="align-self:center">
+          <button id="ai-generate-btn" class="btn btn-primary btn-sm" onclick="loadAIInsights()" style="white-space:nowrap">Generate Insights →</button>
+        </div>
+      </div>
+      <div id="ai-insights-container"></div>
+    </div>
+
+    <!-- Row 1: Worst gaps | Org Heatmap -->
     <div class="two-panel" style="margin-bottom:24px">
       <div>
         <div class="card mb-16">
           <h3 class="mb-16">Top Skill Gaps</h3>
           <div id="worst-gaps-list"><div class="spinner"></div></div>
-        </div>
-        <div class="card">
-          <h3 class="mb-16">AI Insights</h3>
-          <div id="ai-insights-container">
-            <p class="text-sm text-muted mb-16">Gemini AI analysis of your org skill data</p>
-            <button class="btn btn-ghost btn-sm btn-full" onclick="loadAIInsights()">Generate Insights</button>
-          </div>
         </div>
       </div>
       <div>
@@ -580,6 +604,8 @@
             : data.detail?.detail || data.detail?.error || JSON.stringify(data.detail);
           throw new Error(msg || 'Request failed');
         }
+        el.style.marginTop = '16px';
+        document.getElementById('ai-generate-btn')?.remove();
         el.innerHTML = `
           <div class="ai-card"><div class="ai-label">Biggest Gap</div><p>${data.biggest_gap||'—'}</p></div>
           <div class="ai-card"><div class="ai-label">Emerging Risk</div><p>${data.emerging_risk||'—'}</p></div>
