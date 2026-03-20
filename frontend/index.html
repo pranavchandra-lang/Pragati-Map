@@ -176,21 +176,14 @@
   </div>
 
   <script>
-    fetch('/api/v1/bootstrap').then(r => r.json()).then(d => {
+    fetch('/api/v1/bootstrap', {method: 'POST'}).then(r => r.json()).then(d => {
       if (d.status === 'ok') {
+        document.getElementById('stat-assessed').textContent = d.assessments_loaded || '—';
         document.getElementById('stat-total').textContent = d.employees_loaded || '—';
         document.getElementById('stat-roles').textContent = d.roles_loaded || '—';
         document.getElementById('stats-row').classList.remove('hidden');
       }
     }).catch(() => {});
-
-    fetch('/api/v1/admin/employees', {headers: {'X-Admin-Key': sessionStorage.getItem('adminKey') || ''}})
-      .then(r => r.ok ? r.json() : null).then(d => {
-        if (d) {
-          const assessed = d.employees.filter(e => e.assessment_status === 'submitted').length;
-          document.getElementById('stat-assessed').textContent = assessed;
-        }
-      }).catch(() => {});
 
     const user = JSON.parse(sessionStorage.getItem('wiom_user') || 'null');
     if (user) document.getElementById('user-name').textContent = user.name || user.email;

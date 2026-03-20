@@ -98,6 +98,7 @@ class BootstrapResponse(BaseModel):
     functions_loaded: int
     roles_loaded: int
     employees_loaded: int
+    assessments_loaded: int = 0
 
 
 # ── Heatmap ───────────────────────────────────────────────────────────────────
